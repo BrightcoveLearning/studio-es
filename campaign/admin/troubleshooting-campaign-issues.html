@@ -1,0 +1,83 @@
+---
+title: Descripción de problemas de la campaña de resolución de problemas: En este tema, aprenderá acerca de las técnicas de resolución de problemas al utilizar el módulo Campaña.
+parent: Administering Campaign
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="logging">Habilitación del registro detallado</h2>
+    <p>Habilitar el registro detallado le permite ver la información relacionada con la campaña en la consola del navegador. Esto es útil cuando se intenta depurar problemas de Campaign. El registro detallado se puede habilitar agregando&nbsp;<code translate="No">bcverbose=1</code> a la URL de la página con el reproductor habilitado para Campaña o configurando el complemento Campaña con el <code translate="No">"verbose": true</code> opción:</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="configure plugin" src="/assets/images/campaign/admin/node18487-plugin.png" /></figure>
+    <p>Los mensajes de registro se pueden ver en la consola.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="console" src="/assets/images/campaign/admin/node18487-console.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="leadform">Problemas con el formulario de clientes potenciales</h2>
+    <p>A continuación, se presentan algunos problemas y preguntas comunes que hemos visto con los formularios de clientes potenciales.</p>
+    <h3>¿Por qué los formularios de clientes potenciales continúan mostrándose para las integraciones de Marketo Munchkin incluso después de que se haya enviado el formulario?</h3>
+    <p>La integración de Munchkin no tiene una API que podamos usar para preguntar si el usuario es conocido o no. Como no sabemos si es un usuario conocido, siempre mostramos el formulario de cliente potencial. La integración REST de Marketo ofrece API para que podamos determinar los usuarios conocidos frente a los desconocidos. Se recomienda cambiar a una integración REST de Marketo y puede evitar este problema.</p>
+    <h3>Mi formulario de cliente potencial personalizado está configurado para redirigir al enviarlo. ¿Por qué veo la página a la que se redirige durante uno o dos segundos después de enviar el formulario?</h3>
+    <p>Tenemos que esperar hasta que la página a la que se redirige se haya cargado completamente antes de descartar el formulario de cliente potencial. Una solución es redirigir a una página ligera (no tiene muchas imágenes ni JavaScript), o a la página en blanco que configuramos (ubicada <code translate="No">https://map.brightcove.com/lead/complete</code>) específicamente para solucionar este problema.</p>
+    <h3>Configuré mi formulario de cliente potencial con HTML de confirmación. ¿Por qué veo una pantalla negra durante un par de segundos después del envío?</h3>
+    <p>Asegúrese de cambiar el color del texto del HTML. El HTML de confirmación probablemente esté visible, simplemente no puede verlo porque el color del texto predeterminado es negro.</p>
+    <h3>¿Por qué mi formulario de cliente potencial de HubSpot no se descarta después del envío?</h3>
+    <p>Asegúrate de que el formulario de cliente potencial en HubSpot esté configurado para redirigir a <code translate="No"><strong>http://map.brightcove.com/lead/complete</strong></code>. Si quieres mostrar un mensaje de confirmación, configúralo dentro de Campaign y no en HubSpot.</p>
+    <h3>¿Por qué no se muestra mi formulario de cliente potencial?</h3>
+    <p>Si su formulario de cliente potencial no se muestra, primero asegúrese de que se cumplan todos los criterios para mostrar un formulario de cliente potencial. Tenga en cuenta que los criterios que dependen de la visualización de varios videos no funcionarán en las actualizaciones de página. Están pensados para casos de uso en los que el siguiente video se pone automáticamente en cola en el mismo reproductor.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Confirme que el complemento de campaña se haya agregado al reproductor. Para obtener información, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un jugador habilitado para campaña</a>.</li>
+      <li>Confirme que la integración se haya configurado correctamente y se envíe al complemento.</li>
+      <li>Confirme que el formulario de cliente potencial se haya agregado a ese jugador. La respuesta a la llamada que realiza el complemento para su configuración debe contener información de visualización del formulario de cliente potencial bajo la propiedad leadForm si se ha agregado un formulario de cliente potencial al reproductor.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="leadform debug" src="/assets/images/campaign/admin/node18487-leadform-debug.png" /></figure>
+      </li>
+      <li>Confirma que el espectador aún no es un cliente potencial. El formulario de cliente potencial solo se mostrará si Campaign ha identificado que el espectador aún no es un cliente potencial en la plataforma de automatización de marketing (MAP) o aún no ha completado un formulario de cliente potencial. El complemento realiza una llamada JSONP separada al servidor de Campaign para verificar si el espectador es un cliente potencial. Si el espectador es un cliente potencial, el servidor responde con un estado de 1 y cualquier otro identificador que pueda ser útil para sincronizar los datos de la vista con el MAP. Si el espectador no es un cliente potencial, el servidor responde con un estado de 0.
+        <ul>
+          <li>Respuesta de ejemplo para un espectador que no es un cliente potencial:
+            <pre>
+/**/ tipo de función JSONPCallback_2935650618 === 'función'  JSONPcallback_2935650618 ({"status":0});</pre>
+          </li>
+          <li>Respuesta de ejemplo para un espectador que es un cliente potencial:
+            <pre>
+/**/ tipo de jsonpCallback_45936049288 === 'función'  JSONPcallback_45936049288 ({"status":1,"eloqua":{"contactId":"5","internalId":"CTCPB000000000005"}});</pre>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sync">Problemas de sincronización</h2>
+    <p>A continuación, se muestran algunos problemas de sincronización comunes que hemos visto.</p>
+    <h3>Los eventos de la vista REST de Marketo no se sincronizan con el error Id. De tipo de actividad '000000' no encontrado</h3>
+    <p>Esto sucede cuando se elimina la actividad personalizada de Marketo asociada con la integración. Cuando se crea una integración REST de Marketo, obtenemos la actividad, almacenamos su ID y usamos esa ID para sincronizar eventos. La solución (asumiendo que se ha creado una nueva actividad Brightcove Video View) es desconectar y volver a crear la integración para recoger el ID de la nueva actividad.</p>
+    <h3>Ver eventos que no se sincronizan</h3>
+    <p>Cuando la integración está configurada correctamente con un MAP, la visualización de datos de un reproductor habilitado para Campaña debe completar el <strong>Toda la actividad reciente</strong> Los eventos de página y visualización correspondientes a un cliente potencial conocido en el MAP respectivo deberían finalmente sincronizarse con la herramienta.</p>
+    <p>Primero, asegúrese de que los datos de la vista se muestren en el <strong>Toda la actividad reciente</strong> página:</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="viewer activity" src="/assets/images/campaign/admin/node18487-viewer-activity.png" /></figure>
+    <p>Si los eventos de visualización se enumeran pero no están en el MAP, el usuario puede haber autorizado Campaign con su MAP como un usuario que no tiene permisos suficientes para importar datos de visualización en el MAP a través de la API o la integración no está configurada correctamente. La página de inicio de la campaña enumera el estado de las operaciones de sincronización de eventos de visualización recientes. Los comentarios deben estar disponibles allí para indicar por qué los eventos de visualización no se sincronizan con el MAP.</p>
+    <p>Si se muestran eventos de visualización en Campaign, compruebe si el <strong>Estado</strong> la columna es <strong>sincronizado</strong>. Esto indica que Campaign pudo entregar con éxito los datos en su MAP. Si ve un estado de <strong>unknown_contact</strong>, significa que no se conocía al usuario y su MAP no lo puede recibir. La mayoría de los MAP solo aceptan datos de terceros para usuarios conocidos. La solución es utilizar un formulario de cliente potencial personalizado creado en su MAP para asegurarse de que sea un usuario conocido.</p>
+    <p>Si los eventos de visualización no aparecen en la lista, es posible que la campaña no se haya configurado con un reproductor habilitado para la campaña. Con un navegador con las herramientas de desarrollo habilitadas, visite una página que contenga el video problemático y asegúrese de que el complemento Campaign realice ciertas llamadas HTTP.</p>
+    <p>Cuando se carga el reproductor, el complemento debe realizar una llamada al punto final de configuración de Campaign para obtener parámetros que determinan el comportamiento del complemento en función de la integración:</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="plugin config" src="/assets/images/campaign/admin/node18487-debug-config.png" /></figure>
+    <p>Si esta llamada no se encuentra en el tráfico de la red, significa que al reproductor no se le ha asignado una integración. Para obtener información sobre cómo hacer esto, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un jugador habilitado para campaña</a>.</p>
+    <p>Esta llamada se realiza mediante JSONP. Si la respuesta JSONP es un objeto vacío, entonces es posible que el código de inserción sea incorrecto y especifique el ID de cuenta incorrecto. Se devolverá un objeto vacío desde este punto final si la solicitud de configuración no incluye los parámetros de la URL de la cuenta y del jugador o si la cuenta especificada no se pudo recuperar de la base de datos específica de la campaña (lo más probable es que se haya especificado la cuenta incorrecta en la URL / incrustación código y no se encontró en la base de datos).</p>
+    <pre>
+/**/ tipo de jsonpCallback_78754666587 === 'función'  JSONPcallback_78754666587 ({});</pre>
+    <p>Si el objeto tiene un parámetro de ID, pero le falta un parámetro de integración, el usuario no ha configurado una integración con su herramienta de automatización de marketing y los eventos de visualización no se registrarán.</p>
+    <p>También tendrá problemas de sincronización de datos si se utilizó el código de inserción estándar (iframe) al publicar el reproductor habilitado para la campaña. Utilice el código de inserción avanzada (en la página) cuando publique su reproductor. El código de publicación de incrustación estándar (iframe) no funcionará ya que el complemento de la campaña se ejecutará dentro de un iframe y, por lo tanto, no podrá acceder a las cookies de la página principal o&nbsp;Parámetros de URL.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="connection">Problemas de conexión</h2>
+    <h3>El módulo de campaña dice que no puede configurar una integración de Eloqua</h3>
+    <p>Comprobar el<a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html#requirements"> requisitos para Eloqua</a>. Si está utilizando la función de seguridad de la lista blanca de IP, Campaign no podrá comunicarse con Eloqua a menos que incluya en la lista blanca las direcciones IP especificadas para permitir el tráfico de Campaign - Eloqua. Contacto <a href="https://supportportal.brightcove.com/s/login/?language=en_US/create">Soporte de Brightcove</a> para más información.</p>
+    <h3>La campaña dice que a mi actividad personalizada REST de Marketo le faltan campos, pero cuando miro en Marketo, puedo ver que todos los campos existen</h3>
+    <p>Hay algunas cosas para verificar:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Los nombres de los campos deben coincidir exactamente. «Evento 1" no es lo mismo que «Evento 1".</li>
+      <li>La actividad debe estar aprobada y no en estado de borrador.</li>
+      <li>Si eliminó la actividad personalizada y la volvió a crear sin configurar una nueva integración REST de Marketo, debe desconectar su integración anterior y crear una nueva. Buscamos la actividad personalizada y almacenamos su valor de ID para cada integración. Si la ID cambia eliminándola, no podremos recoger la nueva automáticamente.</li>
+      <li>Si recientemente se agregaron nuevos campos a la actividad, el cambio podría demorar hasta 24 horas en surtir efecto en el sistema de Marketo.</li>
+    </ol>
+  </section>
+</article>

@@ -1,0 +1,61 @@
+---
+title: Configuración del estado de privacidad para una descripción de video: Este tema describe cómo puede establecer el estado de privacidad de los videos que se distribuyen a YouTube mediante Brightcove Social.
+parent: General Information
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Cuando crea un destino de publicación de YouTube, una de las propiedades predeterminadas que se pueden establecer es la configuración de privacidad de YouTube. De forma predeterminada, hay tres opciones: <strong>Público</strong>, <strong>Privado</strong> y <strong>No incluido en la lista</strong>. Cuando los videos se publican en YouTube, la configuración de privacidad de todos los videos se establecerá en la configuración seleccionada.</p>
+    <p>Es posible que tenga casos en los que la configuración de privacidad de YouTube para cada video deba ser diferente. En este caso, se puede usar un campo personalizado asociado con el video para controlar la configuración de privacidad, lo que permite que cada video tenga una configuración de privacidad diferente. Cuando el video se publica en YouTube usando Brightcove Social, la configuración de privacidad se establecerá en el valor especificado por el valor del campo personalizado.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="customfield">Creando el campo personalizado</h2>
+    <aside class="bcls-aside bcls-aside--information">Nota: Los campos personalizados solo están disponibles para cuentas Professional y Enterprise.</aside>
+    <p>Comience agregando un campo personalizado a su cuenta, <strong>yt_privacy_status</strong> de tipo <strong>Lista</strong>. Para obtener información sobre cómo agregar campos personalizados a una cuenta, consulte <a href="/admin/creating-custom-metadata-fields.html">Creación de campos de metadatos personalizados</a>. La configuración del valor de este campo personalizado controla la configuración de privacidad del video de YouTube:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th scope="col"><strong>yt_privacy_status</strong></th>
+          <th scope="col">Configuración de privacidad de videos de YouTube</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>privado</td>
+          <td>privado</td>
+        </tr>
+        <tr>
+          <td>público</td>
+          <td>público</td>
+        </tr>
+        <tr>
+          <td>no incluido en listado</td>
+          <td>no incluido en listado</td>
+        </tr>
+        <tr>
+          <td>el valor es nulo o no establecido</td>
+          <td>público</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="BCL-aside">Consejo: Usando un <strong>Lista</strong> escriba para el campo personalizado, los usuarios podrán seleccionar el estado usando una lista desplegable en lugar de tener que escribir un valor en.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node15611-custom-field.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="assign">Asignar un valor al campo personalizado</h2>
+    <p>Una vez que se ha agregado el campo personalizado, el valor se puede establecer usando el módulo de Medios.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node15611-set-status.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="youtube">Editando el destino de publicación</h2>
+    <p>Edite el destino de publicación de YouTube y configure el <strong>Configuración de privacidad</strong> predeterminado a <strong>Utilice el campo personalizado YT_Privacy_Status</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node15611-visibility-default.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="publish">Publicando el video</h2>
+    <p>Cuando se selecciona un video y se selecciona el destino de YouTube, tendrá el estado de privacidad que se estableció mediante el campo personalizado.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node15611-video-visibility.png" /></figure>
+  </section>
+</article>

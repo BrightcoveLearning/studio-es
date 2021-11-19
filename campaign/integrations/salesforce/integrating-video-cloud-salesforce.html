@@ -1,0 +1,177 @@
+---
+title: Integración de Video Cloud con Salesforce
+parent: Salesforce 
+grandparent: Integrations
+---
+
+<article class="bcls-article">
+  <h1>Integración de Video Cloud con Salesforce</h1>
+  <summary>Este tema explica cómo configurar el módulo Campaña para usar con Salesforce.</summary>
+  <section class="bcls-section">
+    <p>El módulo Campaign permite a Video Cloud sincronizar los datos de visualización de Brightcove Players con Salesforce. Una vez en Salesforce, estos datos se pueden utilizar para la lógica de la campaña, informes y comunicaciones personalizadas. La integración del módulo Campaign con Salesforce consta de dos componentes principales:</p>
+    <ul>
+      <li>Un complemento de Brightcove Player para permitir el seguimiento de los datos de vistas de video</li>
+      <li>Un proceso de sincronización para enviar datos de seguimiento desde Video Cloud a Salesforce</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requirements">Requisitos</h2>
+    <p>Para utilizar el módulo Campaña con Salesforce, debe:</p>
+    <ul>
+      <li>Tener una cuenta de Video Cloud profesional o empresarial</li>
+      <li>Tener una cuenta de Salesforce, las cuentas de Sandbox de Salesforce no son compatibles</li>
+      <li>Habilite el módulo Campaña para su cuenta enviando la información requerida en la pantalla de presentación inicial que aparece cuando abre el módulo Campaña</li>
+      <li>Haga clic en el contrato de servicio la primera vez que utilice el módulo.</li>
+      <li>Tener una cuenta de Salesforce.com con el <strong>API habilitada</strong> permiso y pertenecer a un rol que le permite leer y escribir en el objeto de Salesforce al que eligen enviar datos de visualización</li>
+      <li>Utilice el código de publicación Advanced Embed (in-page) cuando publique su reproductor; El código de publicación de incrustación estándar (iframe) no funcionará ya que el complemento se ejecutará dentro de un iframe y, por lo tanto, no podrá acceder a los parámetros de URL de la página principal</li>
+      <li>Si va a utilizar la integración de Pardot, debe completar los pasos descritos en la <a href="../../../campaign/integrations/salesforce/creating-salesforce-object-pardot.html">Creación de un objeto de Salesforce personalizado para la integración de Pardot</a> tema.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="features">Características</h2>
+    <p>Algunas de las características clave de la integración de Video Cloud - Salesforce son:</p>
+    <ul>
+      <li><strong>Formato de datos</strong> - Los datos de visualización de Video Cloud se asignan a un objeto de Salesforce</li>
+      <li><strong>Transferencia de datos</strong> - Los datos de visualización se envían desde Video Cloud a Salesforce cada hora</li>
+      <li><strong>Formularios de clientes potenciales</strong> - Cree formularios de Salesforce que aparecerán automáticamente cuando los espectadores vean videos. Para obtener información, consulte <a href="/campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html">Creación de formularios de clientes potenciales personalizados para Salesforce</a>.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="setupconnection">Configurar la conexión</h2>
+    <p>Siga estos pasos para configurar la conexión entre Video Cloud y Salesforce.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Abra el módulo Campaña y haga clic en <strong>Conexiones de datos</strong> en la navegación de la izquierda.</li>
+      <li>Hacer clic <strong>Agregar nueva conexión</strong>.</li>
+      <li>Seleccione <strong>Fuerza de ventas</strong> como la integración. <aside class="bcls-aside bcls-aside--information">Nota: Las integraciones disponibles se basan en su suscripción a Video Cloud.</aside>
+      </li>
+      <li>(Opcional) Ingrese un <strong>Nombre de la conexión</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select salesforce" src="/assets/images/campaign/integrations/salesforce/node16123-select-salesforce.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>Conectar</strong>.</li>
+      <li>Hacer clic <strong>Conéctese a Salesforce</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connect to salesforce" src="/assets/images/campaign/integrations/salesforce/node16123-connect-to-salesforce.png" /></figure>
+      </li>
+      <li>En la pantalla de inicio de sesión que aparece, ingrese su Salesforce <strong>Nombre de usuario </strong>y <strong>Contraseña</strong>. Hacer clic <strong>Iniciar sesión</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Salesforce login" src="/assets/images/campaign/integrations/salesforce/node16123-salesforce-login.png" /></figure>
+      </li>
+      <li>Si el inicio de sesión es exitoso, se le pedirá que instale el <strong>Brightcove Video Connect para Salesforce</strong> aplicación. Hacer clic <strong>Permitir</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/node16123-bc-connect-salesforce.png" /></figure>
+      </li>
+    </ol>
+    <p>La conexión de Video Cloud a Salesforce ahora está configurada y lista para usar.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">Configurar la integración</h2>
+    <p>Una vez realizada la conexión de Video Cloud a Salesforce, puede configurar la integración. Hacer clic <strong>Información de usuario de Salesforce</strong> para ver información sobre la cuenta que se utilizó al configurar la integración.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connected options" src="/assets/images/campaign/integrations/salesforce/node16123-configure.png" /></figure>
+    <ol class="bcls-tasklist-restart">
+      <li>Para configurar la identificación del espectador, haga clic en el <strong>Configurar cómo se identifican los espectadores</strong> enlace y luego seleccione una opción: </li>
+      <ul>
+        <li><strong>Pardot</strong> - Pardot se utiliza para identificar a los espectadores. Ver el <a href="#pardot">Configurar una integración de Pardot</a> sección siguiente.</li>
+        <li><strong>Manual</strong> - Su personal de desarrollo será responsable de agregar lógica a <a href="#identify">identificar espectadores</a>.</li>
+      </ul>
+      <li>Seleccione un <strong>Tipo de mapeo</strong> y <a href="#configuredata">configurar el mapeo de datos</a>.</li>
+      <li>Por defecto, el <strong>Estado de conexión</strong> estarán <strong>Activado</strong>. La <strong>Estado de conexión</strong> determina si los datos de participación de video de Video Cloud se envían a Salesforce. </li>
+      <ul>
+        <li><strong>Activado</strong> - Los datos se recopilan y se enviarán a Salesforce.</li>
+        <li><strong>Discapacitado</strong> - No se recopilan datos (la integración está deshabilitada)</li>
+      </ul>
+      <li>Por defecto, <strong>Seguimiento de datos para espectadores desconocidos</strong> estarán <strong>Discapacitado</strong>. Esta configuración determina si los datos de participación de video se guardan en Video Cloud cuando se desconoce el espectador. Solo se envían a Salesforce los datos de los espectadores conocidos.
+        <ul>
+          <li><strong>Activado</strong> - Los datos de todos los espectadores se recopilan y guardan en Video Cloud</li>
+          <li><strong>Discapacitado</strong> - Los datos de espectadores desconocidos no se guardan en Video Cloud</li>
+        </ul>
+      </li>
+      <li>Seleccione una política de retención de datos. La política de retención de datos determina cuánto tiempo se conservarán los datos de visualización y los datos del formulario de cliente potencial (si utiliza un formulario de cliente potencial de la campaña) en su cuenta de Video Cloud. Retener datos en Video Cloud le permite recuperarse de sincronizaciones interrumpidas. Además, Campaign continuará reintentando eventos que no se sincronizan (generalmente porque el espectador no es un contacto conocido en el momento en que vio un video) hasta que el evento supere el período de retención de datos. <strong>Debe ajustar la configuración de retención de acuerdo con su política de privacidad.</strong> - no es necesario conservar ningún dato de usuario en Video Cloud. Los datos se eliminarán después del período de retención de datos.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="data retention options" src="/assets/images/campaign/integrations/salesforce/node16123-data-retention-options.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="pardot">Configurar una integración de Pardot</h2>
+    <p>Una vez que se haya establecido la conexión de Brightcove Campaign a Salesforce, puede optar por utilizar Pardot para identificar a los espectadores. Esta sección cubre los pasos para usar Pardot para identificar a los espectadores.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: Antes de configurar la integración de Pardot, debe completar los pasos descritos en la <a href="/campaign/integrations/salesforce/creating-salesforce-object-pardot.html">Creación de un objeto de Salesforce personalizado para la integración de Pardot</a> tema.</aside> <aside class="bcls-aside bcls-aside--information">Nota: A partir del 15 de febrero de 2021, el uso de un inicio de sesión de Pardot ya no es válido.</aside>
+
+    <ol class="bcls-tasklist">
+      <li>Haga clic en el <strong>Configurar cómo se identifican los espectadores</strong> Enlace.</li>
+      <li>Si se le presentan 2 opciones de inicio de sesión, seleccione <strong>Utilice el inicio de sesión de Salesforce</strong>.</li>
+    </ol>
+    <h3 id="pardot-api-key">Obtenga el ID de la unidad de negocio de Pardot</h3>
+    <p>Para obtener el valor del campo ID de unidad de negocio de Pardot, siga estos pasos.</p>
+    <ol  class="bcls-tasklist">
+      <li>Inicie sesión en su cuenta de Salesforce.</li>
+      <li> Haga clic en el icono de rueda dentada (<img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/pardot-gear-icon.png" />) y luego <strong>Configuración</strong>.</li>
+      <li>En la navegación de la izquierda, en el <strong>Búsqueda rápida</strong> caja, busque <strong>Pardot</strong> , luego haga clic en <strong>Configuración de la cuenta de Pardot</strong>.</li>
+      <li> Localizar el <strong> ID de unidad de negocio</strong> campo. Ingrese el valor en el <strong>ID de unidad de negocio de Pardot</strong> campo en Campaña.</li>
+    </ol>
+    <h3 id="tracking-ids">Obtenga los ID de seguimiento</h3>
+    <p>Para obtener el valor de la <strong>Seguimiento de piAld</strong> y <strong>Seguimiento de PiCld</strong> campos, siga estos pasos.</p>
+    <ol class="bcls-tasklist">
+      <li>Utilice la navegación izquierda para abrir el <strong>Márketing</strong> página.</li>
+      <li>Hacer clic <strong>Campañas</strong> en la navegación superior.</li>
+      <li> Haga clic en el nombre de una campaña (o haga clic en <strong>Nuevo</strong> y crear una campaña si no hay campañas). <aside class="bcls-aside bcls-aside--information">Nota: No importa qué campaña seleccione, Brightcove Campaign necesita ambos valores para que la cookie identifique al espectador.</aside>
+      </li>
+      <li> Hacer clic <strong>Ver código de seguimiento</strong>. La <strong>piAId</strong> y <strong>piCId</strong> Se mostrarán los valores.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/pardot-tracking-code.png" /></figure>
+      </li>
+      <li>Copie los valores y péguelos en sus respectivos campos. <aside class="bcls-aside bcls-aside--information">Nota: Brightcove Campaign no valida los campos PiAid y PicID, pero si se introducen valores erróneos, Brightcove Campaign no podrá identificar al espectador.</aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="salesforce integration type" src="/assets/images/campaign/integrations/salesforce/pardot-credentials.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>Conectarse a Pardot</strong>.</li>
+    </ol>
+    <p>Normalmente, cuando utilice el tipo de integración de Pardot, seleccionará el <strong>Avanzado</strong> Tipo de mapeo y luego mapee los campos de vista al <a href="/campaign/integrations/salesforce/creating-salesforce-object-pardot.html">Objeto personalizado de Salesforce</a> tu creaste.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configuredata">Configurar el mapeo de datos</h2>
+    <p>La asignación de datos determina cómo se asignan los datos de video a los campos en un objeto de Salesforce. Por defecto, la integración se configurará utilizando <strong>Sencillo</strong> mapeo que mapea algunos datos de video al <strong>Tarea</strong> objeto en Salesforce.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/node16123-simple-mapping.png" /></figure>
+    <p>Siga estos pasos para personalizar el mapeo de datos.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Haga clic en el <strong>Configurar cómo se asignan los datos a los campos en un objeto de Salesforce</strong> o haga clic en el <strong>Mapeos</strong> Enlace.</li>
+      <li>Para Tipo de <strong>asignación</strong>, seleccione <strong>Avanzado</strong>.</li>
+      <li>En el <strong>Objeto de Salesforce</strong> lista desplegable, seleccione un objeto para asignar los datos de video.</li>
+      <li>Mapear el apropiado <strong>Ver campo</strong> a los campos de Salesforce.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/node16123-adv-mapping.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>Ahorrar</strong> para guardar los cambios.</li>
+    </ol>
+    <p>Para eliminar la integración con Salesforce, haga clic en <strong>Desconectar</strong>. El módulo Campaña admite múltiples conexiones a plataformas de marketing. Hacer clic <strong>Agregar nueva conexión</strong> para configurar integraciones adicionales.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">Creación de un reproductor habilitado para campaña</h2>
+    <p>Los datos de participación de video solo se enviarán a Salesforce cuando esté utilizando un reproductor de video habilitado para Campaign. Para obtener información sobre cómo crear un Brightcove Player habilitado para la campaña, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un jugador habilitado para campaña</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="trackingid2">Pasando una identificación de seguimiento</h2>
+    <p>El módulo Campaña admite la capacidad de pasar un valor de ID de seguimiento a Salesforce. El ID de seguimiento se puede utilizar para realizar un seguimiento de un ID de campaña, por ejemplo. El ID de seguimiento se puede agregar a la URL que muestra el reproductor habilitado para la campaña o agregarse al código de inserción del reproductor.</p>
+    <ul>
+      <li>Ejemplo: Anexado a la URL</li>
+    </ul>
+    <pre>
+  http://www.myurl.com/video.html?<strong>bctrackingid = 12345</strong></pre>
+    <ul>
+      <li>Ejemplo: Agregado al código de inserción del jugador</li>
+    </ul>
+    <pre>
+  &lt;video data-video-id = "6033402539001" data-account = "1486906377" data-player = "default" data-embed = "default" data-application-id class = "video-js" <strong>data-bc-trackingid = "12345"</strong> control S&gt;&lt; /video&gt;&lt; script src = "// players.brightcove.net/1486906377/default_default/index.min.js"&gt;&lt; /texto&gt;</pre>
+    <p>La campaña luego pasará el valor a Salesforce como otro campo sincronizado.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="identify">Identificación de espectadores</h2>
+    <p>Si su conexión de Salesforce está configurada para usar <strong>Manual</strong> identificación del espectador, usted decide identificar a los espectadores. Para que se produzca el seguimiento del espectador, la identificación de usuario debe pasarse como un parámetro de URL en la página que muestra el video. Se admiten dos parámetros de URL:</p>
+    <ul>
+      <li><strong>bcemail</strong> - Para pasar la dirección de correo electrónico del espectador (por ejemplo, consulte <a href="/campaign/general/how-campaign-module-identifies-viewers.html#email">este tema</a>)</li>
+      <li><strong>bcsfid</strong> - Para pasar el ID de Salesforce del espectador</li>
+    </ul>
+    <p>En este escenario, las páginas de destino de los videos se generarían con una URL que se generó de manera única con fines de seguimiento. El módulo Campaña utilizará el parámetro de URL para buscar el usuario del lado del servidor y sincronizar los datos de visualización.</p>
+    <p>Para que el reproductor / complemento lea los parámetros de URL, se debe usar el código de publicación de inserción avanzada (en la página). El código de publicación de incrustación estándar (iframe) no funcionará ya que el complemento se ejecutará dentro de un iframe y, por lo tanto, no podrá acceder a la URL de la página principal que tiene el parámetro.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: De forma predeterminada, la tabla de contactos y clientes potenciales se utiliza para buscar el ID de Salesforce de un espectador. La campaña se puede configurar para utilizar en su lugar la tabla Cuenta en Salesforce. Para habilitar esto, por favor <a href="https://supportportal.brightcove.com">póngase en contacto con el soporte de Brightcove</a> y solicitar, por ejemplo: «Configure mi cuenta de Campaign para que use la tabla Cuenta de Salesforce cuando busque los ID de visor. «</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sfdata">Ver datos de video en Salesforce</h2>
+    <p>A medida que los videos se ven en reproductores habilitados para Campaign, los datos de visualización de videos se sincronizarán con Salesforce. Si el <strong>Sencillo</strong> Se seleccionó la opción de mapeo de datos, los datos de la vista de video aparecerán como una <strong>Tarea</strong> entrada dentro de Salesforce. Si el <strong>Avanzado</strong> Se utilizó la opción de mapeo de datos, los datos de visualización aparecerán como parte del objeto de Salesforce que estaba seleccionando cuando se configuró el mapeo. En el siguiente ejemplo, <strong>Avanzado</strong> Se utilizó el mapeo de datos y los campos de video se asignaron a un <strong>Vista de video BC</strong> Objeto de Salesforce.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="task record" src="/assets/images/campaign/integrations/salesforce/salesforce-bc-video-view-record.png" /></figure>
+    <p>Al hacer clic en el nombre del video, se mostrará información detallada.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="task detail" src="/assets/images/campaign/integrations/salesforce/salesforce-bc-video-view-detail.png" /></figure>
+  </section>
+</article>

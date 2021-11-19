@@ -1,0 +1,32 @@
+---
+title: Cómo se calcula la puntuación de referencia de video
+parent: General Information
+description: In this topic you will learn how about the Video Benchmark Score and learn how it is calculated.
+---
+
+<article class="bcls-article">
+  <h1>Cómo se calcula la puntuación de referencia de video</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>El Video Benchmark Score (VBS) examina dos métricas de video clave:</p>
+    <ul>
+      <li>Tasa de reproducción</li>
+      <li>Porcentaje medio visto</li>
+    </ul>
+    <p>La tasa de reproducción se calcula dividiendo la cantidad de vistas de video por la cantidad de veces que se cargó el video (vistas de video / cargas de video). Si tiene una página con un video y esa página se ve 10 veces y los espectadores miran el video en 4 de esas visitas, el video tendrá una tasa de reproducción del 40%.  </p>
+    <p>El porcentaje promedio visto mide el porcentaje de un video que se ve realmente. Por ejemplo, dos espectadores ven un video de 60 segundos. El primer espectador mira durante 5 segundos y el segundo espectador mira durante 25 segundos. En total, estos espectadores han acumulado 30 segundos de tiempo de visualización, o un promedio de 15 segundos. El porcentaje medio visto sería del 25% (5 segundos + 25 segundos) / (60 segundos * 2 espectadores).</p>
+    <p>El VBS comienza comparando la tasa de reproducción y el porcentaje promedio visto de su video con todos los videos con el mismo tipo de contenido de video (descripción general del producto, detalles del producto, etc.). Luego determinamos dónde se ubica su video dentro de esta agrupación: está en el percentil 10, percentil 20, etc. Luego se promedian estos dos percentiles. Entonces, si su video está en el percentil 60 para la tasa de reproducción y el percentil 70 en el porcentaje promedio visto, su VBS tendría 65.</p>
+    <p>Hay una ponderación adicional a la baja de la VBS si la Tasa de reproducción o el Porcentaje promedio visto está en o por debajo del percentil 30. Esto es para enfatizar el bajo desempeño y la necesidad de mejorar.</p>
+    <p>La fórmula para la ponderación a la baja es la siguiente, escrita en pseudocódigo: </p>
+    <pre><code translate="No">
+If either rate is &lt;=30
+   lower_rate = smaller of the two rates
+   multiple = (1.1-(1/(lower_rate/10)))
+   If multiple &lt; .35
+     multiple = 0.35
+     score = (start_rate + percentage_watched)/2)*multiple
+   end if
+end if
+    </code></pre>
+  </section>
+</article>

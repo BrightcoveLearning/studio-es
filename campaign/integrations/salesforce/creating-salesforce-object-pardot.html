@@ -1,0 +1,130 @@
+---
+title: Descripción de la creación de un objeto de Salesforce personalizado para la integración de Pardot: En este tema, aprenderá a crear el objeto personalizado de Salesforce que se requiere cuando se usa la integración de Pardot.
+parent: Salesforce 
+grandparent: Integrations
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Para enviar datos a la plataforma Pardot, es necesario que envíe datos de visualización a nivel de contacto a su Salesforce CRM a través de un objeto personalizado. A continuación, puede utilizar las capacidades nativas de Pardot y Salesforce CRM para incorporar el nuevo objeto personalizado en Pardot.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requirements">Requisitos</h2>
+    <p>Para utilizar la integración de Salesforce - Pardot, debe:</p>
+    <ul>
+      <li>Debe tener Salesforce y Pardot Connector instalados y configurados. Comuníquese con su administrador de cuentas de Pardot si necesita ayuda. </li>
+      <li>Debe tener una asignación de objetos personalizados disponible en su cuenta de Pardot. Póngase en contacto con su administrador de cuentas de Salesforce si necesita comprar asignaciones de objetos adicionales. </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sf-objects">Objetos de Salesforce</h2>
+    <p>Los objetos son tablas de bases de datos que le permiten almacenar datos específicos de la organización en Salesforce. Hay dos tipos de objetos en Salesforce:</p>
+    <ul>
+      <li> <strong>Objetos estándar</strong> - Los objetos proporcionados por salesforce.com se denominan objetos estándar. Ejemplos de objetos estándar son Cuentas, Contactos, Oportunidades, Clientes potenciales, Productos, Campañas, Casos, Usuarios, Contratos, Informes y Paneles.</li>
+      <li><strong>Objeto personalizado</strong> - Los objetos creados por los usuarios se denominan objetos personalizados. Los objetos personalizados almacenan información que es única e importante para su organización y proporcionan una estructura para compartir datos. Los datos de visualización de video se pueden enviar desde Brightcove Players a Salesforce utilizando objetos personalizados. Se pueden agregar al objeto diferentes campos con diferentes tipos de datos. Una relación de búsqueda esencialmente vincula dos objetos para que pueda "buscar" un objeto de los elementos relacionados en otro objeto. Podemos crear una relación de búsqueda entre el objeto personalizado y un Contacto.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="object-creation">Creando un objeto personalizado</h2>
+    <p>Los contactos son los usuarios cuyo comportamiento desea rastrear o mantener registros en Salesforce. Debe haber una relación entre el objeto personalizado que se crea a continuación y el objeto de contacto en Salesforce para obtener datos relacionados con el usuario correcto. Para crear este objeto personalizado, siga estos pasos:</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: Las imágenes de pantalla que aparecen a continuación se tomaron utilizando la interfaz Salesforce Lightning.</aside>
+    <ol class="bcls-tasklist">
+      <li>Inicie sesión en Salesforce.</li>
+      <li>Haga clic en el ícono de ajustes en la esquina superior derecha para abrir el <strong>Configuración</strong> menú.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/sf-pardot-setup-menu.png" /></figure>
+      </li>
+      <li>En la navegación de la izquierda, en el <strong>HERRAMIENTAS DE PLATAFORMA</strong> sección, haga clic en <strong>Objetos y campos&gt; Administrador de objetos</strong>.</li>
+      <li>En la cima de la <strong>Administrador de objetos</strong> página, haga clic en <strong>Crear&gt; Objeto personalizado</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/sf-pardot-create-custom-object.png" /></figure>
+      </li>
+      <li>Entrar a <strong>Etiqueta</strong>. Brightcove recomienda usar <code translate="No">BC Video View</code>. </li>
+      <li>Entrar a <strong>Etiqueta plural</strong>. Brightcove recomienda usar <code translate="No">BC Video Views</code>.</li>
+      <li>Ingrese un <strong>Nombre del objeto</strong>. Se generará un valor inicial basado en la <strong>Etiqueta</strong> valor.</li>
+      <li>Entrar a <strong>Nombre de registro</strong>. Se generará un valor inicial basado en la <strong>Etiqueta</strong> valor. Confirmar la <strong>Tipo de datos</strong> es <strong>Texto</strong>.</li>
+      <li>Seleccione cualquiera <strong>Características opcionales</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/sf-pardot-new-custom-object.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>Ahorrar</strong>.</li>
+      <li>Sobre el <strong>Detalle de objeto personalizado</strong> página, busque el <strong>Relaciones y campos personalizados</strong> sección.</li>
+      <li>Hacer clic <strong>Nuevo</strong>.</li>
+      <li>Cree los siguientes campos personalizados. Para todos los campos, establezca <strong>Tipo de datos</strong> a <strong>Texto</strong> y mantenga las opciones predeterminadas de seguridad a nivel de campo y diseño de página.
+        <table width="92%" class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th width="40%">Etiqueta de campo</th>
+              <th width="20%"><strong>Largo</strong></th>
+              <th width="40%"><strong>Nombre del campo</strong></th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>ID de video</td>
+              <td valign="top"><p>200</p></td>
+              <td valign="top"><p>Video_ID</p></td>
+            </tr>
+            <tr>
+              <td>ID de jugador</td>
+              <td valign="top"><p>200</p></td>
+              <td valign="top"><p>Player_ID</p></td>
+            </tr>
+            <tr>
+              <td>URL de la página</td>
+              <td valign="top">200</td>
+              <td valign="top">URL de la página</td>
+            </tr>
+            <tr>
+              <td>Sello de tiempo</td>
+              <td valign="top">200</td>
+              <td valign="top">Time_Stamp</td>
+            </tr>
+            <tr>
+              <td>Tiempo total visualizado</td>
+              <td valign="top">200</td>
+              <td valign="top">Total_Time_Watched</td>
+            </tr>
+            <tr>
+              <td>Porcentaje visualizado</td>
+              <td valign="top">200</td>
+              <td valign="top">Porcentaje_ observado</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>Confirme que se hayan creado todos los campos.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/sf-pardot-all-custom-fields.png" /></figure>
+      </li>
+      <li>En el <strong>Relaciones y campos personalizados</strong> sección, haga clic en <strong>Nuevo</strong>.</li>
+      <li>Seleccione <strong>Relación de búsqueda</strong> y haga clic en <strong>próximo</strong>.</li>
+      <li>En el <strong>Relacionado con</strong> desplegable, seleccione <strong>Contacto</strong>. Hacer clic <strong>próximo</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/sf-pardot-related-to.png" /></figure>
+        <p>Esto asociará el objeto personalizado BC Video View con un contacto en Salesforce.</p>
+      </li>
+      <li>Para el nombre del <strong>campo</strong>, escriba <strong>Contacto</strong>. Hacer clic <strong>próximo</strong>.</li>
+      <li>Mantenga las opciones de seguridad predeterminadas a nivel de campo. Hacer clic <strong>próximo</strong>.</li>
+      <li>En la página del campo de referencia (paso 5), haga clic en <strong>próximo</strong>.</li>
+      <li>En la página de listas personalizadas relacionadas (paso 6), haga clic en <strong>Ahorrar</strong>.</li>
+    </ol>
+    <p>Normalmente, cuando utilice el tipo de integración de Pardot, seleccionará el <strong>Avanzado</strong> Asignación Escriba Brightcove Campaign y luego asigne los campos de vista al objeto personalizado de Salesforce que creó.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="pardot-data">Ver datos en Pardot</h2>
+    <p>Una vez sincronizados los datos, puede ver los objetos y los datos en Pardot.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>En la barra de navegación de la izquierda, coloca el cursor sobre <strong>Administración</strong> y haga clic en <strong>Objetos personalizados</strong>. </li>
+      <li>Hacer clic <strong>+ Agregar objeto personalizado</strong>.</li>
+      <li>Selecciona el <strong>Vista de video BC</strong> objeto personalizado.</li>
+      <li>En la barra de navegación de la izquierda, coloca el cursor sobre <strong>Perspectivas</strong> y haga clic en <strong>Lista de posibles clientes</strong>. Se mostrarán los contactos que se han creado en Salesforce.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/sf-pardot-prospect-list.png" /></figure>
+      </li>
+      <li>Haga clic en el nombre de un cliente potencial.</li>
+      <li>Haga clic en el <strong>Objetos relacionados</strong> pestaña. Confirme que aparecen los datos del objeto personalizado (estos son los mismos datos que están en Salesforce).
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/sf-pardot-related-objects.png" /></figure>
+      </li>
+      <li>Haga clic en el nombre del video para ver los detalles.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/sf-pardot-video-details.png" /></figure>
+      </li>
+    </ol>
+  </section>
+</article>

@@ -1,0 +1,73 @@
+---
+title: Cómo el módulo de campaña identifica a los espectadores descripción: En este tema, aprenderá sobre las diferentes formas en que el módulo Campaña intenta identificar a los espectadores.
+parent: General Information
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>El módulo Campaña intenta identificar a los espectadores mediante una variedad de fuentes de datos:</p>
+    <ul>
+      <li><a href="#cookie">Cookie de campaña</a></li>
+      <li><a href="#eloqua">GUID de Oracle Eloqua</a></li>
+      <li><a href="#marketo">Galleta Marketo Munchkin</a></li>
+      <li><a href="#sfurl">Parámetro de URL de ID de Salesforce</a></li>
+      <li><a href="#sfid">Atributo HTML de ID de Salesforce</a></li>
+      <li><a href="#hubspot">Cookie de HubSpot UTK</a></li>
+      <li><a href="#email">Parámetro de correo electrónico</a></li>
+    </ul>
+    <p>El módulo Campaña se regirá por la configuración del navegador del usuario con respecto a <a href="#dnt">No rastrear</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: Al utilizar una integración personalizada, usted es responsable de identificar al espectador. Para obtener información, consulte <a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">Creación de integraciones personalizadas con el módulo Campaign</a>.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="cookie">Cookie de campaña</h2>
+    <p>Jugadores habilitados para campaña&nbsp;establecerá una cookie de terceros y la utilizará para asociar los datos de visualización con el mismo usuario si el seguimiento de campañas está habilitado para su cuenta y el jugador lo está utilizando. Si un usuario alguna vez llena un formulario de cliente potencial de Campaign, Campaign creará un perfil para ese espectador y todos sus datos de visualización se asociarán con ese perfil.</p>
+    <p>La cookie que establecerá Campaign se llama <strong>_bc_uuid</strong>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="eloqua">GUID de Oracle Eloqua</h2>
+    <p>Los jugadores habilitados para la campaña con una integración de Eloqua invocarán las API de Eloqua para obtener la identificación del visitante, frecuentemente conocida como la GUID de Eloqua. Esta ID se captura en los datos de visualización del módulo Campaign y se utiliza para sincronizar los datos de visualización con Eloqua.</p>
+    <p>Eloqua utiliza su propio conjunto de cookies y cuando se configura un Brightcove Player con una integración de Eloqua, Campaign captura el GUID en la cookie de Eloqua y se comunica con Eloqua en el servidor para intentar averiguar quién es el usuario.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="marketo">Galleta Marketo Munchkin</h2>
+    <p>Los jugadores habilitados para campañas con una integración de Marketo se referirán a la cookie de Munchkin (_mkto_trk) que se crea en el navegador del usuario. Este valor se captura en los datos de visualización del módulo Campaign y se utiliza para sincronizar los datos de visualización con Marketo.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sfurl">Parámetro de URL de ID de Salesforce</h2>
+    <p>Para las integraciones de Salesforce, el complemento puede intentar identificar al espectador verificando la URL del parámetro llamado <strong>bcsfid</strong>. Esto permite a los usuarios de Salesforce enviar campañas de correo electrónico con una URL de página de destino que se genera de forma única con fines de seguimiento al proporcionar el ID de Salesforce del cliente potencial en la URL.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sfid">Atributo HTML de ID de Salesforce</h2>
+    <p>Para las integraciones de Salesforce, si el complemento no puede identificar al espectador al verificar el <strong>bcsfid</strong> Parámetro de URL, buscará el <strong>data-bc-sfid</strong> atributo en el <code translate="No">&lt;video&gt; </code> elemento del código de publicación incrustado HTML para el video y use su valor como el ID de Salesforce del cliente potencial si está configurado.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="hubspot">Cookie de HubSpot UTK</h2>
+    <p>Para las integraciones de HubSpot, el complemento inyecta el código de seguimiento JavaScript de HubSpot que suelta un <strong>hubspotutk</strong> cookie en el navegador del usuario. Esta cookie se utiliza para realizar un seguimiento de la identidad de un visitante dentro de HubSpot y asociar los datos de visualización de Brightcove con un contacto. Si el usuario ya tiene un <strong>hubspotutk</strong> cookie cuando se carga el reproductor, Campaign hará una solicitud de API a HubSpot y preguntará si el valor de la cookie corresponde a un contacto conocido, y si es así, Campaign asociará los datos de visualización con ese usuario.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="email">Parámetro de correo electrónico</h2>
+    <p>Al módulo Campaña también se le puede decir quién es el usuario a través de una dirección de correo electrónico. La campaña buscará un parámetro de URL titulado <strong>bcemail</strong>. Esto es útil con campañas de correo electrónico con una URL de página de destino que se ha generado de forma única con fines de seguimiento. Si vas a enviar un correo electrónico por lotes a una lista, ya sea desde una plataforma de marketing o desde un servicio de correo electrónico de terceros como MailChimp, deberás configurar el parámetro de correo electrónico en la configuración de la plataforma de envío para actualizar dinámicamente el enlace en el que hacen clic los usuarios. Luego, Campaign usará este parámetro de correo electrónico para buscar el lado del servidor del usuario y sincronizar los datos de visualización. El parámetro de correo electrónico también se puede incrustar con el código de incrustación del reproductor.</p>
+    <h3>Ejemplo de URL</h3>
+    <code translate="No">http://go.brightcove.com/be-video-hero-cust?<strong>bcemail</strong>=msmith@brightcove.com </code>
+    <p>Si el complemento Campaign no encuentra una dirección de correo electrónico a través del <strong>bcemail</strong> Parámetro de URL, luego verificará el <code translate="No">&lt;video&gt; </code> elemento del código de publicación HTML incrustado. Buscará el <strong>data-bc-email</strong> atributo en el elemento de video y use su valor como la dirección de correo electrónico si está configurado.</p>
+    <h3>Ejemplo de incrustación</h3>
+    <pre>
+&lt;video id = "player" data-account = "0000000001" data-player = "predeterminado" data-video-id = "0000000002" <strong> data-bc-email</strong>= "msmith@brightcove.com" class = controles "video-js"&gt;&lt; /video&gt;
+</pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="dnt">No rastrear</h2>
+    <p>Los jugadores habilitados para la campaña cumplen&nbsp;por la configuración del navegador de un espectador con respecto a No rastrear (DNT) y no usará ni establecerá su cookie normal si ve que No rastrear está habilitado. También se puede indicar al complemento del reproductor que nunca realice un seguimiento si un cliente de Video Cloud desea desactivarlo para todos sus espectadores o usuario por usuario. Esto se hace usando el código de inserción en la página y configurando el <code translate="No">data-do-not-track </code> a un valor de 1.</p>
+    <pre>
+&lt;video-js data-video-id = "9240259371001" cuenta-de-datos = "3491906377" <strong>data-do-not-track = "1"</strong> data-player = "7dccc39d-0e2d-4b27-bea9-af44b2166148" data-embed = "default" class = "video-js" controles&gt;&lt; / video-js&gt;&lt; script src = "https://players.brightcove.net/1486906377/7dccc39d-0e2d-4b27-bea9-af44b2166148_default/index.min.js"&gt;&lt; /texto&gt;
+</pre>
+    <h3>Oracle Eloqua</h3>
+    <p>Eloqua ha declarado que no procesan (básicamente ignoran), no rastrean las solicitudes y devolverán un GUID de Eloqua independientemente. Actualmente, Campaign no está manejando esto de ninguna manera especial, es decir, no usa la API de JavaScript de Eloqua cuando Campaign ve DNT. Eloqua también tiene soporte para un modo estricto que satisface los requisitos de privacidad de la UE. Cuando esto está habilitado para una cuenta de Eloqua, los usuarios finales no son rastreados a menos que se inscriban a través de un formulario.</p>
+    <h3>Marketo</h3>
+    <p>Marketo admite DNT, pero deja que el cliente lo active o desactive para su cuenta particular. Para obtener más información, consulte el documento de Marketo <a href="https://docs.marketo.com/pages/releaseview.action?pageId=6095047">Editar la configuración de compatibilidad del navegador "No rastrear"</a>.</p>
+    <h3>HubSpot</h3>
+    <p>HubSpot respeta DNT según <a href="https://knowledge.hubspot.com/getting-started-with-hubspot-v2/how-to-enable-a-privacy-policy-alert-if-you-are-doing-business-in-europe">este documento</a>.</p>
+  </section>
+</article>

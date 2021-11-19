@@ -1,0 +1,70 @@
+---
+title: Visualización de videos publicados en la descripción de las redes sociales: En este tema, aprenderá a monitorear el estado de los videos que se han publicado, o que están programados para publicarse, en sus cuentas de redes sociales mediante Brightcove Social.
+parent: General Information
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5018179071001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    <p>Cuando abre Brightcove Social, o hace clic en <strong>Publicado</strong> en el panel de navegación de la izquierda, aparecerá una lista de videos publicados con Brightcove Social.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16343-publish-streams.png" /></figure>
+    <p>Tenga en cuenta que si se utiliza la sincronización automática y las reglas de sincronización están configuradas para actualizar los metadatos de video en la plataforma social, es posible que aparezcan en la lista varias entradas para el mismo video. Por ejemplo, aparecerá una entrada cuando el video se sincronice por primera vez y luego aparecerán entradas adicionales si los metadatos del video se actualizan y sincronizan con una plataforma social.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="view">Ver el estado de la publicación</h2>
+    <p>El cuerpo de la página enumerará todos los videos que se han publicado en un destino de redes sociales. Para cada video, se mostrará lo siguiente:</p>
+    <ul>
+      <li>Estado</li>
+      <li>Hora del evento</li>
+      <li>Miniatura de video</li>
+      <li>Nombre del video y breve descripción</li>
+      <li>Enlace a la cuenta de redes sociales y al sitio donde se publicó el video</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="filter">Filtrar la lista publicada</h2>
+    <p>La parte superior de la página ofrece la opción de filtrar la lista según el estado de publicación o el destino. Están disponibles los siguientes estados de publicación:</p>
+    <ul>
+      <li><strong>Todos los tipos de estado</strong> - Muestra todos los tipos de estado</li>
+      <li><strong>Eliminado</strong> - Muestra videos que se han publicado y eliminado de una plataforma social</li>
+      <li><strong>Error</strong> - Muestra publicaciones que resultaron en un error</li>
+      <li><strong>Oculto</strong> - Muestra publicaciones donde el video es privado, no listado o vencido en las redes sociales</li>
+      <li><strong>Procesando</strong> - Muestra videos que están en proceso de ser publicados en una plataforma social.</li>
+      <li><strong>Publicado</strong> - Muestra videos que se publicaron con éxito en una plataforma social</li>
+      <li><strong>Programado</strong> - Muestra videos que están programados para ser publicados en una plataforma social.</li>
+      <li><strong>Sincronizado</strong> - Muestra videos que se sincronizaron con Auto Sync</li>
+      <li><strong>Abandonado</strong> - Muestra videos que se sincronizaron automáticamente con una plataforma social y luego:
+        <ul>
+          <li>Se eliminó de Video Cloud y el video se dejó en la plataforma social debido a que Auto Sync se configuró para no realizar ninguna acción cuando se elimina un video</li>
+          <li>Sin etiquetar para que ya no coincida con la sincronización automática, pero se deja en la plataforma social debido a que la sincronización automática está configurada para no realizar ninguna acción cuando cambian los metadatos del video.</li>
+        </ul>
+      </li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16343-filter-streams.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="search">Buscando videos</h2>
+    <p>El campo de búsqueda se puede utilizar para buscar los videos en su cuenta. Al buscar, se buscan los siguientes campos:</p>
+    <ul>
+      <li>ID de video</li>
+      <li>Nombre</li>
+      <li>Breve descripción</li>
+      <li>Descripción larga</li>
+      <li>Etiquetas</li>
+      <li>Identificación de referencia</li>
+      <li>Campos Personalizados</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="errors">Errores de publicación comunes</h2>
+    <p>A continuación se muestra una lista de errores de publicación comunes que se pueden encontrar.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>YouTube - <strong>Subir rechazo: El video era un duplicado</strong>. YouTube no permite que se cargue el mismo video (según se determina comparando las huellas digitales del binario de video cargado, no mediante la identificación de video de Video Cloud) en un canal más de una vez y falla los intentos después del primero con este error.</li>
+      <li><strong>NO_RENDITION_FOR_SOCIAL_PLATFORM_ERROR</strong>. El módulo Social no pudo encontrar una reproducción de video de Video Cloud que cumpla con los requisitos de video de la plataforma. La causa más común de estos son, con mucho, los editores con sincronizaciones automáticas de Twitter que etiquetan videos que duran más de 140 segundos (la duración máxima permitida de Twitter).</li>
+      <li>YouTube - <strong>Los metadatos de la solicitud especifican un título de video no válido o vacío (como parte de un mensaje de error más largo)</strong>. YouTube tiene una longitud máxima de título de 100 caracteres, por lo que al usar la sincronización automática, si los metadatos de video de Video Cloud que se asignan al título de YouTube son demasiado largos, se producirá este error.</li>
+    </ol>
+  </section>
+</article>

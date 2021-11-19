@@ -1,0 +1,56 @@
+---
+title: Revisión de la descripción de Social Engagement Analytics: En este tema, aprenderá a monitorear el desempeño de participación social de sus videos usando Brightcove Social.
+parent: Analytics
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Brightcove Social proporciona varios informes que se pueden usar para monitorear el rendimiento de sus videos que se publican en sus cuentas de redes sociales:</p>
+    <ul>
+      <li><strong>Tablero</strong> - Proporciona una descripción general de alto nivel del rendimiento de video en cuentas de redes sociales. Para obtener información, consulte <a href="/social/reviewing-social-analytics.html">Revisión de análisis social</a>.</li>
+      <li><strong>Vistas sociales</strong> - Proporciona una descripción general de la vista social para videos compartidos en cuentas de redes sociales. Para obtener información, consulte <a href="/social/reviewing-social-views-analytics.html">Revisión de análisis de vistas sociales</a>.</li>
+      <li><strong>Compromiso social</strong> - Proporciona una descripción general de la participación social (Me gusta, Compartir, Retweets, etc.) para videos compartidos en cuentas de redes sociales. Cubierto en este tema.</li>
+    </ul>
+    <p>Inicia por <a href="reviewing-social-analytics.html#timespan">seleccionando un lapso de tiempo</a> para el informe. Para ver el Informe de análisis de interacción social, haga clic en el <strong>Compromiso social</strong> pestaña en la parte superior de la página.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report tabs" src="/assets/images/social/node16680-report-tabs.png" /></figure>
+    <p>El Informe de análisis de interacción social está organizado en las siguientes secciones:</p>
+    <ul>
+      <li><a href="#socialengagement">Compromiso social</a></li>
+      <li><a href="#viewsbyvideo">Compromiso social por video</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="socialviews">Compromiso social</h2>
+    <p>El gráfico de participación social mostrará la participación social de los videos publicados en sus cuentas de redes sociales durante el período de tiempo seleccionado. La fecha de actualización es la última fecha para la que Video Cloud tiene datos de análisis social. Por lo general, hay un retraso de 24 a 48 horas antes de que las plataformas sociales actualicen las vistas y los datos de participación en sus API. Al pasar el cursor sobre una línea en el gráfico, se mostrarán los datos para esa fecha.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="social engagement graph" src="/assets/images/social/node16680-video-engagement-graph.png" /></figure>
+    <p>La leyenda a la derecha del gráfico se puede utilizar para seleccionar el nivel de detalle que se mostrará:</p>
+    <ul>
+      <li><strong>Facebook</strong> - Muestra la cantidad de Me gusta, comentarios y acciones.</li>
+      <li><strong>Gorjeo</strong> - Muestra el número de Retweets y Favoritos</li>
+      <li><strong>YouTube</strong> - Muestra el número de comentarios, me gusta, no me gusta y compartidos</li>
+    </ul>
+    <p>Las vistas de YouTube que se muestran en los informes analíticos se recopilan de <a href="http://youtube.com/analytics">Descripción general de YouTube Analytics</a> informe. YouTube no garantiza que estos datos sean datos en tiempo real. Por lo tanto, es posible que veas demoras de varios días antes de que aparezcan las vistas y la participación en este informe. Una vez que los datos estén en YouTube Analytics, los recopiladores de datos nocturnos para Brightcove Social Analytics los recogerán.</p>
+    <p>Si necesita datos de visualización en tiempo real más recientes, YouTube también proporciona <a href="https://support.google.com/youtube/answer/6096647">informes en tiempo real</a> con estimaciones de datos de visualización durante las últimas 48 horas para sus 25 videos más recientes publicados. Puedes encontrar el informe en tiempo real de tu canal de YouTube. <a href="https://www.youtube.com/analytics?o=U#r=realtime">aquí</a>. Brightcove Social Analytics no recopila estos datos en tiempo real, ya que proporciona vistas estimadas (a diferencia de las reales) y solo se aplica a videos recientes.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="viewsbyvideo">Compromiso social por video</h2>
+    <p>La sección Social View by Video mostrará los datos de la vista detallada de cada video. El selector de columnas (<img alt="column selector" src="/assets/images/social/node16680-column-selector.png" />) se puede utilizar para seleccionar las columnas que se mostrarán.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select columns to display" src="/assets/images/social/node16680-select-columns.png" /></figure>
+    <p>Para cada video, se mostrará lo siguiente:</p>
+    <ul>
+      <li>Nombre y duración del video</li>
+      <li>ID de video</li>
+      <li>Fecha de creación</li>
+      <li>Columnas seleccionadas</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="video engagement" src="/assets/images/social/node16680-video-engagement-detail.png" /></figure>
+    <p>La parte inferior del informe tiene controles que le permiten seleccionar cuántas filas deben mostrarse y navegar a otras páginas.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="export">Exportando datos</h2>
+    <p>Los datos del informe se pueden descargar como valores separados por comas y formatos de Excel. Tenga en cuenta que la función de exportación guarda los datos directamente desde un <span translate="No">API de análisis</span> llama. Los datos exportados no se manipulan de la forma en que lo son los datos de la interfaz de usuario y actualmente contienen todos los datos subyacentes en el informe, no solo el subconjunto de campos que muestra la interfaz de usuario. Tener todos los datos en el formato original de la API le permite manipular los datos de formas distintas a las que se proporcionan en la interfaz de usuario.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export data" src="/assets/images/social/node16680-export.png" /></figure>
+  </section>
+</article>

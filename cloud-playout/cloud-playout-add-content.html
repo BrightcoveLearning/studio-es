@@ -1,0 +1,120 @@
+---
+title: Agregar contenido a un canal de reproducción en la nube
+description: En este tema, aprenderá cómo agregar elementos VOD, eventos en vivo y listas de reproducción a su canal Cloud Playout.
+parent: Cloud Playout
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+		<h2 id="Introduction">Introducción</h2>
+		<p>Dependiendo de cómo haya configurado su canal de Cloud Playout, puede agregar contenido de varios tipos. El contenido VOD y las listas de reproducción se pueden agregar a cualquier canal. Además, puede agregar eventos en vivo si configuró el canal para admitirlo. Las siguientes secciones proporcionan los pasos para agregar cada tipo de contenido.</p>
+		<aside class="bcls-aside bcls-aside--information">Tenga en cuenta que también puede <a href="/cloud-playout/adding-bumpers-to-vod.html">agregar parachoques</a> a tu canal, y <a href="/cloud-playout/enabling-server-side-ads.html">anuncios del lado del servidor</a> , si el canal se configuró para eso. Consulte estos temas para obtener más información sobre cómo hacerlo.</aside>
+	</section>
+  
+  <section class="bcls-section">
+    <h2 id="add_videos">Agregar contenido VOD</h2>
+    <p>Después de crear su canal, o cuando vaya a los detalles del canal, la pantalla mostrará la configuración del canal:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/cloud-playout/cloudplayout-channel-details.png" alt="Channel Settings">
+      <figcaption class="bcls-caption--image">Configuración de canal</figcaption>
+    </figure>
+    <p>Puede editar los detalles, pero el siguiente paso principal es agregar contenido al canal.</p>
+    <h3>Pasos para agregar videos (VOD)</h3>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Hacer clic <span class="button-blue"><i data-feather="plus"></i> Añadir vídeos</span> (si estás en la página de lista de canales, haz clic en el nombre del canal para abrir la página de configuración del canal y, a continuación, haz clic en <span class="button-blue"><i data-feather="plus"></i> Agregar vídeos</span>).
+      </li>
+      <li>Haga clic en la casilla de verificación junto a los videos que desea agregar al canal.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select videos" src="/assets/images/cloud-playout/playout-select-videos.png" /></figure>
+      </li>
+      <li>Hacer clic <span class="button-blue">Agregar videos</span>)</li>
+      <li>Hacer clic <span class="button-blue"><i data-feather="save"></i> Guardar</span>.</li>
+      <li>
+        Aparecerá la lista de programas del canal:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/cloud-playout/cloudplayout-vod-program-list.png" alt="Program List">
+          <figcaption class="bcls-caption--image">Lista de programas</figcaption>
+        </figure>
+        <p>Tenga en cuenta que las horas de inicio y finalización se calculan automáticamente a partir de la duración del video. Puede arrastrar y soltar videos en la lista para reordenarlos, y las horas de inicio / finalización se ajustarán automáticamente.</p>
+      </li>
+    </ol>
+	</section>
+
+	<section class="bcls-section">
+		<h2 id="add_playlists">Agregar listas de reproducción</h2>
+		<p>También puede importar listas de reproducción completas en su canal. Tenga en cuenta las siguientes condiciones:</p>
+		<ul>
+			<li>Puede importar listas de reproducción EXPLÍCITAS (manuales) e inteligentes.</li>
+			<li>A <strong>instantánea</strong> de la lista de reproducción en su estado actual se importará (lo que significa que los cambios futuros en la lista de reproducción <strong>no</strong> reflejarse en el contenido del canal).</li>
+			<li>Solo se puede importar una lista de reproducción a la vez.</li>
+			<li>Si la lista de reproducción importada contiene un evento en vivo, se creará un evento en vivo nuevo idéntico con el mismo nombre, descripción y duración. Esto se debe a que un evento en vivo siempre comparte una relación de 1: 1 con el canal.</li>
+			<li>Se agregarán los videos en la lista de reproducción <strong>hasta el final</strong> del programa del canal actual.</li>
+			<li>Puede agregar contenido VOD, así como listas de reproducción, y se permiten duplicados.</li>
+			<li>Hay una verificación de validación sobre el límite de activos totales (100). Si la importación supera el límite de 100 activos, la importación fallará.</li>
+			<li>
+				<aside class="bcls-aside bcls-aside--information">Nota: Si la entrada en directo no está habilitada para el canal, puedes importar una lista de reproducción que incluya eventos en directo si eliges excluir los eventos en directo de la importación.</aside>
+			</li>
+			<li>
+				<aside class="bcls-aside bcls-aside--information">Nota: Si se trata de un canal habilitado para SSAI, no se permiten eventos en vivo. Aún puedes importar una lista de reproducción que incluya eventos en directo si eliges excluir los eventos en directo de la importación.</aside>
+			</li>
+			<li>
+				<aside class="bcls-aside bcls-aside--information">Nota: Solo se permitirán los activos elegibles con una copia MP4. Una advertencia indica qué activos no serán elegibles para la importación; tras la confirmación, solo se importarán los activos admisibles.</aside>
+			</li>
+		</ul>
+		<h3>Agregar pasos a la lista de reproducción</h3>
+		<ol class="bcls-tasklist-restart">
+			<li>Hacer clic <span class="button-blue"><i data-feather="plus"></i> Importar listas de reproducción</span>.</li>
+			<li>Hacer clic <span class="blue-button">Importar</span> para la lista de reproducción que desea importar.</li>
+			<li>Si aparecen mensajes que indican que algunos elementos de la lista de reproducción no se pueden importar, haga clic en <span class="blue-button">Continuar</span> si desea importar los videos compatibles.</li>
+      <li>Hacer clic <span class="button-blue"><i data-feather="save"></i> Guardar</span>.</li>
+			<li>
+				Si la importación fue exitosa, lo verá en su lista de programas:
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/cloud-playout/program-list-with-playlist-imports.png" alt="Program List with Playlist">
+					<figcaption class="bcls-caption--image">Lista de programas con lista de reproducción</figcaption>
+				</figure>
+			</li>
+		</ol>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Add_Live_events">Agregar eventos en vivo</h2>
+		<p>Nota: esto solo se aplica si el canal está habilitado para eventos en vivo.</p>
+    <ol class="bcls-tasklist">
+        <li>Hacer clic <img src="/assets/images/cloud-playout/cloudplayout-add-live-event.png" alt="add live event" class="ui-image"></li>
+        <li>
+          En el cuadro de diálogo Agregar evento en directo, introduzca el <strong>nombre</strong>, la <strong>duración</strong> y la <strong>descripción</strong> del evento en directo:
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/cloud-playout/cloudplayout-add-live-event.png" alt="Add Live Event">
+            <figcaption class="bcls-caption--image">Agregar evento en vivo</figcaption>
+          </figure>
+          <p>Tenga en cuenta que la duración mínima de un evento en vivo es de 5 minutos, y la duración se puede incrementar o disminuir en intervalos de 5 minutos solamente. Si es necesario, la duración se puede editar en línea en el cuadro de texto para ajustar la granularidad del tiempo. La duración de un evento en vivo se puede modificar en cualquier momento, incluso mientras se está reproduciendo.</p>
+        </li>
+        <li>
+          Después de agregar eventos en vivo, aparecerán en la lista de programas junto con los elementos de VOD:
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/cloud-playout/cloudplayout-live-event-program-list.png" alt="Program List">
+            <figcaption class="bcls-caption--image">Lista de programas</figcaption>
+          </figure>
+        </li>
+        <li>Puede arrastrar eventos en vivo para reordenar la lista tal como lo hace con los videos. También puede utilizar el <img src="/assets/images/cloud-playout/cloudplayout-quick-edit.png" alt="quick edit" class="ui-image"> botón para modificar la duración de un evento en vivo.</li>
+    </ol>
+	</section>
+    <p>Ver también <a href="/cloud-playout/adding-bumpers-to-vod.html">Adición de parachoques al contenido</a> para agregar bumpers publicitarios a VOD o elementos de eventos en vivo.</p>
+  
+  <section class="bcls-section">
+    <h2 id="Related_topics">Temas relacionados</h2>
+    <ul>
+      <li><a href="/cloud-playout/cloud-playout-overview.html">Descripción general: Playout en la nube</a></li>
+      <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Creación de un canal de reproducción en la nube</a></li>
+      <li><a href="/cloud-playout/adding-bumpers-to-vod.html">Agregar parachoques a la reproducción en la nube</a></li>
+      <li><a href="/cloud-playout/static-image-overlays.html">Superposiciones de imágenes estáticas</a></li>
+      <li><a href="/cloud-playout/using-channel-actions.html">Usar acciones de canal</a></li>
+      <li><a href="/cloud-playout/enabling-server-side-ads.html">Monetización de Cloud Playout</a></li>
+      <li><a href="/cloud-playout/generating-channel-embed-code.html">Generación del código de inserción del canal</a></li>
+      <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">Visualización de resultados y análisis del canal</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">Descripción general: API EPG</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">Referencia de la API de EPG</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-channels.html">Referencia de API de canal</a></li>
+    </ul>
+  </section>
+</article>

@@ -1,0 +1,188 @@
+---
+title: Superposiciones de imágenes estáticas
+description: 'Este tema explica cómo agregar superposiciones de imágenes estáticas a sus canales de Cloud Playout.'
+parent: Cloud Playout
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introducción</h2>
+    <p>Puede usar la función de superposición de imágenes estáticas para superponer una imagen estática en un video en un canal de Cloud Playout. Una imagen estática es una imagen fija que no tiene movimiento. Usted prepara la imagen y la almacena fuera de Cloud Playout y nos la proporciona como una URL http / https no autenticada y de acceso público.</p>
+    <h3>Ejemplos de</h3>
+    <ul>
+      <li>Desea insertar una superposición de imagen estática en un momento específico durante el tiempo de ejecución del canal y ejecutarlo durante 10 segundos. Desea que la superposición de imágenes aparezca en la esquina inferior derecha del cuadro de video. Quieres que la superposición de imágenes tenga un 50% de opacidad.</li>
+      <li>Desea insertar dos superposiciones de imágenes estáticas para que ambas aparezcan en el fotograma de video al mismo tiempo o con alguna superposición. Desea que la visualización de las superposiciones de imágenes se superponga ligeramente para que aparezca una superposición de imágenes en una ubicación y, mientras esa superposición de imágenes todavía se muestra, aparece otra superposición de imágenes en otra ubicación.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Implementation">Implementación</h2>
+    <ul>
+      <li>La imagen que superpongas en un video debe ser una <a href="https://en.wikipedia.org/wiki/Truevision_TGA">.tga</a> o un archivo .png.</li>
+      <li>
+        Cree y administre imágenes superpuestas estáticas para una cuenta utilizando el nuevo elemento del menú lateral:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/cloud-playout/overlays-menu-item.png" alt="Overlays">
+          <figcaption class="bcls-caption--image">Superposiciones</figcaption>
+        </figure>
+      </li>
+      <li>
+        Las imágenes superpuestas se pueden asociar con un canal:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/cloud-playout/overlay-associate-with-channel.png" alt="Associate Overlay with Channel">
+          <figcaption class="bcls-caption--image">Asociar superposición con canal</figcaption>
+        </figure>
+        <br>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/cloud-playout/overlays-draft-channel.png" alt="Overlays in Draft Channel">
+          <figcaption class="bcls-caption--image">Superposiciones en el canal de borrador</figcaption>
+        </figure>
+        <br>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/cloud-playout/overlays-for-running-channel.png" alt="Overlays in Running Channel">
+          <figcaption class="bcls-caption--image">Superposiciones en el canal en ejecución</figcaption>
+        </figure>
+      </li>
+      <li>
+        Puede insertar hasta dos <strong>capas</strong> de una sola vez. Cada imagen debe ser una <strong>capa separada</strong>. Si se programan diferentes imágenes en la misma capa para el mismo tiempo o si se superponen durante cualquier período de tiempo, la imagen que se aprovisiona más tarde eliminará la imagen existente en la misma capa.
+          <ul>
+            <li>Las capas están en orden Z, lo que significa que <strong>las superposiciones con valores más altos de capa se insertan encima de las superposiciones con valores más bajos de capa</strong>.</li>
+          </ul>
+      </li>
+      <li>Puede configurar las superposiciones para que todas aparezcan en el video subyacente al mismo tiempo (o no), y puede configurarlas para que se superpongan físicamente entre sí (o no).</li>
+      <li>
+        Puede configurar cada superposición de imágenes con una hora de inicio y una duración:
+        <ul>
+          <li>Si se establece la duración, la duración máxima es de 24 horas</li>
+          <li>Si no se establece la duración, la superposición seguirá mostrándose hasta que se desactive</li>
+          <li>La hora de inicio debe ser una hora futura</li>
+        </ul>
+      </li>
+      <li>Puede configurarlo con una opacidad de 0 a 100. <strong>0</strong> es transparente y <strong>100</strong> es completamente opaco.</li>
+      <li>
+        Puede colocar la imagen superpuesta en el fotograma de video, según lo especificado por las coordenadas x / y. Por defecto, las coordenadas X, Y se consideran 0, 0 (<strong>la esquina superior izquierda de un fotograma de video</strong>):
+        <ul>
+          <li><strong>Posición X</strong> : la posición del borde izquierdo de la superposición en relación con el borde izquierdo del fotograma de video, en píxeles. Si la ubicación hace que la superposición se extienda más allá del borde derecho del video subyacente, la superposición se recortará a la derecha.</li>
+          <li><strong>Posición Y</strong> : la posición del borde superior de la superposición en relación con el borde superior del fotograma de video, en píxeles. Si la ubicación hace que la superposición se extienda más allá del borde inferior del video subyacente, la superposición se recortará en la parte inferior.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Dimensionamiento:</strong> los <strong>Usar original</strong> La opción se puede usar para que Resolución use la resolución original de la imagen proporcionada:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/cloud-playout/overlay-use-original-size.png" alt="Use Original Image Size">
+          <figcaption class="bcls-caption--image">Usar tamaño de imagen original</figcaption>
+        </figure>
+        <ul>
+          <li>
+            Puede proporcionar un personalizado <strong>ancho</strong> y <strong>altura</strong> para que la resolución permita que el sistema escale la imagen antes de aplicarla en el video de origen:
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/cloud-playout/overlay-custom-width-height.png" alt="Set Width and Height">
+              <figcaption class="bcls-caption--image">Establecer ancho y alto</figcaption>
+            </figure>
+          </li>
+          <li>Dejándo el <strong>ancho</strong> y <strong>altura</strong> vacío y <strong>Usar original</strong> si no está marcada, el sistema utilizará la resolución de salida del canal. Por ejemplo: La salida móvil y web establecerá la resolución de superposición en 720p y un perfil de Smart TV establecerá la resolución de superposición en 1080p. <strong>No se recomienda usar esta opción</strong> ya que es posible que no siempre esté alineado con la resolución de la fuente MP4.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="State_transitions">Transiciones de estado</h2>
+    <p>Transiciones de estado para programas superpuestos</p>
+    <ul>
+      <li>
+        <strong>INACTIVO</strong>
+        <ul>
+          <li>Un horario recién creado (o)</li> 
+          <li>Un programa que ya ha completado la ejecución (o)</li>
+          <li>Un horario que ya está desactivado.</li> 
+          <li>Puede cambiar la hora de inicio para que vuelva al estado PROGRAMADO con la misma configuración de superposición o actualizada.</li>
+          <li>Eliminar: si ya no va a utilizar esta configuración.</li>
+          <li>Modifique para cualquier cambio de configuración.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>PROGRAMADO</strong>
+        <ul>
+          <li>Programado para comenzar a la hora de inicio especificada.</li> 
+          <li>Elimínelo si ya no necesita este horario.</li>
+          <li>Modifique para cualquier cambio de configuración.</li> 
+        </ul>
+      </li>
+      <li>
+        <strong>ACTIVO</strong>
+        <ul>
+          <li>Un cronograma que está actualmente en curso.</li> 
+          <li>Desactive cuando necesite detener la superposición.</li>
+          <li>Modifique cualquier configuración excepto layer y start_time.</li> 
+          <li>Eliminación no permitida. Primero debes desactivarlo.</li>
+        </ul>
+      </li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information language-editable">Puede editar las superposiciones en cualquier momento. Sin embargo <strong>capa</strong> y <strong>hora de inicio</strong> no se puede cambiar por un <strong>ACTIVO</strong> cubrir. Puede cambiar la resolución, las coordenadas x/y, la opacidad o incluso la imagen en sí en una programación de superposición activa.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Contextual_Overlay_Launch">Lanzamiento de superposición contextual</h2>
+    <p>Para facilitar el acceso, si desea que aparezca la superposición de un video específico en la lista de reproducción, puede colocar el mouse sobre el video en la lista de reproducción y hacer clic en el <strong>Agregar icono de superposición</strong> ( <img src="/assets/images/cloud-playout/overlay-icon.svg" alt="overlay icon"> ), la interfaz de usuario lanzará el modal Agregar superposiciones, con la hora de inicio y la duración del video seleccionado.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/cloud-playout/overlay-add-particular-video.png" alt="Contextual Overlay Launch">
+      <figcaption class="bcls-caption--image">Lanzamiento de superposición contextual</figcaption>
+    </figure>
+    <h3>Notas</h3>
+    <ol>
+      <li>Esto creará una programación para la hora de inicio del video seleccionado y no se adjuntará al video en sí. En otras palabras, si el video se reordena (o) se elimina (o) se cambia la hora de inicio debido a varios cambios en la programación de EPG, la programación de superposición seguirá estando en la hora de inicio programada originalmente.</li>
+      <li>Se recomienda usar esta opción Agregar superposición en contexto al video en un canal en ejecución en lugar de en un canal en estado BORRADOR o PROGRAMADO, porque el canal en ejecución es más preciso en el tiempo (alimentado por EPG) que los canales en otros estados.</li>
+      <li>En un canal en ejecución, esta opción está disponible en todos los videos que siguen al video que se está reproduciendo.</li>
+      <li>Esta opción no está disponible para videos de marcadores de posición de anuncios en el canal SSAI.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Image_handling">Manejo de imágenes</h2>
+    <p>La imagen se superpone al píxel de video de origen subyacente por píxel.</p>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Si la superposición es más grande que el video subyacente o sobrepasa un borde del video subyacente, la superposición no se aplicará completamente en el video de origen (se recortará). Esto se aplica tanto a los activos de VoD como a los segmentos Live.</aside>
+    <p>A continuación, se muestran algunas posibles correcciones / soluciones para un caso en el que la superposición es más grande que el video.</p>
+    <h3>Caso de problema</h3>
+    <p>El siguiente diagrama muestra una superposición demasiado grande, con el logotipo de la empresa en la esquina inferior derecha y, por lo tanto, oculto:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/cloud-playout/overlay-problem-case.png" alt="Problem Case">
+      <figcaption class="bcls-caption--image">Caso de problema</figcaption>
+    </figure>
+    <h4>Solucion 1</h4>
+    <p>Puede usar los campos de ancho y alto para cambiar el tamaño de la imagen para que se ajuste al tamaño de la pantalla de video. La desventaja de esto es que cambiar el tamaño de una imagen degrada la calidad de la imagen y hará que el logotipo sea más pequeño:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/cloud-playout/overlay-solution-1.png" alt="Solution 1">
+      <figcaption class="bcls-caption--image">Solucion 1</figcaption>
+    </figure>
+    <h4>Solucion 2</h4>
+    <p>Si mueve el logotipo a la esquina superior izquierda, al menos se asegurará la visibilidad, pero es posible que no tenga una ubicación deseable:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/cloud-playout/overlay-solution-2.png" alt="Solution 2">
+      <figcaption class="bcls-caption--image">Solucion 2</figcaption>
+    </figure>
+    <h4>Solución 3</h4>
+    <p>los <strong>solución ideal</strong> es ajustar el tamaño de la superposición para que coincida exactamente con la resolución del video (y verifique <strong>Usar original</strong> para el tamaño):</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/cloud-playout/overlay-solution-3.png" alt="Solution 3">
+      <figcaption class="bcls-caption--image">Solución 3</figcaption>
+    </figure>
+    <h5>Notas</h5>
+    <ol>
+      <li>La imagen se superpone antes de la creación de codificaciones de salida individuales (con sus diferentes resoluciones y calidad de video). Esto significa que si el video subyacente se escala para una codificación de salida particular, la imagen se escala de manera similar.</li>
+      <li>La imagen de superposición se inserta en todas las salidas, es decir, las superposiciones también serán visibles en las imágenes de vista previa que se ven en la IU de Cloud Playout. </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Related_topics">Temas relacionados</h2>
+    <ul>
+      <li><a href="/cloud-playout/cloud-playout-overview.html">Descripción general: Playout en la nube</a></li>
+      <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Creación de un canal de reproducción en la nube</a></li>
+      <li><a href="/cloud-playout/adding-bumpers-to-vod.html">Agregar parachoques a la reproducción en la nube</a></li>
+      <li><a href="/cloud-playout/enabling-server-side-ads.html">Monetización de Cloud Playout</a></li>
+      <li><a href="/cloud-playout/using-channel-actions.html">Usar acciones de canal</a></li>
+      <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">Visualización de resultados y análisis del canal</a></li>
+      <li><a href="/cloud-playout/generating-channel-embed-code.html">Generación del código de inserción del canal</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">Descripción general: API EPG</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">Referencia de la API de EPG</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-channels.html">Referencia de API de canal</a></li>
+    </ul>
+  </section>
+</article>

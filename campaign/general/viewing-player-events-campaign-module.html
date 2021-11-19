@@ -1,0 +1,60 @@
+---
+title: Visualización de eventos de jugador en la descripción del módulo de campaña: En este tema, aprenderá a ver los eventos de los jugadores en el módulo Campaña.
+parent: General Information
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>El módulo Campaña ofrece la posibilidad de realizar un seguimiento de los eventos de visualización. La frecuencia con la que se envían los eventos de visualización al módulo Campaña se calcula dinámicamente en función de la duración del video. La campaña enviará un mínimo de 4 eventos, uno por cuartil.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: Los datos de eventos de visualización se pueden exportar utilizando el <a href="/campaign/admin/exporting-campaign-data-campaign-module.html">Exportar datos</a> opción o usando la <a href="/campaign/develop/overview-audience-api.html">API de audiencia</a>.</aside>
+    <p>Para ver los eventos de vista, abra el módulo Campaña y haga clic en&nbsp;<strong>Toda la actividad reciente</strong> en la navegación de la izquierda. La página mostrará la visualización de la actividad del evento durante las últimas 24 horas.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/general/node15863-view-events.png" /></figure>
+    <p>La <strong>Mostrar eventos de interacción</strong> el enlace se habilitará si <a href="#events">eventos personalizados o métricas</a> están adjuntos a un evento de visualización.</p>
+    <p>La página mostrará la siguiente información.</p>
+    <ul>
+      <li><strong>Marca de tiempo</strong> - Fecha y hora de la visualización del video.</li>
+      <li><strong>Nombre e ID del video</strong> - Nombre del video e ID de video de Video Cloud</li>
+      <li><strong>Porcentaje visualizado</strong> - El punto en el que el espectador dejó de ver el video, dividido por la duración del video. Por ejemplo, si un espectador vio los primeros 5 segundos de un video de dos minutos, luego pasó al punto de 55 segundos, miró 5 segundos más y detuvo el video (o abandonó la página), el porcentaje de reproducción se registraría como 50 %. <aside class="bcls-aside bcls-aside--information">Nota: Para <strong>Videos en vivo</strong> , no es posible realizar un seguimiento del porcentaje visto en Campaign. Dado que no es posible saber cuánto durará, el módulo Campaign solo hará un seguimiento del tiempo total observado.</aside>
+      </li>
+      <li><strong>Tiempo observado</strong> - Tiempo total visto</li>
+      <li><strong>Identificación externa</strong> - Valor utilizado para identificar al espectador, por ejemplo, Eloqua GUID, Marketo GUID, HubSpot GUID, SSO GUID u otro valor único que se utilizó para identificar al espectador.</li>
+      <li><strong>Estado</strong> - Estado del evento
+        <ul>
+          <li><strong>sin procesar</strong> - el evento no se ha sincronizado con la plataforma de automatización de marketing</li>
+          <li><strong>sincronizado</strong> - el evento se sincronizó con éxito con la plataforma de automatización de marketing</li>
+          <li><strong>sync_disabled</strong> - El módulo de campaña se configuró con la sincronización deshabilitada, por lo que se omitió el evento.</li>
+          <li><strong>ha fallado</strong> - error de sincronización; la información sobre herramientas proporciona algunos detalles sobre qué error ocurrió</li>
+          <li><strong>desconocido_contacto</strong> - usuario desconocido, por lo que el evento no se sincronizó</li>
+          <li><strong>N / A</strong> - no aplica; se muestra cuando se utilizan integraciones personalizadas, de seguimiento de campañas o de Marketo Munchkin</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Los datos de eventos también se pueden filtrar por estado usando la lista desplegable en la parte superior de la página.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/general/node15863-filter.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="events">Ver eventos de interacción</h2>
+    <p>Si se adjuntan métricas o eventos personalizados a un evento de vista, el <strong>Mostrar eventos de interacción</strong> se habilitará el enlace. Por ejemplo, si está utilizando una experiencia en la página de la galería con un reproductor habilitado para la campaña y la experiencia está configurada con <a href="https://gallery.support.brightcove.com/experiences/inpage/adding-interactions-page-experience.html">enlaces, tarjetas o cualquier otro tipo de elemento interactivo</a> , la experiencia enviará eventos de impresión y conversión al módulo Campaña. Estos eventos se pasan a Campaign mediante los campos personalizados de Campaign. Los datos del evento aparecerán en el módulo Campaña como parte del <strong>Toda la actividad reciente</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: Los eventos de interacción también pueden aparecer cuando se utilizan las métricas y eventos personalizados de <a href="/campaign/general/using-custom-metrics-and-events.html">Campaign</a>.</aside>
+    <p>Se pueden pasar los siguientes datos:</p>
+    <ul>
+      <li><strong>Evento 1</strong> - Lista separada por comas de nombres de CTA con los que el espectador tuvo la oportunidad de interactuar (impresión)</li>
+      <li><strong>Evento 2</strong> - Lista separada por comas de los nombres de CTA que el espectador <strong>hizo</strong> interactuar con (conversión)</li>
+      <li><strong>Métrica 1</strong> - Recuento total de impresiones de CTA</li>
+      <li><strong>Métrica 2</strong> - Recuento total de conversiones de CTA, es decir, enlace en el que se hizo clic, envío de formularios, etc.</li>
+    </ul>
+    <p>Para ver los eventos, haga clic en el <strong>Mostrar eventos de interacción</strong> enlace en el encabezado.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/general/node15863-ipx-example.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="viewdata">Otras opciones de visualización de datos</h2>
+    <p>Los datos de la campaña se pueden ver / exportar de otras formas:</p>
+    <ul>
+      <li><strong>Actividad de video</strong> - Se usa para ver la actividad del espectador por video. Para obtener información, consulte <a href="/campaign/general/viewing-video-activity.html">Visualización de la actividad de video</a>.</li>
+      <li><strong>Perfiles de espectadores</strong> - Se utiliza para ver la actividad de video por espectador. Para obtener información, consulte <a href="/campaign/general/viewing-viewer-profile-information.html">Visualización de la información del perfil del espectador</a>.</li>
+      <li><strong>Exportar datos</strong> - Se utiliza para exportar vista de video y datos de clientes potenciales. Para obtener información, consulte <a href="/campaign/admin/exporting-campaign-data-campaign-module.html">Exportación de datos de campaña desde el módulo de campaña</a>.</li>
+      <li><strong>API de audiencia</strong> - La API Audience se puede utilizar para recuperar de manera programática la vista de video y los datos de clientes potenciales. Para obtener información, consulte <a href="/campaign/develop/overview-audience-api.html">Descripción general: API de audiencia</a>.</li>
+    </ul>
+  </section>
+</article>

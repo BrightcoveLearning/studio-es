@@ -1,0 +1,167 @@
+---
+title: Descripción del uso de la sincronización automática para sincronizar videos con cuentas de redes sociales: En este tema, aprenderá a utilizar la función de sincronización automática en Brightcove Social para sincronizar automáticamente los videos con los canales de las redes sociales.
+parent: General Information
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5194128705001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    <p>Brightcove Social proporciona una función de sincronización automática que se puede utilizar para sincronizar automáticamente videos con canales de redes sociales en función de las etiquetas asociadas con un video.</p>
+    <p>Antes de configurar la sincronización automática, debe haber creado algunos destinos de publicación. Para obtener información sobre la creación de destinos de publicación, consulte <a href="/social/creating-social-media-publishing-destinations.html">Creación de destinos de publicación en redes sociales</a>.</p>
+    <p>Tenga en cuenta que el uso de Sincronización automática y la publicación manual de videos mediante el módulo Social son operaciones independientes. Auto Sync no sabe qué videos se han publicado manualmente usando el módulo Social. Si un video está etiquetado de una manera que hace que Auto Sync lo publique en uno de sus destinos sociales, lo hará independientemente de si ese video se publicó previamente manualmente usando el módulo Social.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">Configurar la sincronización automática</h2>
+    <p>Para configurar la sincronización automática, siga estos pasos.</p>
+    <p>Después de ingresar las etiquetas, se mostrará la cantidad de videos con estas etiquetas.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: Los videos existentes con las etiquetas especificadas no se sincronizarán automáticamente. Todos los videos nuevos con estas etiquetas se sincronizarán automáticamente. Para que los vídeos existentes se sincronicen, cambia los metadatos de vídeo para activar una sincronización automática.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Abra Brightcove Social.</li>
+      <li>Hacer clic <strong>Sincronización automática</strong> en la navegación de la izquierda. Se mostrará una lista de todos los nombres de sincronización automática que se han creado.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-autosync-list.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Nota: La imagen en miniatura se rellenará una vez que se hayan sincronizado los vídeos.</aside>
+      </li>
+      <li>Hacer clic <strong>Configurar sincronización automática</strong>.</li>
+      <li>Entrar a <strong>Nombre</strong> para la sincronización.</li>
+      <li>Seleccione los videos para distribuir.
+        <ul>
+          <li><strong>Vídeos con todas estas etiquetas</strong> - Videos con <strong>TODAS</strong> de las etiquetas enumeradas deben estar sincronizadas</li>
+          <li><strong>Vídeos con cualquiera de estas etiquetas</strong> - Videos con <strong>ALGUNA</strong> de las etiquetas enumeradas deben estar sincronizadas</li>
+          <li><strong>Todos los videos de esta cuenta</strong> - Todos los videos de la cuenta deben estar sincronizados.</li>
+        </ul>
+      </li>
+      <li>A no ser que <strong>Todos los videos de esta cuenta</strong> fue seleccionado, ingrese una lista de etiquetas separadas por comas.</li>
+      <li>Seleccione los videos que deben excluirse.
+        <ul>
+          <li><strong>Inactivo</strong> - Los videos inactivos no se sincronizarán (predeterminado)</li>
+          <li><strong>Horario restringido</strong> - Los videos programados no se sincronizarán</li>
+          <li><strong>Restringido geográficamente</strong> - Los videos con restricciones geográficas no se sincronizarán</li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-setup.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>próximo</strong>.</li>
+      <li>Elija un destino de publicación para sincronizar los videos. Hacer clic <strong>Administrar destinos</strong> para crear nuevos destinos o editar los existentes. Al hacer clic en un destino, se mostrarán los valores predeterminados del destino.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-choose-dest.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Nota: Los valores predeterminados de destino se pueden cambiar editando las propiedades de destino.</aside>
+      </li>
+      <li>Hacer clic <strong>próximo</strong>.</li>
+      <li><a href="#rules">Configurar las reglas de sincronización automática</a>. Las opciones disponibles cambiarán según la plataforma social seleccionada.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="rules">Configuración de reglas de sincronización automática</h2>
+    <p>Al configurar la sincronización automática, las reglas se pueden configurar para manejar lo que sucede con los videos en el sitio de redes sociales. Esto incluye qué hacer cuando el video se elimina de la lista (el video se elimina de Video Cloud o las etiquetas cambian) o cómo se manejan las actualizaciones de metadatos de video. Las reglas se basan en la plataforma de redes sociales que se seleccionó:</p>
+    <ul>
+      <li><a href="#yt">YouTube</a></li>
+      <li><a href="#fb">Facebook</a></li>
+      <li><a href="#twitter">Gorjeo</a></li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Notas:
+      <ul>
+        <li>Una vez que los videos se publican en una plataforma social usando Auto Sync, Brightcove Social no rastrea ninguna acción que suceda con ese video en el lado de las redes sociales. Por ejemplo, Brightcove Social no recibe una notificación cuando un video se ha eliminado de una plataforma social y el hecho de que el video se haya eliminado no se reflejará en Brightcove Social. Esto también puede suceder si una plataforma de redes sociales detecta contenido con derechos de autor y luego lo elimina. Cualquier cambio posterior al video en el lado de Video Cloud que causaría que ocurriera otro evento de sincronización causará errores de sincronización en Brightcove Social. En este caso, es un "error recuperable" y el reintento hará que el video se vuelva a subir con los cambios aplicados.</li>
+        <li>Hay un límite inicial de 20 posibles sincronizaciones automáticas disponibles. Si necesita más, por favor <a href="https://supportportal.brightcove.com/s/login/?language=en_US">póngase en contacto con el soporte de Brightcove</a>.</li>
+      </ul>
+    </aside>
+    <div id="yt" class="BCL-subsection">
+      <h3>Configurar las reglas de YouTube</h3>
+      <p>Al usar la sincronización automática con YouTube:</p>
+      <ul>
+        <li>YouTube tiene un límite de 100 caracteres para los títulos, por lo que el módulo Social truncará los títulos de los videos a 100 caracteres.</li>
+        <li>Si el <strong>Actualizar los metadatos de video en la opción de YouTube</strong> está seleccionado, si el video se carga sin subtítulos, y luego se agregan subtítulos, los subtítulos se pasarán a YouTube.</li>
+        <li>Si el <strong>Actualizar los metadatos de video en la opción de YouTube</strong> Si el video se carga con subtítulos, cualquier cambio en la información de los subtítulos en Video Cloud hará que los subtítulos actualizados se pasen a YouTube.</li>
+      </ul>
+      <ol class="bcls-tasklist-restart">
+        <li>Seleccione lo que sucede cuando se quita la etiqueta o se elimina un video de Video Cloud:
+          <ul>
+            <li><strong>Eliminar video distribuido en YouTube</strong> - El video se eliminará de YouTube.</li>
+            <li><strong>Hacer video distribuido</strong> - Hacer el video de YouTube <strong>Privado</strong> o <strong>No incluido en listado</strong></li>
+            <li><strong>Ninguna acción</strong> - No pasa nada con el video de YouTube</li>
+          </ul>
+        </li>
+        <li>Seleccione lo que sucede cuando se cambian los metadatos del video:
+          <ul>
+            <li><strong>Actualizar metadatos de video en YouTube</strong> - Los cambios en los metadatos de video en el lado de Video Cloud se sincronizarán con YouTube</li>
+            <li><strong>Ninguna acción</strong> - No se realiza ninguna acción <aside class="bcls-aside bcls-aside--information">Nota: Cuando el archivo de origen del video se actualiza en Studio, el video actualizado no se sincroniza con YouTube. Se trata de una limitación de <a href="https://support.google.com/youtube/answer/55770?hl=en">YouTube</a>.</aside>
+            </li>
+          </ul>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-yt-rules.png" /></figure>
+        </li>
+        <li>Hacer clic <strong>próximo</strong>.</li>
+        <li>Confirme la configuración de sincronización automática y luego haga clic en <strong>Terminar</strong>.
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-yt-confirm.png" /></figure>
+        </li>
+      </ol>
+    </div>
+    <div id="fb" class="BCL-subsection">
+      <h3>Configurar las reglas de Facebook</h3>
+      <ol class="bcls-tasklist-restart">
+        <li>Seleccione lo que sucede cuando se quita la etiqueta o se elimina un video de Video Cloud:
+          <ul>
+            <li><strong>Eliminar video distribuido en Facebook</strong> - El video se eliminará de Facebook.</li>
+            <li><strong>Caducar el video distribuido en Facebook</strong> - El video caducará en Facebook</li>
+            <li><strong>Ninguna acción</strong> - No pasa nada con el video de Facebook</li>
+          </ul>
+        </li>
+        <li>Seleccione lo que sucede cuando se cambian los metadatos del video:
+          <ul>
+            <li><strong>Actualizar metadatos de video en Facebook</strong> - Los cambios en los metadatos de video en el lado de Video Cloud se sincronizarán con Facebook</li>
+            <li><strong>Ninguna acción</strong> - No se realiza ninguna acción</li>
+          </ul>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-fb-rules.png" /></figure>
+        </li>
+        <li>Hacer clic <strong>próximo</strong>.</li>
+        <li>Confirme la configuración de sincronización automática y luego haga clic en <strong>Terminar</strong>.
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-fb-confirm.png" /></figure>
+        </li>
+      </ol>
+    </div>
+    <div id="twitter" class="BCL-subsection">
+      <h3>Configurar las reglas de Twitter</h3>
+      <ol class="bcls-tasklist-restart">
+        <li>Seleccione lo que sucede cuando se quita la etiqueta o se elimina un video de Video Cloud:
+          <ul>
+            <li><strong>Eliminar video distribuido en Twitter</strong> - El video se eliminará de Twitter.</li>
+            <li><strong>Ninguna acción</strong> - No pasa nada con el video de Twitter</li>
+          </ul>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-twitter-rules.png" /></figure>
+        </li>
+        <li>Hacer clic <strong>próximo</strong>.</li>
+        <li>Confirme la configuración de sincronización automática y luego haga clic en <strong>Terminar</strong>.
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-twitter-confirm.png" /></figure>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="view">Ver y editar trabajos de sincronización automática</h2>
+    <p>Para ver y editar los trabajos de sincronización automática que se han creado, siga estos pasos:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Abra Brightcove Social.</li>
+      <li>Hacer clic <strong>Sincronización automática</strong> en la navegación de la izquierda. Se mostrará una lista de todos los trabajos de sincronización automática que se han creado.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-autosync-list.png" /></figure>
+        <ul>
+          <li>Haga clic en los enlaces en el <strong>Etiquetas</strong> columna para abrir el módulo de Medios y buscar según esas etiquetas.</li>
+          <li>Haga clic en el <strong>Destino</strong> columna para abrir la configuración del destino de publicación.</li>
+          <li>Hacer clic <strong>Borrar</strong> para eliminar el trabajo de sincronización.</li>
+        </ul>
+      </li>
+      <li>Haga clic en el enlace en el <strong>Sincronización automática de nombre e ID</strong> nombre de la columna para abrir las propiedades de sincronización.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-autosync-properties.png" /></figure>
+      </li>
+      <li>La <strong>ESTADO</strong> se puede configurar en:
+        <ul>
+          <li><strong>ACTIVO</strong> - Los videos se sincronizarán</li>
+          <li><strong>En pausa</strong> - No se sincronizarán videos</li>
+        </ul>
+      </li>
+      <li>La <strong>SHOW</strong> La lista se puede utilizar para filtrar lo que se muestra.</li>
+      <li>Hacer clic <strong>Ajustes</strong> para editar la configuración de sincronización. Hacer clic <strong>Actualizar</strong> el guardar los cambios.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16642-edit-sync-properties.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>Borrar</strong> para eliminar el trabajo de sincronización.</li>
+    </ol>
+  </section>
+</article>

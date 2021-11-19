@@ -1,0 +1,131 @@
+---
+title: Creación de formularios de clientes potenciales personalizados para la descripción de Marketo: En este tema, aprenderá a utilizar un formulario de Marketo para capturar datos de clientes potenciales dentro de un Brightcove Player.
+parent: Marketo 
+grandparent: Integrations
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>El módulo Campaña brinda la capacidad de crear formularios de clientes potenciales que le permiten capturar información del espectador a medida que se reproducen videos dentro de los reproductores de Brightcove. Esto le da la posibilidad de incluir los campos que necesite (visibles u ocultos) y también le da la posibilidad de aprovechar funciones como la creación de perfiles progresiva (si está disponible). Marketo envía y procesa los datos de los clientes potenciales.</p>
+    <p>Para crear un formulario de cliente potencial personalizado, se deben realizar los siguientes pasos.</p>
+    <ol>
+      <li><a href="#form">Crea un formulario</a></li>
+      <li><a href="#formcss">Opcional: estilo del formulario con CSS</a></li>
+      <li><a href="#edit">Copie el código de inserción del formulario</a></li>
+      <li><a href="#leadform">Cree un formulario de cliente potencial personalizado en el módulo Campaña</a></li>
+      <li><a href="#player">Asignar el formulario principal a un jugador</a></li>
+      <li><a href="#formdata">Validar los datos del formulario en Marketo</a></li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Nota: Para obtener información sobre los formularios de clientes potenciales estándar que capturan información del espectador y guardan los datos en Video Cloud, consulte <a href="/campaign/general/creating-campaign-lead-form.html">Creación de un formulario de clientes potenciales de campaña</a>.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="form">Creando un formulario</h2>
+    <p>Marketo brinda la capacidad de crear formularios para capturar información del espectador. Estos formularios se pueden mostrar dentro de los reproductores Brightcove habilitados para la campaña. Los datos que se capturan se pueden utilizar para personalizar las comunicaciones futuras. Los pasos a continuación crearán un formulario simple para capturar el nombre, apellido y dirección de correo electrónico. Para obtener detalles completos sobre los formularios de Marketo, consulte el <a href="https://docs.marketo.com/display/public/DOCS/Forms">Documentación de Marketo</a>.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Inicie sesión en su cuenta de Marketo.</li>
+      <li>Navegar a <strong>Estudio de diseño </strong> &gt; <strong>Formularios</strong> y luego haga clic en <strong>Nuevo&gt; Nuevo formulario</strong>. Se abre el cuadro de diálogo Nuevo formulario.</li>
+      <li>Entrar a <strong>Nombre</strong> para el formulario y haga clic en <strong>CREAR</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-lead-form.png" /></figure>
+      </li>
+      <li>Se abrirá el diseñador de formularios. De forma predeterminada, los campos Nombre, Apellido y Dirección de correo electrónico estarán en el formulario. Edite las propiedades y el comportamiento del campo según sea necesario. Hacer clic <strong>SIGUIENTE</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-lead-form-design.png" /></figure>
+      </li>
+      <li>Haga clic en los iconos de flecha para seleccionar un tema de formulario. El tema del formulario controla el estilo del formulario. Hacer clic <strong>Vista previa del borrador</strong> para ver una vista previa del formulario. En este ejemplo, el <strong>Oscuro</strong> se seleccionó el tema.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-preview-draft.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>Editar borrador</strong> para volver al editor de formularios.</li>
+      <li>Hacer clic <strong>SIGUIENTE</strong>.</li>
+      <li>Configure cualquier configuración de formulario adicional y haga clic en <strong>TERMINAR</strong>.</li>
+      <li>Hacer clic <strong>APROBAR Y CERRAR</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="formcss">Opcional: estilizar el formulario con CSS</h2>
+    <p>Al crear un formulario, Marketo ofrece la posibilidad de seleccionar un tema de formulario para proporcionar un estilo de formulario básico. También puede personalizar el formulario utilizando su propio CSS personalizado. En esta sección, personalizaremos el tema Oscuro y haremos que el texto de la etiqueta sea blanco y en negrita. Para obtener detalles completos sobre los formularios de Marketo, consulte el <a href="https://docs.marketo.com/display/public/DOCS/Edit+the+CSS+of+a+Form+Theme">Documentación de Marketo</a>.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Navegar a <strong>Estudio de diseño </strong> &gt; <strong>Formularios</strong> y luego haga clic en su formulario.</li>
+      <li>Hacer clic <strong>Editar formulario</strong>.</li>
+      <li>Hacer clic <strong>Configuración de formulario</strong> y luego haga clic en el ícono de ajustes.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-edit-form-css.png" /></figure>
+      </li>
+      <li>Haciendo clic <strong>Ver CSS del tema</strong> mostrará el CSS del tema actual. Hacer clic <strong>Editar CSS personalizado</strong>. Pegue el siguiente código CSS para que el texto de la etiqueta sea blanco y en negrita.
+        <pre>
+.mktoForm etiqueta { font-weight: bold; color: #FFF; }</pre>
+        <aside class="bcls-aside bcls-aside--information">Nota: Ingrese solo su CSS personalizado (solo las partes que son diferentes). No tienes que pegar en todo el tema CSS.</aside>
+      </li>
+      <li>Hacer clic <strong>AHORRAR</strong>.</li>
+      <li>Hacer clic <strong>Vista previa del borrador</strong> para ver una vista previa del formulario. El texto de la etiqueta debe ser blanco y en negrita.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-preview-draft-after.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>Editar borrador</strong> para volver al editor de formularios.</li>
+      <li>Hacer clic <strong>TERMINAR</strong> y entonces <strong>APROBAR Y CERRAR</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Copiando el código de inserción del formulario</h2>
+    <p>Para utilizar el formulario dentro del módulo Campaña, deberá copiar el código de inserción del formulario.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>En la navegación izquierda, haga clic con el botón derecho en el formulario y haga clic en <strong>Código de inserción</strong>.</li>
+      <li>Selecciona el <strong>Tipo de código</strong> a <strong>Normal</strong> y luego copia el <strong>Código</strong> al portapapeles. Hacer clic <strong>Cerca</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-form-embed-code-copy.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="leadform">Crear un formulario de cliente potencial personalizado en el módulo Campaña</h2>
+    <p>Una vez que se haya creado y estilizado el formulario, cree un formulario de cliente potencial personalizado en el módulo Campaña y asocie el formulario de cliente potencial con un reproductor habilitado para Campaña.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Abra el módulo Campaña.</li>
+      <li>Hacer clic <strong>Formularios de clientes potenciales</strong> en la navegación de la izquierda. Si se han creado formularios de clientes potenciales, se mostrarán.</li>
+      <li>Hacer clic <strong>Crear formulario de cliente potencial</strong>.</li>
+      <li>Dale a la forma de plomo un descriptivo <strong>Nombre</strong>.</li>
+      <li>Seleccione un <strong>Lenguaje de formulario</strong>.</li>
+      <li>Selecciona el <strong>Tiempo de formulario</strong>. El tiempo del formulario determina cuándo se mostrará el formulario principal.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form (1)" src="/assets/images/campaign/integrations/marketo/node16110-edit-lead-form-1.png" /></figure>
+      </li>
+      <li>Establezca el tipo de formulario en <strong>Formulario de cliente potencial personalizado</strong>.</li>
+      <li>Pegar en el <strong>Formulario HTML</strong> de Marketo.</li>
+      <li><strong>(Opcional)</strong> Pegar en el <strong>HTML de confirmación</strong>. La vista de confirmación se mostrará durante 5 segundos y luego se reanudará la reproducción del video. Si no se incluye HTML de confirmación, el video se reanudará después de enviar el formulario.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form (2)" src="/assets/images/campaign/integrations/marketo/node16110-edit-lead-form-2.png" /></figure>
+      </li>
+      <li><strong>(Opcional)</strong> Hacer clic <strong>Formulario de vista previa</strong> para abrir una vista previa del formulario.</li>
+      <li>Hacer clic <strong>Ahorrar</strong> para guardar el formulario de cliente potencial.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">Asignar una forma de cliente potencial a un jugador</h2>
+    <p>Una vez que se ha creado el formulario de cliente potencial, debe asignarse a un jugador. Siga estos pasos para asignar un formulario de cliente potencial a un jugador.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Hacer clic <strong>Jugadores de campaña</strong> en la navegación de la izquierda.</li>
+      <li>Localice su reproductor y utilice el <strong>Formulario de cliente potencial</strong> lista desplegable para seleccionar el formulario de cliente potencial.</li>
+    </ol>
+    <p>La configuración ahora está completa y está listo para capturar información de clientes potenciales. Cuando se publica un video con un reproductor habilitado para Campaña, el formulario de cliente potencial aparecerá de acuerdo con la configuración de tiempo del formulario.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="formdata">Validando los datos del formulario en Marketo</h2>
+    <p>Hay varias formas de validar que los datos del formulario se hayan pasado a Marketo. Siga estos pasos para ver los datos del formulario en Marketo.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Inicie sesión en su cuenta de Marketo.</li>
+      <li>Hacer clic <strong>Base de datos de clientes potenciales</strong>.</li>
+      <li>En el panel de navegación de la izquierda, expanda Group Smart Lists y luego haga clic en <strong>Form Capture SL</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-form-capture-sl.png" /></figure>
+      </li>
+      <li>Haga clic en el <strong>Lista inteligente</strong> pestaña.</li>
+      <li>En la lista de <strong>Filtros</strong> en el lado derecho de la página, ubique el <strong>Formulario llenado</strong> filtrar. Haga clic y arrastre el filtro a la página.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-add-filter.png" /></figure>
+      </li>
+      <li>Ingrese el nombre de su formulario. También puede hacer clic en el <strong>+</strong> para buscar su formulario.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-constraint.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>Dirige</strong> en la parte superior de la página para ver los datos de clientes potenciales filtrados.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="lead form data" src="/assets/images/campaign/integrations/marketo/node16110-form-data.png" /></figure>
+      </li>
+      <li>Haga clic en un <strong> Identificación</strong> para abrir el detalle de plomo.</li>
+      <li>Haga clic en el <strong>Registro de actividades</strong> pestaña. Confirme que el formulario se completó.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="lead form data" src="/assets/images/campaign/integrations/marketo/node16110-activity.png" /></figure>
+      </li>
+    </ol>
+  </section>
+</article>

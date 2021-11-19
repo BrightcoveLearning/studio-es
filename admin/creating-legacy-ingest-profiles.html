@@ -1,0 +1,76 @@
+---
+title: Creación de perfiles de ingesta heredados
+parent: Administering Accounts
+description: This topic provides an overview of how to create custom ingest profiles for use with Legacy transcoding.
+layout: staging
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>La página de administración de Ingest Profiles se puede utilizar para crear nuevos perfiles de ingesta heredados. Los perfiles de ingesta se definen mediante JSON. Al crear un nuevo perfil heredado, es útil revisar el <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Perfiles de ingesta estándar para la transcodificación heredada</a> Documente y busque un perfil similar al que necesita. Luego, en Studio, puede duplicar fácilmente el perfil y luego editarlo con sus cambios.</p>
+    <p >Nota: Para obtener información sobre la creación de perfiles de ingesta que utilizan DRM, consulte la <a href="https://general.support.brightcove.com/general/mpeg-dash-video.html">Vídeo MPEG-DASH</a> documento de desarrollador.</p>
+    <p >Nota: Cada perfil puede crear un máximo de 25 representaciones. &nbsp;Los pósters y las imágenes en miniatura cuentan para el máximo de 25.&nbsp;</p>
+    <p>Para crear un nuevo perfil de ingesta heredado:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Haga clic en el <strong>ADMINISTRACIÓN</strong> enlace en el encabezado de Studio.</li>
+      <li>Haga clic en el <strong>Perfiles de ingesta</strong> Enlace.</li>
+      <li>Busque un perfil heredado para duplicarlo. Haga clic en el nombre del perfil para abrir el editor de perfiles.</li>
+      <li>Hacer clic <strong>Perfil duplicado</strong>. El editor de perfiles se abrirá con el nuevo perfil.</li>
+      <li>Desplácese hasta la parte superior del perfil. Edite el <code translate="No"><strong>name</strong></code> elemento para darle al perfil un nombre significativo. Este nombre se mostrará dentro de Video Cloud Studio.</li>
+      <li>Edite el <code translate="No"><strong>description</strong></code> elemento para darle al perfil una descripción significativa.
+        <figure class="bcls-figure"><img alt="" src="/assets/images/admin/node18503-edit-profile-name.png" /></figure>
+      </li>
+      <li>Edite la información de la reproducción según sea necesario. El tamaño predeterminado para el póster y las imágenes en miniatura se encuentra al final del perfil.</li>
+      <li>Hacer clic <strong>Ahorrar</strong>.</li>
+    </ol>
+    <div class="BCL-subsection">
+      <h3>Agregar una marca de agua a un perfil</h3>
+      <p>Se puede agregar una marca de agua a cada interpretación agregando el <code translate="No">watermarks</code> elemento a cada <code translate="No">rendition</code>:</p>
+      <pre>
+       marcas de agua ": [{ "y": -20, "x": -10, "width": "20%", "url": "http://www.mysite.com/companylogo.png" }]
+       </pre>
+      <p>La <code translate="No">watermarks</code> elemento tiene los siguientes parámetros.</p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th width="13%">Parámetro</th>
+            <th width="14%">Tipo</th>
+            <th width="73%">Descripción</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr>
+            <td ><code translate="No">url</code></td>
+            <td >cuerda</td>
+            <td >URL de la imagen de la marca de agua</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">width</code></td>
+            <td >cuerda</td>
+            <td >ancho en píxeles o porcentaje del ancho del marco; por ejemplo, 20 o 10%</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">height</code></td>
+            <td >cuerda</td>
+            <td >altura en píxeles o porcentaje del ancho del marco; por ejemplo, 20 o 10%</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">x</code></td>
+            <td >cuerda</td>
+            <td >distancia desde el borde izquierdo hasta el centro de la imagen como píxeles o porcentaje del ancho del marco; por ejemplo, 20 o 10% (use valores negativos como -10 para colocar la marca de agua en relación con el borde derecho)</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">y</code></td>
+            <td >cuerda</td>
+            <td >distancia desde el borde superior al centro si la imagen se expresa como píxeles o porcentaje de la altura del marco; por ejemplo, 20 o 10% (utilice valores negativos como -10 para colocar la marca de agua en relación con el borde inferior)</td>
+          </tr>
+        </tbody>
+      </table>
+      &nbsp;
+      <p>A continuación, se muestra un perfil de muestra con una marca de agua:</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18503-watermark.png" /></figure>
+    </div>
+  </section>
+</article>

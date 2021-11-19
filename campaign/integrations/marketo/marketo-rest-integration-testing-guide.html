@@ -1,0 +1,89 @@
+---
+title: Descripción de la guía de pruebas de integración REST de Marketo: En este tema, aprenderá a verificar una integración entre Video Cloud y Marketo.
+parent: Marketo 
+grandparent: Integrations
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Al configurar una nueva integración basada en REST de Marketo, puede ser un desafío probar y confirmar que los datos de visualización de video se están entregando a Marketo. En este tema, aprenderá a probar y confirmar sistemáticamente que la integración funciona y que los datos de visualización y los clientes potenciales se envían a Marketo.</p>
+    <p class="BCL-aside">Para obtener información sobre cómo configurar el módulo Campaign para su uso con Marketo utilizando las API REST, consulte&nbsp;<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">Integración de Video Cloud con Marketo mediante las API REST</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="start">Antes de empezar</h2>
+    <p>Antes de validar la integración se asume que tiene:</p>
+    <ul>
+      <li>Completó con éxito el <a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">Integración REST de Brightcove Campaign</a> con Marketo</li>
+      <li>Creado al menos uno <a href="/campaign/general/creating-campaign-enabled-player.html">Reproductor habilitado para campaña</a> y lo configuró para usar la conexión Marketo</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="lead_form">Configurar un formulario de clientes potenciales de prueba y publicar un video</h2>
+    <p>Para realizar pruebas, deberá crear y configurar un formulario de cliente potencial personalizado en Campaign. Este es un formulario de Marketo cuyo código de inserción ha pegado en Campaign. Incluso si no va a utilizar formularios de clientes potenciales en su entorno de producción, este formulario de clientes potenciales se utiliza para asegurarse de que se le conoce en su base de datos y en la página. Para crear un formulario de Marketo y configurar Campaign para usarlo, siga estos pasos.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Inicie sesión en su cuenta de Marketo.</li>
+      <li>Crea y aplica estilo a un formulario de Marketo. Para obtener información sobre cómo crear un formulario Marketo, consulte <a href="/campaign/integrations/marketo/creating-custom-lead-forms-marketo.html">Creación de formularios de clientes potenciales personalizados para Marketo</a>.</li>
+      <li>Haga clic con el botón derecho en el formulario en la barra de navegación izquierda y haga clic en <strong>Código de inserción</strong>.</li>
+      <li>Copie el código de inserción del formulario en el portapapeles.</li>
+      <li>Regrese al módulo Campaña.</li>
+      <li>Cree un nuevo formulario de cliente potencial utilizando el código de incrustación del formulario de Marketo.</li>
+      <li>Configure su formulario personalizado para mostrar el formulario en la marca de 5 segundos. De esta forma sabrá exactamente cuándo debería aparecer.</li>
+      <li>Marque la casilla para <strong>Muestre siempre el formulario de cliente potencial incluso si el cliente potencial ya es conocido</strong>. Esto asegurará que el formulario continúe mostrándose después de completarlo durante la prueba.</li>
+      <li><strong>Ahorrar</strong> la forma.</li>
+      <li>Configure Brightcove Player con la conexión de Marketo para utilizar el formulario de cliente potencial de Marketo que se acaba de crear.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="preview_video">Generando un enlace de vista previa para ver el video</h2>
+    <p>Para generar un enlace de vista previa al video, siga estos pasos.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Abra el módulo de medios.</li>
+      <li>Seleccione un video y publíquelo en un reproductor web. Asegúrese de seleccionar el jugador habilitado para campaña con el formulario de cliente potencial.</li>
+      <li>Haga clic en el enlace de vista previa para abrir el video en una nueva ventana del navegador. Probar de esta manera elimina cualquier variable potencial que pudieran introducir los reproductores incrustados en una página HTML.</li>
+      <li>Confirme que el video se reproduce y que el formulario principal se muestra en la marca de 5 segundos.</li>
+      <li>Complete el formulario de cliente potencial con información de contacto y dirección de correo electrónico únicas (es decir, el nombre de una celebridad o un nombre que contenga las palabras "bctest") para que se pueda encontrar fácilmente más adelante en Marketo. Esto elimina cualquier variable de nivel de navegador, reproductor o base de datos. Al completar el formulario como nuevo usuario, podemos estar seguros de que ahora es un usuario conocido en Marketo.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="confirm_data">Confirmando que Campaign está capturando los datos con éxito</h2>
+    <p>Antes de buscar datos de visualización de video en Marketo, primero confirme que Campaign efectivamente capturó la vista de video. Tenga en cuenta que la visualización de los datos puede tardar hasta 3 horas en mostrarse en la interfaz de usuario de la campaña. Para confirmar que Campaign está capturando correctamente los datos, siga estos pasos.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Abra el módulo Campaña.</li>
+      <li>Hacer clic <strong>Toda la actividad reciente</strong> en la navegación de la izquierda.</li>
+      <li>Confirme que haya un evento con una marca de tiempo reciente que muestre el nombre del video que se acaba de ver. El estado del evento debe ser <strong>sin procesar</strong>. Esto indica que Campaign ha capturado la vista pero aún no ha intentado sincronizarla con Marketo.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-unprocessed.png" /></figure>
+      </li>
+      <li>Para activar manualmente una sincronización entre Campaign y Marketo, haga clic en <strong>Actividad de sincronización</strong> en la navegación de la izquierda.</li>
+      <li>Desde el <strong>Seleccionar conexión</strong> lista desplegable, seleccione su integración de Marketo. A <strong>Prueba de sincronización</strong> debería aparecer el botón.</li>
+      <li>Hacer clic<strong> Prueba de sincronización</strong> para activar una sincronización manual. Tenga en cuenta que está limitado a la frecuencia con la que puede activar una sincronización manual. De forma predeterminada, Campaign sincronizará las vistas con Marketo una vez por hora.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-test-sync.png" /></figure>
+      </li>
+      <li>Hacer clic <strong>Toda la actividad reciente</strong> en la navegación de la izquierda.</li>
+      <li>El estado de su evento de visualización será <strong>puesto en cola</strong>. Es posible que los datos tarden unos 15 minutos en sincronizarse con Marketo. Una vez que los datos se sincronizan, el estado cambiará a uno de dos estados:
+        <ul>
+          <li><strong>sincronizado</strong> - Indica que el usuario era un usuario conocido y los datos se entregaron correctamente a su registro de actividad. Los datos también deberían poder verse en Marketo en unos minutos.</li>
+          <li><strong>desconocido_contacto</strong> - Indica que el usuario se consideró desconocido y Marketo no pudo aceptar los datos. Si obtienes un <strong>desconocido_contacto</strong> estado, verifique que publicó el video con el reproductor correcto, que tiene un formulario de Marketo en su lugar y que está probando usando el enlace de vista previa, no incrustado en una página.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-synced.png" /></figure>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="confirm_marketo">Confirmando que los datos de visualización de video están en Marketo</h2>
+    <p>Una vez que la Campaña ha mostrado un <strong>sincronizado</strong> estado, siga estos pasos para verificar que los datos estén en Marketo.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: La interfaz de usuario de Marketo tarda entre 5 y 10 minutos en actualizarse con los nuevos datos que ha recibido de Campaign.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Inicie sesión en su cuenta de Marketo.</li>
+      <li>Navegue a la base de datos de clientes potenciales y busque el nuevo cliente potencial. Busque utilizando el nombre único o la dirección de correo electrónico que utilizó al completar el formulario de cliente potencial.</li>
+      <li>Haga doble clic en el nuevo cliente potencial para abrir la información del cliente potencial.</li>
+      <li>Haga clic en el <strong>Registro de actividades</strong> pestaña.</li>
+      <li>Utilizando <strong>Búsqueda rápida...</strong> en la parte inferior de la página, busque <strong>Vista de video de Brightcove</strong>.</li>
+      <li>Haga doble clic en una fila para mostrar los campos que ha llenado la campaña. La ventana emergente mostrará los datos de visualización de video entregados desde Campaign a Marketo, como ID de jugador, ID de video, Nombre de video, Porcentaje de reproducción y otros campos.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-marketo-info.png" /></figure>
+      </li>
+    </ol>
+  </section>
+</article>

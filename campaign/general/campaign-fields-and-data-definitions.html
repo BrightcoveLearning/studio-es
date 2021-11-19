@@ -1,0 +1,114 @@
+---
+title: Descripción de campos de campaña y definiciones de datos: Este tema proporciona una descripción general de los campos que puede completar el módulo Campaña.
+parent: General Information
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Brightcove Campaign entregará un conjunto de datos de visualización de videos a campos específicos en su plataforma integrada. A continuación se muestra un ejemplo de esos campos y una descripción de los datos que llenarán cada campo.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="standard">Campos estándar</h2>
+    <p>Estos campos siempre los completará Brightcove Campaign.</p>
+    <table width="99%" class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="12%" style="width: 24%;">Campo</th>
+          <th width="88%" style="width: 33%;"><strong>Descripción</strong></th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>video_id</td>
+          <td valign="top"><p>El ID del video de Brightcove asociado con el evento de visualización</p></td>
+        </tr>
+        <tr>
+          <td>video_name</td>
+          <td valign="top"><p>El nombre del video en Video Cloud</p></td>
+        </tr>
+        <tr>
+          <td>tracking_id</td>
+          <td valign="top">Puede agregar un <a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html#trackingid">ID de seguimiento personalizado</a> a una URL</td>
+        </tr>
+        <tr>
+          <td>external_id</td>
+          <td valign="top">El ID de usuario global (GUID) utilizado para identificar al usuario</td>
+        </tr>
+        <tr>
+          <td>player_id</td>
+          <td valign="top">El ID del Brightcove Player que creó el evento de vista</td>
+        </tr>
+        <tr>
+          <td>page_url</td>
+          <td valign="top">La URL de la página donde se vio el video.</td>
+        </tr>
+        <tr>
+          <td>observado</td>
+          <td valign="top">Porcentaje visto: qué tan avanzado en la línea de tiempo vieron</td>
+        </tr>
+        <tr>
+          <td>time_watched</td>
+          <td valign="top">Segundos del video visto: la cantidad total de tiempo que realmente pasaron con ese video</td>
+        </tr>
+        <tr>
+          <td>created_at</td>
+          <td valign="top">Fecha de creación</td>
+        </tr>
+        <tr>
+          <td>updated_at</td>
+          <td valign="top">Fecha de última actualización</td>
+        </tr>
+        <tr>
+          <td>is_synced</td>
+          <td valign="top">Un booleano que indica si el evento de vista se ha sincronizado o no con la plataforma de terceros.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="additional">Campos Adicionales</h2>
+    <p>Estos campos no se completan automáticamente. Están acostumbrados a <a href="/campaign/general/using-custom-metrics-and-events.html">rastrear datos personalizados adicionales</a>. De forma predeterminada, están configurados para capturar la interactividad de la Galería. <a href="https://gallery.support.brightcove.com/experiences/inpage/adding-interactions-page-experience.html">Experiencias en la página</a>. Si no utiliza la interactividad, estos campos estarán en blanco.</p>
+    <table width="99%" class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="12%" style="width: 24%;">Campo</th>
+          <th width="88%" style="width: 33%;"><strong>Descripción</strong></th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>event_1, event_2, event_3</td>
+          <td valign="top"><p>Eventos personalizados</p></td>
+        </tr>
+        <tr>
+          <td>metric_1, metric_2, metric_3</td>
+          <td valign="top"><p>Métricas personalizadas</p></td>
+        </tr>
+        <tr>
+          <td><strong>Campos UTM</strong> - utmSource, utmMedium, utmCampaign, utmTerm y utmContent</td>
+          <td valign="top">Para obtener información sobre cómo trabajar con campos UTM, consulte <a href="/campaign/general/working-utm-fields-campaign-module.html">Trabajar con campos UTM en el módulo de campaña</a>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="custom">Campos Personalizados</h2>
+    <p>Estos campos no se completan automáticamente. Tiene la opción de sincronizar ID de referencia, etiquetas o campos personalizados con su MAP o CRM a través de estos campos. Para configurar esto, por favor <a href="https://supportportal.brightcove.com/s/login/?language=en_US/create">soporte de contacto</a> y solicitar, por ejemplo: "Asigne mis" etiquetas "de campo de Video Cloud al campo" custom_1 "de la campaña".</p>
+    <table width="99%" class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="12%" style="width: 24%;">Campo</th>
+          <th width="88%" style="width: 33%;"><strong>Descripción</strong></th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>custom_1, custom_2, custom_3</td>
+          <td valign="top"><p>Eventos personalizados</p></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>

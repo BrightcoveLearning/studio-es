@@ -1,0 +1,63 @@
+---
+title: Revisión de la descripción de Social Views Analytics: En este tema, aprenderá a monitorear el rendimiento de las vistas sociales de sus videos con Brightcove Social.
+parent: Analytics
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Brightcove Social proporciona varios informes que se pueden usar para monitorear el rendimiento de sus videos que se publican en sus cuentas de redes sociales:</p>
+    <ul>
+      <li><strong>Tablero</strong> - Proporciona una descripción general de alto nivel del rendimiento de video en cuentas de redes sociales. Para obtener información, consulte <a href="/social/reviewing-social-analytics.html">Revisión de análisis social</a>.</li>
+      <li><strong>Vistas sociales</strong> - Proporciona una descripción general de la vista social para videos compartidos en cuentas de redes sociales. Cubierto en este tema.</li>
+      <li><strong>Compromiso social</strong> - Proporciona una descripción general de la participación social (Me gusta, Compartir, Retweets, etc.) para videos compartidos en cuentas de redes sociales. Para obtener información, consulte <a href="/social/reviewing-social-engagement-analytics.html">Revisión de análisis de participación social</a>.</li>
+    </ul>
+    <p>Inicia por <a href="reviewing-social-analytics.html#timespan">seleccionando un lapso de tiempo</a> para el informe. Para ver el informe de análisis de vistas sociales, haga clic en el <strong>Vistas sociales</strong> pestaña en la parte superior de la página.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report tabs" src="/assets/images/social/node16679-report-tabs.png" /></figure>
+    <p>El Informe de análisis de Social View está organizado en las siguientes secciones:</p>
+    <ul>
+      <li><a href="#socialviews">Vistas sociales</a></li>
+      <li><a href="#viewsdetail">Detalles de vistas sociales</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="socialviews">Vistas sociales</h2>
+    <p>El gráfico de Vistas sociales mostrará la cantidad de vistas de video de los videos publicados en sus cuentas de redes sociales durante el período de tiempo seleccionado. La fecha de actualización es la última fecha para la que Video Cloud tiene datos de análisis social. Por lo general, hay un retraso de 24 a 48 horas antes de que las plataformas sociales actualicen las vistas y los datos de participación en sus API.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: Las API de Twitter Insights no informan de las vistas de los medios, por lo que la visualización de datos no está disponible como parte del análisis social.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="social views graph" src="/assets/images/social/node16679-video-views-graph.png" /></figure>
+    <p>La leyenda a la derecha del gráfico se puede utilizar para seleccionar el nivel de detalle que se mostrará:</p>
+    <ul>
+      <li><strong>Mis sitios y aplicaciones</strong> - Muestra la cantidad de vistas de video de los reproductores y aplicaciones de Video Cloud</li>
+      <li><strong>Facebook</strong> - Muestra el número de reproducciones de videos en Facebook.</li>
+      <li><strong>YouTube</strong> - Muestra el número de reproducciones de videos en YouTube.</li>
+      <li><strong>Total</strong> - Muestra el número total de vistas de video en todas las plataformas.</li>
+    </ul>
+    <p>Al pasar el cursor sobre una línea en el gráfico, se mostrarán los datos para esa fecha.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="viewsdetail">Detalles de vistas sociales</h2>
+    <p>La sección Detalles de vistas sociales se puede utilizar para ver los detalles de la vista de video mediante:</p>
+    <ul>
+      <li>Vistas (predeterminado)</li>
+      <li>Tiempo promedio visto</li>
+      <li>Promedio% visualizado</li>
+    </ul>
+    <p>Después de realizar una selección, el informe mostrará los datos detallados de cada video.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: Las API de Twitter Insights no informan de las vistas de los medios, por lo que la visualización de datos no está disponible como parte del análisis social.</aside>
+    <p>Las vistas de YouTube que se muestran en los informes analíticos se recopilan de <a href="https://youtube.com/analytics">Descripción general de YouTube Analytics</a> informe. YouTube no garantiza que estos datos sean datos en tiempo real. Por lo tanto, es posible que veas demoras de varios días antes de que aparezcan las vistas y la participación en este informe. Una vez que los datos estén en YouTube Analytics, los recopiladores de datos nocturnos para Brightcove Social Analytics los recogerán.</p>
+    <p>Si necesita datos de visualización en tiempo real más recientes, YouTube también proporciona <a href="https://support.google.com/youtube/answer/6096647">informes en tiempo real</a> con estimaciones de datos de visualización durante las últimas 48 horas para sus 25 videos más recientes publicados. Puedes encontrar el informe en tiempo real de tu canal de YouTube. <a href="https://www.youtube.com/analytics?o=U#r=realtime">aquí</a>. Brightcove Social Analytics no recopila estos datos en tiempo real, ya que proporciona vistas estimadas (a diferencia de las reales) y solo se aplica a videos recientes.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="social views by video" src="/assets/images/social/node16679-video-views-detail.png" /></figure>
+    <p>La parte inferior del informe tiene controles que le permiten seleccionar cuántas filas deben mostrarse y navegar a otras páginas. Al hacer clic en el enlace de cualquiera de los títulos de video, se mostrarán las analíticas de vistas sociales del video seleccionado.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="faq">Preguntas comunes</h2>
+    <p>1. Cuando el módulo Social se usa para publicar un video en YouTube y luego ese video está incrustado en un reproductor de YouTube en otro sitio, ¿los datos de reproducción / participación aún se recopilarán y pasarán al análisis del módulo Social?</p>
+    <p>Social Analytics recopila todos los datos de visualización informados por YouTube, tal como aparecen en su Creator Studio y / o en las páginas de análisis de YouTube. Si las vistas del reproductor incrustado de YouTube cuentan para sus análisis, el módulo Social lo capturará y lo informará. Usando el código de inserción de YouTube <strong>Compartir&gt; Insertar</strong> La función exactamente como se indica hace que las vistas de ese reproductor integrado cuenten para sus análisis en YouTube. Sin embargo, editar el código de inserción puede hacer que YouTube no recopile datos de vistas y, en particular, configurar el reproductor integrado para que reproduzca automáticamente el video parece hacer que YouTube no cuente las vistas de ese reproductor.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="export">Exportando datos</h2>
+    <p>Los datos del informe se pueden descargar como valores separados por comas y formatos de Excel. Tenga en cuenta que la función de exportación guarda los datos directamente desde un <span translate="No">API de análisis</span> llama. Los datos exportados no se manipulan de la forma en que lo son los datos de la interfaz de usuario y actualmente contienen todos los datos subyacentes en el informe, no solo el subconjunto de campos que muestra la interfaz de usuario. Tener todos los datos en el formato original de la API le permite manipular los datos de formas distintas a las que se proporcionan en la interfaz de usuario.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export data" src="/assets/images/social/node16680-export.png" /></figure>
+  </section>
+</article>
