@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item">Gestionar jugadores<a href="/players/"></a></li>
+      <li class="breadcrumb-item">Gestionar reproductores<a href="/players/"></a></li>
       
       <li class="breadcrumb-item active" aria-current="page">Configuración del seguimiento de eventos de Adobe Analytics</li>
     </ol>
@@ -113,7 +113,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <option value="https://player.support.brightcove.com">Desarrollo de jugadores de Brightcove</option>
+              <option value="https://player.support.brightcove.com">Desarrollo de reproductores de Brightcove</option>
             
           
             
@@ -252,7 +252,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/basics/video-cloud-basics-styling-player.html">Estilo de un jugador</a></li>
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">Estilo de un reproductor</a></li>
                   
                 
                   
@@ -520,7 +520,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <h5 class="submenu-header"><a href="/players/index.html"><strong>+</strong> &nbsp;Gestión de Jugadores</a></h5>
+              <h5 class="submenu-header"><a href="/players/index.html"><strong>+</strong> &nbsp;Gestión de reproductores</a></h5>
               <ul class="sidenav-submenu" style="display:none;">
                 
                   
@@ -540,7 +540,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuración de la publicidad del jugador</a></li>
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuración de la publicidad del reproductor</a></li>
                   
                 
                   
@@ -572,7 +572,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/generating-player-embed-code.html">Generación de código de inserción del jugador</a></li>
+                    <li><a href="/players/generating-player-embed-code.html">Generación de código de inserción del reproductor</a></li>
                   
                 
                   
@@ -592,7 +592,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/styling-players.html">Jugadores de estilo</a></li>
+                    <li><a href="/players/styling-players.html">reproductores de estilo</a></li>
                   
                 
               </ul>
@@ -651,7 +651,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar Jugadores en Joomla</a></li>
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar reproductores en Joomla</a></li>
                   
                 
                   
@@ -671,7 +671,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios jugadores en una página</a></li>
+                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios reproductores en una página</a></li>
                   
                 
                   
@@ -730,7 +730,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de jugador en Google Analytics</a></li>
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de reproductor en Google Analytics</a></li>
                   
                 
                   
@@ -930,7 +930,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="review_events">Revisión de los eventos disponibles para realizar un seguimiento</h2>
     <p>Cada evento de Brightcove que se realizará un seguimiento debe crearse como evento de éxito personalizado en Adobe Analytics. Los ID de evento de Adobe se utilizarán dentro del módulo Players. Esto permite que los datos de eventos de Brightcove se pasen a los eventos de Adobe Success. Revise la lista de eventos a continuación para determinar qué eventos desea realizar el seguimiento.</p>
     <ul>
-      <li>Carga del jugador (bcvideo_player_load) - Se envía cuando se ha cargado un reproductor y está listo para su reproducción<strong></strong></li>
+      <li>Carga del reproductor (bcvideo_player_load) - Se envía cuando se ha cargado un reproductor y está listo para su reproducción<strong></strong></li>
       <li>Impresión de vídeo (bcvideo_video_impression) - Se envía cuando un vídeo se ha cargado en un reproductor y está listo para su reproducción<strong></strong></li>
       <li>Vista de vídeo (bcvideo_video_view): se envía cuando un vídeo ha comenzado a reproducirse mediante reproducción automática o debido a la interacción del usuario<strong></strong></li>
       <li>Video Engagement (bcvideo_video_engagement): un usuario vio un intervalo de segundos de la línea de tiempo de un vídeo.<strong></strong> Este evento es un latido para el seguimiento de la interacción del vídeo y probablemente se enviará muchas veces durante la reproducción, dependiendo de la interacción del usuario y de la duración del vídeo.</li>
@@ -968,8 +968,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Los parámetros contienen datos adicionales y se pasan con eventos. Todos los parámetros de Brightcove que se grabarán deben crearse como una variable de tráfico (eVARXX, donde XX es un número como 88) en Adobe Analytics. El parámetro nombrado se utilizará dentro del módulo Players. Esto permite que los parámetros de Brightcove se pasen a Variables de tráfico de Adobe. Revise la lista de parámetros a continuación para determinar cuáles desea capturar.</p>
     <ul>
       <li><strong>ID de cuenta&nbsp;(bcvideo_account) </strong>- Nombre de cuenta de Brightcove</li>
-      <li>ID del jugador (bcvideo_player) - ID del jugador<strong>&nbsp;</strong><strong></strong></li>
-      <li>Nombre del jugador (bcvideo_player_name) - Nombre del jugador<strong>&nbsp;</strong><strong></strong></li>
+      <li>ID del reproductor (bcvideo_player) - ID del reproductor<strong>&nbsp;</strong><strong></strong></li>
+      <li>Nombre del reproductor (bcvideo_player_name) - Nombre del reproductor<strong>&nbsp;</strong><strong></strong></li>
       <li>Versión del reproductor (bcvideo_platform_version) - Número de versión del reproductor<strong>&nbsp;</strong></li>
       <li>Sesión (bcvideo_session) - Identificador de sesión<strong>&nbsp;</strong><strong></strong></li>
       <li>Video ID (bcvideo_video) - ID de vídeo del vídeo<strong>&nbsp;</strong><strong></strong></li>

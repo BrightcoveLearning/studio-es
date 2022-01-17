@@ -1,5 +1,6 @@
 ---
-title: Uso de la descripción de la herramienta de migración dirigida: En este tema, aprenderá a utilizar la herramienta de migración dirigida para migrar Brightcove Smart Players a Brightcove Players.
+title: Uso de la herramienta de migración dirigida
+description: 'En este tema, aprenderá a utilizar la herramienta de migración dirigida para migrar Brightcove Smart Players a Brightcove Players.'
 parent: Administering Accounts
 ---
  <h1>{{ page.title }}</h1>
@@ -11,9 +12,9 @@ parent: Administering Accounts
     <ul>
       <li> <a href="#req">Requisitos de migración dirigida</a> </li>
       <li> <a href="#create">Creando un mapeo</a> </li>
-      <li> <a href="#test">Prueba de asignaciones de jugadores</a> </li>
-      <li> <a href="#edit">Editar asignaciones de jugadores</a> </li>
-      <li> <a href="#delete">Eliminar asignaciones de jugadores</a> </li>
+      <li> <a href="#test">Prueba de asignaciones de reproductores</a> </li>
+      <li> <a href="#edit">Editar asignaciones de reproductores</a> </li>
+      <li> <a href="#delete">Eliminar asignaciones de reproductores</a> </li>
     </ul>
     <aside class="bcls-aside bcls-aside--information">Nota: Las asignaciones de Smart Player a Brightcove Player seguirán funcionando después del final de su vida útil de Smart Player a finales de 2017.</aside>
   </section>
@@ -41,15 +42,15 @@ parent: Administering Accounts
     <ol class="bcls-tasklist">
       <li> Haga clic en el <strong>ADMINISTRACIÓN</strong> enlace en el encabezado de Studio. </li>
       <li> Haga clic en el <strong>Configuración del reproductor</strong> Enlace. </li>
-      <li> Haz clic en <strong>Crear asignación</strong>. Se mostrará una lista de jugadores inteligentes en la cuenta.
+      <li> Haz clic en <strong>Crear asignación</strong>. Se mostrará una lista de reproductores inteligentes en la cuenta.
         <div> <img class="bcls-image--no-border" alt="Create mapping" src="/assets/images/admin/node16627-create-mapping.png" /> </div>
       </li>
       <li> Seleccione uno o más reproductores inteligentes para reemplazarlos por un reproductor Brightcove. Haz clic en <strong>Siguiente</strong>. </li>
       <li> Seleccione un Brightcove Player para usar en lugar de los Smart Player. Cuando se selecciona un reproductor de Brightcove, se mostrará una vista previa del reproductor.
         <div> <img class="bcls-image--no-border" alt="Select Brightcove Player" src="/assets/images/admin/node16627-select-bc-player.png" /> </div>
       </li>
-      <li> Haz clic en <strong>Siguiente</strong>. Instrucciones para <a href="#test">probando mapeos de jugadores</a> será mostrado.
-        <p class="BCL-aside">Nota: Las asignaciones de jugadores pueden tardar hasta 5 minutos en surtir efecto.</p>
+      <li> Haz clic en <strong>Siguiente</strong>. Instrucciones para <a href="#test">probando mapeos de reproductores</a> será mostrado.
+        <p class="BCL-aside">Nota: Las asignaciones de reproductores pueden tardar hasta 5 minutos en surtir efecto.</p>
       </li>
       <li> Haz clic en <strong>Guardar</strong>. Se mostrará una lista de asignaciones actuales.
         <div> <img class="bcls-image--no-border" alt="Player mappings" src="/assets/images/admin/node16627-mappings-list.png" /> </div>
@@ -58,8 +59,8 @@ parent: Administering Accounts
     <p> Después de crear una asignación, el estado será <strong>Probando</strong>. Una vez el <a href="#test">el mapeo ha sido probado</a> y comprometido, el estado será <strong>Comprometido</strong> . Asignaciones marcadas con un estado de <strong>Comprometido</strong> renderizará un Brightcove Player en lugar del Smart Player. </p>
   </section>
   <section class="bcls-section">
-    <h2 id="test">Prueba de asignaciones de jugadores</h2>
-    <p>Debe probar las asignaciones de jugadores que se crean antes de que se confirmen. Para probar el mapeo de un jugador, siga estos pasos:</p>
+    <h2 id="test">Prueba de asignaciones de reproductores</h2>
+    <p>Debe probar las asignaciones de reproductores que se crean antes de que se confirmen. Para probar el mapeo de un reproductor, siga estos pasos:</p>
     <ol class="bcls-tasklist">
       <li> Busque una página que muestre su reproductor inteligente heredado.
         <div> <img class="bcls-image--no-border" alt="Smart Player Example" src="/assets/images/admin/node16627-smart-player.png" /> </div>
@@ -75,27 +76,27 @@ parent: Administering Accounts
         <div> <img class="bcls-image--no-border" alt="Brightcove  Player Example" src="/assets/images/admin/node16627-brightcove-player.png" /> </div>
         <p>Cuando esté satisfecho con el funcionamiento del reproductor, vuelva a Video Cloud Studio.</p>
       </li>
-      <li> Seleccione la casilla de verificación junto al mapeo del jugador y haga clic en <strong>Asignación de confirmación</strong> para que el nuevo Brightcove Player sea visible para todos los visitantes del sitio. </li>
+      <li> Seleccione la casilla de verificación junto al mapeo del reproductor y haga clic en <strong>Asignación de confirmación</strong> para que el nuevo Brightcove Player sea visible para todos los visitantes del sitio. </li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="edit">Editar asignaciones de jugadores</h2>
-    <p>Para editar la asignación de un jugador, siga estos pasos:</p>
+    <h2 id="edit">Editar asignaciones de reproductores</h2>
+    <p>Para editar la asignación de un reproductor, siga estos pasos:</p>
     <ol class="bcls-tasklist">
       <li> Haga clic en el <strong>ADMINISTRACIÓN</strong> enlace en el encabezado de Studio. </li>
-      <li> Haga clic en el <strong>Configuración del reproductor</strong> Enlace. Se mostrará una lista de asignaciones de jugadores. </li>
-      <li> Seleccione la casilla de verificación junto al mapeo del jugador para editar. Haz clic en <strong>Editar asignación</strong>. </li>
+      <li> Haga clic en el <strong>Configuración del reproductor</strong> Enlace. Se mostrará una lista de asignaciones de reproductores. </li>
+      <li> Seleccione la casilla de verificación junto al mapeo del reproductor para editar. Haz clic en <strong>Editar asignación</strong>. </li>
       <li> Seleccione un nuevo Brightcove Player al que mapear. Hacer clic <strong>próximo</strong> y entonces <strong>Ahorrar</strong> para guardar los cambios. </li>
     </ol>
-    <p> Asegúrate de <a href="#test">probar cualquier cambio en las asignaciones de jugadores</a>. </p>
+    <p> Asegúrate de <a href="#test">probar cualquier cambio en las asignaciones de reproductores</a>. </p>
   </section>
   <section class="bcls-section">
-    <h2 id="delete">Eliminar asignaciones de jugadores</h2>
-    <p>Para eliminar la asignación de un jugador, siga estos pasos:</p>
+    <h2 id="delete">Eliminar asignaciones de reproductores</h2>
+    <p>Para eliminar la asignación de un reproductor, siga estos pasos:</p>
     <ol class="bcls-tasklist">
       <li> Haga clic en el <strong>ADMINISTRACIÓN</strong> enlace en el encabezado de Studio. </li>
-      <li> Haga clic en el <strong>Configuración del reproductor</strong> Enlace. Se mostrará una lista de asignaciones de jugadores. </li>
-      <li> Seleccione la casilla de verificación junto a la asignación del jugador para eliminar. Haz clic en <strong>Eliminar asignación</strong>. </li>
+      <li> Haga clic en el <strong>Configuración del reproductor</strong> Enlace. Se mostrará una lista de asignaciones de reproductores. </li>
+      <li> Seleccione la casilla de verificación junto a la asignación del reproductor para eliminar. Haz clic en <strong>Eliminar asignación</strong>. </li>
       <li> Confirme la eliminación haciendo clic en <strong>Eliminar</strong>. </li>
     </ol>
   </section>

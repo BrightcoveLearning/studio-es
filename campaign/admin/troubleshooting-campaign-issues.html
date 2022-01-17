@@ -1,5 +1,6 @@
 ---
-title: Descripción de problemas de la campaña de resolución de problemas: En este tema, aprenderá acerca de las técnicas de resolución de problemas al utilizar el módulo Campaña.
+title: 'Problemas del módulo de campaña: Resolución de problemas'
+description: 'En este tema, aprenderá acerca de las técnicas de resolución de problemas al utilizar el módulo de Campaña.'
 parent: Administering Campaign
 ---
 
@@ -27,9 +28,9 @@ parent: Administering Campaign
     <h3>¿Por qué no se muestra mi formulario de cliente potencial?</h3>
     <p>Si su formulario de cliente potencial no se muestra, primero asegúrese de que se cumplan todos los criterios para mostrar un formulario de cliente potencial. Tenga en cuenta que los criterios que dependen de la visualización de varios videos no funcionarán en las actualizaciones de página. Están pensados para casos de uso en los que el siguiente video se pone automáticamente en cola en el mismo reproductor.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Confirme que el complemento de campaña se haya agregado al reproductor. Para obtener información, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un jugador habilitado para campaña</a>.</li>
+      <li>Confirme que el complemento de campaña se haya agregado al reproductor. Para obtener información, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un reproductor habilitado para campaña</a>.</li>
       <li>Confirme que la integración se haya configurado correctamente y se envíe al complemento.</li>
-      <li>Confirme que el formulario de cliente potencial se haya agregado a ese jugador. La respuesta a la llamada que realiza el complemento para su configuración debe contener información de visualización del formulario de cliente potencial bajo la propiedad leadForm si se ha agregado un formulario de cliente potencial al reproductor.
+      <li>Confirme que el formulario de cliente potencial se haya agregado a ese reproductor. La respuesta a la llamada que realiza el complemento para su configuración debe contener información de visualización del formulario de cliente potencial bajo la propiedad leadForm si se ha agregado un formulario de cliente potencial al reproductor.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="leadform debug" src="/assets/images/campaign/admin/node18487-leadform-debug.png" /></figure>
       </li>
       <li>Confirma que el espectador aún no es un cliente potencial. El formulario de cliente potencial solo se mostrará si Campaign ha identificado que el espectador aún no es un cliente potencial en la plataforma de automatización de marketing (MAP) o aún no ha completado un formulario de cliente potencial. El complemento realiza una llamada JSONP separada al servidor de Campaign para verificar si el espectador es un cliente potencial. Si el espectador es un cliente potencial, el servidor responde con un estado de 1 y cualquier otro identificador que pueda ser útil para sincronizar los datos de la vista con el MAP. Si el espectador no es un cliente potencial, el servidor responde con un estado de 0.
@@ -60,8 +61,8 @@ parent: Administering Campaign
     <p>Si los eventos de visualización no aparecen en la lista, es posible que la campaña no se haya configurado con un reproductor habilitado para la campaña. Con un navegador con las herramientas de desarrollo habilitadas, visite una página que contenga el video problemático y asegúrese de que el complemento Campaign realice ciertas llamadas HTTP.</p>
     <p>Cuando se carga el reproductor, el complemento debe realizar una llamada al punto final de configuración de Campaign para obtener parámetros que determinan el comportamiento del complemento en función de la integración:</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="plugin config" src="/assets/images/campaign/admin/node18487-debug-config.png" /></figure>
-    <p>Si esta llamada no se encuentra en el tráfico de la red, significa que al reproductor no se le ha asignado una integración. Para obtener información sobre cómo hacer esto, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un jugador habilitado para campaña</a>.</p>
-    <p>Esta llamada se realiza mediante JSONP. Si la respuesta JSONP es un objeto vacío, entonces es posible que el código de inserción sea incorrecto y especifique el ID de cuenta incorrecto. Se devolverá un objeto vacío desde este punto final si la solicitud de configuración no incluye los parámetros de la URL de la cuenta y del jugador o si la cuenta especificada no se pudo recuperar de la base de datos específica de la campaña (lo más probable es que se haya especificado la cuenta incorrecta en la URL / incrustación código y no se encontró en la base de datos).</p>
+    <p>Si esta llamada no se encuentra en el tráfico de la red, significa que al reproductor no se le ha asignado una integración. Para obtener información sobre cómo hacer esto, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un reproductor habilitado para campaña</a>.</p>
+    <p>Esta llamada se realiza mediante JSONP. Si la respuesta JSONP es un objeto vacío, entonces es posible que el código de inserción sea incorrecto y especifique el ID de cuenta incorrecto. Se devolverá un objeto vacío desde este punto final si la solicitud de configuración no incluye los parámetros de la URL de la cuenta y del reproductor o si la cuenta especificada no se pudo recuperar de la base de datos específica de la campaña (lo más probable es que se haya especificado la cuenta incorrecta en la URL / incrustación código y no se encontró en la base de datos).</p>
     <pre>
 /**/ tipo de jsonpCallback_78754666587 === 'función'  JSONPcallback_78754666587 ({});</pre>
     <p>Si el objeto tiene un parámetro de ID, pero le falta un parámetro de integración, el usuario no ha configurado una integración con su herramienta de automatización de marketing y los eventos de visualización no se registrarán.</p>

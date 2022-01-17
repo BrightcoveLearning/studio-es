@@ -1,5 +1,6 @@
 ---
-title: Compartir videos en las tarjetas de jugador de Twitter descripción: Este tema explica cómo la integración de Twitter de Video Cloud le permite incrustar videos en un tweet usando Twitter Player Cards.
+title: Compartir videos en las tarjetas de reproductor de twitter
+description: 'Este tema explica cómo la integración de Twitter de Video Cloud le permite incrustar videos en un tweet usando Twitter Player Cards.'
 parent: General Information
 ---
 
@@ -12,14 +13,14 @@ parent: General Information
     <p>De forma predeterminada, cuando un espectador usa la función para compartir en redes sociales en Brightcove Player para twittear un video, la URL de la página que contiene el video aparecerá en el feed de Twitter del espectador.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/node15772-tweet-link.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">Nota: Para obtener más información sobre cómo configurar los ajustes de uso compartido en redes sociales en Brightcove Player, consulte <a href="/players/configuring-social-properties-player.html">Configuración de las&nbsp;propiedades sociales de un reproductor</a>.</aside>
-    <p>Twitter ofrece la opción de mostrar contenido en tarjetas de Twitter, lo que le permite adjuntar fotos y videos a los tweets que dirigen el tráfico a su sitio web. Al usar tarjetas de Twitter, el feed de Twitter mostrará una vista de jugador incrustada.</p>
+    <p>Twitter ofrece la opción de mostrar contenido en tarjetas de Twitter, lo que le permite adjuntar fotos y videos a los tweets que dirigen el tráfico a su sitio web. Al usar tarjetas de Twitter, el feed de Twitter mostrará una vista de reproductor incrustada.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/node15772-tweet-link-media.png" /></figure>
     <p>Al hacer clic en la miniatura del video, se reproducirá el video usando Brightcove Player dentro del feed de Twitter.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/node15772-twitter-card.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="addvideo">Configuración de tarjetas de jugador de Twitter</h2>
-    <p>Para implementar las tarjetas de jugador de Twitter, se deben completar los siguientes pasos:</p>
+    <h2 id="addvideo">Configuración de tarjetas del reproductor de Twitter</h2>
+    <p>Para implementar las tarjetas del reproductor de Twitter, se deben completar los siguientes pasos:</p>
     <ol class="bcls-tasklist">
       <li><a href="#create">(Opcional) Cree una página para alojar su video</a></li>
       <li><a href="#metatags">Agregue las metaetiquetas de Twitter requeridas a su página</a></li>
@@ -33,14 +34,14 @@ parent: General Information
     <h2 id="create">(Opcional) Creación de una página para alojar su video</h2>
     <p>Si su video no está publicado en una página, debe crear una página HTML para alojar su video. Al crear la página, siga estas pautas:</p>
     <ul>
-      <li>Asegúrese de habilitar el intercambio social para el jugador y habilite la opción de Twitter</li>
+      <li>Asegúrese de habilitar el intercambio social para el reproductor y habilite la opción de Twitter</li>
       <li>Configure el tamaño del reproductor para que responda o asegúrese de que el tamaño del reproductor quepa dentro de un feed de Twitter (aproximadamente 480 píxeles de ancho)</li>
       <li>Utilizar el <strong>Estándar (iframe)</strong> incrustar código al publicar el video</li>
     </ul>
   </section>
   <section class="bcls-section">
     <h2 id="metatags">Agregar las metaetiquetas de Twitter requeridas a su página</h2>
-    <p>Debe agregar algunas metaetiquetas específicas de Twitter a su página para habilitar las tarjetas de jugador de Twitter.</p>
+    <p>Debe agregar algunas metaetiquetas específicas de Twitter a su página para habilitar las tarjetas del reproductor de Twitter.</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -51,7 +52,7 @@ parent: General Information
       <tbody class="bcls-table__body">
         <tr>
           <td>twitter: tarjeta</td>
-          <td>Tipo de tarjeta de Twitter; Debe establecerse en un valor de "jugador"</td>
+          <td>Tipo de tarjeta de Twitter; Debe establecerse en un valor de "reproductor"</td>
         </tr>
         <tr>
           <td>twitter: título</td>
@@ -66,15 +67,15 @@ parent: General Information
           <td>Descripción del contenido (opcional)</td>
         </tr>
         <tr>
-          <td>twitter: jugador</td>
+          <td>twitter: reproductor</td>
           <td>URL HTTPS al reproductor de iframe; debe ser una URL HTTPS que no genere advertencias de contenido mixto activo en un navegador web (URL de la página que aloja el reproductor)</td>
         </tr>
         <tr>
-          <td>twitter: jugador: ancho</td>
+          <td>twitter: reproductor: ancho</td>
           <td>Ancho de IFRAME especificado en Twitter: reproductor en píxeles</td>
         </tr>
         <tr>
-          <td>twitter: jugador: altura</td>
+          <td>twitter: reproductor: altura</td>
           <td>Altura de IFRAME especificada en Twitter: reproductor en píxeles</td>
         </tr>
         <tr>
@@ -99,6 +100,6 @@ parent: General Information
   </section>
   <section class="bcls-section">
     <h2 id="approve">Solicitar aprobación para la inclusión en la lista blanca</h2>
-    <p>Si Twitter no ha incluido tu dominio en la lista blanca, las tarjetas de jugador no aparecerán. Al validar la URL, aparecerá un mensaje que indica que la URL no se ha incluido en la lista blanca. Para obtener más información sobre el proceso de aprobación, consulte el <a href="https://dev.twitter.com/cards/types/player/approval">Documentación de Twitter</a>.</p>
+    <p>Si Twitter no ha incluido tu dominio en la lista blanca, las tarjetas de reproductor no aparecerán. Al validar la URL, aparecerá un mensaje que indica que la URL no se ha incluido en la lista blanca. Para obtener más información sobre el proceso de aprobación, consulte el <a href="https://dev.twitter.com/cards/types/player/approval">Documentación de Twitter</a>.</p>
   </section>
 </article>

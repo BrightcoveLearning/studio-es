@@ -1,5 +1,6 @@
 ---
-title: Cómo el módulo de campaña identifica a los espectadores descripción: En este tema, aprenderá sobre las diferentes formas en que el módulo Campaña intenta identificar a los espectadores.
+title: Cómo el módulo de campaña identifica a los espectadores 
+description: 'En este tema, aprenderá sobre las diferentes formas en que el módulo Campaña intenta identificar a los espectadores.'
 parent: General Information
 ---
 
@@ -22,17 +23,17 @@ parent: General Information
   </section>
   <section class="bcls-section">
     <h2 id="cookie">Cookie de campaña</h2>
-    <p>Jugadores habilitados para campaña&nbsp;establecerá una cookie de terceros y la utilizará para asociar los datos de visualización con el mismo usuario si el seguimiento de campañas está habilitado para su cuenta y el jugador lo está utilizando. Si un usuario alguna vez llena un formulario de cliente potencial de Campaign, Campaign creará un perfil para ese espectador y todos sus datos de visualización se asociarán con ese perfil.</p>
+    <p>reproductores habilitados para campaña&nbsp;establecerá una cookie de terceros y la utilizará para asociar los datos de visualización con el mismo usuario si el seguimiento de campañas está habilitado para su cuenta y el reproductor lo está utilizando. Si un usuario alguna vez llena un formulario de cliente potencial de Campaign, Campaign creará un perfil para ese espectador y todos sus datos de visualización se asociarán con ese perfil.</p>
     <p>La cookie que establecerá Campaign se llama <strong>_bc_uuid</strong>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="eloqua">GUID de Oracle Eloqua</h2>
-    <p>Los jugadores habilitados para la campaña con una integración de Eloqua invocarán las API de Eloqua para obtener la identificación del visitante, frecuentemente conocida como la GUID de Eloqua. Esta ID se captura en los datos de visualización del módulo Campaign y se utiliza para sincronizar los datos de visualización con Eloqua.</p>
+    <p>Los reproductores habilitados para la campaña con una integración de Eloqua invocarán las API de Eloqua para obtener la identificación del visitante, frecuentemente conocida como la GUID de Eloqua. Esta ID se captura en los datos de visualización del módulo Campaign y se utiliza para sincronizar los datos de visualización con Eloqua.</p>
     <p>Eloqua utiliza su propio conjunto de cookies y cuando se configura un Brightcove Player con una integración de Eloqua, Campaign captura el GUID en la cookie de Eloqua y se comunica con Eloqua en el servidor para intentar averiguar quién es el usuario.</p>
   </section>
   <section class="bcls-section">
     <h2 id="marketo">Galleta Marketo Munchkin</h2>
-    <p>Los jugadores habilitados para campañas con una integración de Marketo se referirán a la cookie de Munchkin (_mkto_trk) que se crea en el navegador del usuario. Este valor se captura en los datos de visualización del módulo Campaign y se utiliza para sincronizar los datos de visualización con Marketo.</p>
+    <p>Los reproductores habilitados para campañas con una integración de Marketo se referirán a la cookie de Munchkin (_mkto_trk) que se crea en el navegador del usuario. Este valor se captura en los datos de visualización del módulo Campaign y se utiliza para sincronizar los datos de visualización con Marketo.</p>
   </section>
   <section class="bcls-section">
     <h2 id="sfurl">Parámetro de URL de ID de Salesforce</h2>
@@ -59,7 +60,7 @@ parent: General Information
   </section>
   <section class="bcls-section">
     <h2 id="dnt">No rastrear</h2>
-    <p>Los jugadores habilitados para la campaña cumplen&nbsp;por la configuración del navegador de un espectador con respecto a No rastrear (DNT) y no usará ni establecerá su cookie normal si ve que No rastrear está habilitado. También se puede indicar al complemento del reproductor que nunca realice un seguimiento si un cliente de Video Cloud desea desactivarlo para todos sus espectadores o usuario por usuario. Esto se hace usando el código de inserción en la página y configurando el <code translate="No">data-do-not-track </code> a un valor de 1.</p>
+    <p>Los reproductores habilitados para la campaña cumplen&nbsp;por la configuración del navegador de un espectador con respecto a No rastrear (DNT) y no usará ni establecerá su cookie normal si ve que No rastrear está habilitado. También se puede indicar al complemento del reproductor que nunca realice un seguimiento si un cliente de Video Cloud desea desactivarlo para todos sus espectadores o usuario por usuario. Esto se hace usando el código de inserción en la página y configurando el <code translate="No">data-do-not-track </code> a un valor de 1.</p>
     <pre>
 &lt;video-js data-video-id = "9240259371001" cuenta-de-datos = "3491906377" <strong>data-do-not-track = "1"</strong> data-player = "7dccc39d-0e2d-4b27-bea9-af44b2166148" data-embed = "default" class = "video-js" controles&gt;&lt; / video-js&gt;&lt; script src = "https://players.brightcove.net/1486906377/7dccc39d-0e2d-4b27-bea9-af44b2166148_default/index.min.js"&gt;&lt; /texto&gt;
 </pre>

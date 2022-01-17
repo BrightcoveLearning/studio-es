@@ -33,7 +33,7 @@ parent: Reviewing Analytics
     <p>La capacidad de filtrar rangos de direcciones IP no está disponible en este momento.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="7">7. ¿La analítica rastrea a los jugadores con transmisión de eventos en vivo?</h2>
+    <h2 id="7">7. ¿La analítica rastrea a los reproductores con transmisión de eventos en vivo?</h2>
     <p>Analytics realiza un seguimiento de los minutos visualizados como parte del informe de rendimiento. Los segundos en vivo visualizados se pueden mostrar al crear informes personalizados o mediante el módulo de facturación. No se muestra el ancho de banda del evento en vivo.</p>
   </section>
   <section class="bcls-section">
@@ -87,7 +87,7 @@ parent: Reviewing Analytics
     <h2 id="17">17. ¿Por qué la cantidad de reproducciones de videos de un día determinado varía con el tiempo?</h2>
     <p>El sistema de análisis proporciona métricas recientes no conciliadas recopiladas cada hora y se reconcilia automáticamente con las métricas reales informadas a nivel diario. Esta reconciliación ocurre lo antes posible, generalmente en 3 a 5 días. Nunca conciliamos los datos recopilados por horas. Dado que los editores valoran los datos por hora, ponemos a disposición los datos por hora no conciliados durante 32 días. Algunos detalles más sobre la reconciliación:</p>
     <ul>
-      <li>Los jugadores envían datos a la API de recopilación de datos</li>
+      <li>Los reproductores envían datos a la API de recopilación de datos</li>
       <li><span id="1422467412848S" style="display: none;">&nbsp;</span>La API de recopilación de datos hace todo lo posible para escribir en la base de datos en tiempo real&nbsp;Y escribe los eventos en el almacenamiento de registros</li>
       <li>A medida que recopilamos datos adicionales de CDN y otras fuentes, los datos analíticos se actualizan; este es el proceso de reconciliación</li>
       <li>Un sistema de lotes nocturno analiza los eventos de registro sin procesar y crea archivos de importación de datos históricos</li>

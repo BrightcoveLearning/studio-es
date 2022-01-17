@@ -37,7 +37,7 @@
       url: /basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
     - name: Creación de una lista de reproducción manual
       url: /basics/video-cloud-basics-creating-manual-playlist.html
-    - name: Crear un jugador
+    - name: Crear un reproductor
       url: /basics/video-cloud-basics-creating-player.html
     - name: Creación de un reproductor de listas de reproducción
       url: /basics/video-cloud-basics-creating-playlist-player.html
@@ -57,7 +57,7 @@
       url: /basics/video-cloud-basics-publishing-playlist-web.html
     - name: Publicar un solo video en la web
       url: /basics/video-cloud-basics-publishing-single-video-web.html
-    - name: Diseñar un jugador
+    - name: Diseñar un reproductor
       url: /basics/video-cloud-basics-styling-player.html
     - name: Carga de póster de video e imágenes en miniatura
       url: /basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
@@ -99,7 +99,7 @@
       url: /general/protecting-videos-hls-encryption.html
     - name: Restablecimiento de su contraseña de Studio
       url: /general/resetting-your-studio-password.html
-    - name: Compartir videos en tarjetas de jugador de Twitter
+    - name: Compartir videos en tarjetas de reproductor de Twitter
       url: /general/sharing-videos-twitter-player-cards.html
     - name: Requisitos del sistema de estudio
       url: /general/studio-system-requirements.html
@@ -202,7 +202,7 @@
     - name: Visualización de resultados y análisis del canal
       url: /cloud-playout/viewing-channel-output-and-analytics.html
 - section:
-  name: Gerente Jugadores
+  name: Gerente reproductores
   url: /players/index.html
   docs:
     - name: Adición de búsqueda de miniaturas
@@ -215,15 +215,15 @@
       url: /players/configuring-adobe-analytics-event-tracking.html
     - name: Configuración del seguimiento de eventos de Google Analytics
       url: /players/configuring-google-analytics-event-tracking.html
-    - name: Configurar la publicidad del jugador
+    - name: Configurar la publicidad del reproductor
       url: /players/configuring-player-advertising-using-players-module.html
     - name: Configuración de restricciones de contenido del reproductor
       url: /players/configuring-player-content-restrictions.html
-    - name: Configurar los controles del jugador
+    - name: Configurar los controles del reproductor
       url: /players/configuring-player-controls.html
     - name: Configuración de la pantalla final del reproductor
       url: /players/configuring-player-endscreen.html
-    - name: Configurar la localización del jugador
+    - name: Configurar la localización del reproductor
       url: /players/configuring-player-localization.html
     - name: Configuración de las propiedades de reproducción del reproductor
       url: /players/configuring-player-playback-properties.html
@@ -231,17 +231,17 @@
       url: /players/configuring-player-plugins.html
     - name: Configuración de las propiedades sociales
       url: /players/configuring-social-properties-player.html
-    - name: Generando código de inserción del jugador
+    - name: Generando código de inserción del reproductor
       url: /players/generating-player-embed-code.html
-    - name: Introducción al módulo de jugadores
+    - name: Introducción al módulo de reproductores
       url: /players/getting-started-players-module.html
-    - name: Configuración de las propiedades de información del jugador
+    - name: Configuración de las propiedades de información del reproductor
       url: /players/setting-player-information-properties.html
     - name: Configuración de las propiedades del reproductor
       url: /players/setting-player-properties.html
     - name: Configuración del modo de actualización del reproductor
       url: /players/setting-player-update-mode-and-version.html
-    - name: Jugadores de estilo
+    - name: reproductores de estilo
       url: /players/styling-players.html
 - section:
   name: 'Publicación de videos y reproductores'
@@ -251,7 +251,7 @@
       url: /publish/adding-3play-media-interactive-transcript-video.html
     - name: Agregar una ID de aplicación al código de inserción
       url: /publish/adding-application-id-player-embed-code.html
-    - name: Agregar un jugador a una página de fans de Facebook
+    - name: Agregar un reproductor a una página de fans de Facebook
       url: /publish/adding-brightcove-player-facebook-fan-page.html
     - name: Cambiar un video en un reproductor
       url: /publish/changing-video-player-without-changing-embed-code.html
@@ -269,9 +269,9 @@
       url: /publish/embedding-brightcove-player-google-sites-page.html
     - name: Publicar un reproductor en una página de Wordpress
       url: /publish/publishing-brightcove-player-wordpress-page.html
-    - name: Publicar jugadores en artículos instantáneos de Facebook
+    - name: Publicar reproductores en artículos instantáneos de Facebook
       url: /publish/publishing-brightcove-players-facebook-instant-articles.html
-    - name: Publicar jugadores en Joomla
+    - name: Publicar reproductores en Joomla
       url: /publish/publishing-brightcove-players-joomla.html
     - name: Publicar un video en un correo electrónico
       url: /publish/publishing-video-email.html
@@ -318,7 +318,7 @@
     docs:
       - name: Introducción a la campaña
         url: /campaign/get-started/getting-started-campaign-module.html
-      - name: Creación de un jugador habilitado para campaña
+      - name: Creación de un reproductor habilitado para campaña
         url: /campaign/general/creating-campaign-enabled-player.html
       - name: Descripción general de los tipos de contenido de video
         url: /campaign/get-started/overview-video-content-types.html
@@ -331,7 +331,7 @@
         url: /campaign/general/campaign-fields-and-data-definitions.html
       - name: Configurar la configuración de la campaña
         url: /campaign/general/configuring-campaign-settings.html
-      - name: Creación de un jugador habilitado para campaña
+      - name: Creación de un reproductor habilitado para campaña
         url: /campaign/general/creating-campaign-enabled-player.html
       - name: Creación de un formulario de cliente potencial de campaña
         url: /campaign/general/creating-campaign-lead-form.html
@@ -345,7 +345,7 @@
         url: /campaign/general/publishing-video-email-using-campaign-module.html
       - name: Uso de eventos y métricas personalizadas
         url: /campaign/general/using-custom-metrics-and-events.html
-      - name: Visualización de eventos del jugador
+      - name: Visualización de eventos del reproductor
         url: /campaign/general/viewing-player-events-campaign-module.html
       - name: Visualización de la actividad de video
         url: /campaign/general/viewing-video-activity.html
@@ -451,7 +451,7 @@
       url: /analytics/managing-scheduled-reports.html
     - name: Referencia del informe de rendimiento
       url: /analytics/performance-report-reference.html
-    - name: Revisión de eventos de jugadores en Google Analytics
+    - name: Revisión de eventos de reproductores en Google Analytics
       url: /analytics/reviewing-player-event-data-google-analytics.html
     # - name: Referencia del informe Tendencias actuales
     #   url: /analytics/trending-now-report-reference.html

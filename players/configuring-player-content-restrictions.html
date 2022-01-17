@@ -1,5 +1,6 @@
 ---
-title: Descripción de la configuración de las restricciones de contenido del reproductor: En este tema, aprenderá a configurar las propiedades de restricción de contenido mediante el módulo Reproductores.
+title: Configuración de las restricciones de contenido del reproductor
+description: 'En este tema, aprenderá a configurar las propiedades de restricción de contenido mediante el módulo Reproductores.'
 parent: Managing Players
 ---
 
@@ -9,7 +10,7 @@ parent: Managing Players
   <section class="bcls-section">
     <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5706078874001">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>El jugador <strong>Restricción de contenido</strong> Las propiedades se pueden usar para restringir a un jugador a países en particular, o bloquear a un jugador de países en particular. Se pueden agregar restricciones de dominio a un reproductor para limitar los dominios donde se puede usar el reproductor.</p>
+    <p>El reproductor <strong>Restricción de contenido</strong> Las propiedades se pueden usar para restringir a un reproductor a países en particular, o bloquear a un reproductor de países en particular. Se pueden agregar restricciones de dominio a un reproductor para limitar los dominios donde se puede usar el reproductor.</p>
     <aside class="bcls-aside bcls-aside--information">
       <h4>Notas:</h4>
       <ul>
@@ -18,13 +19,13 @@ parent: Managing Players
         <li>IE 10 y 11, en modo de compatibilidad, mostrarán errores de restricción de dominio al ver contenido restringido por dominio.</li>
       </ul>
     </aside>
-    <p>Para ver y editar el <strong>Restricción de contenido</strong> propiedades de un jugador, abra el módulo Jugadores, haga clic en el nombre de un jugador y haga clic en <strong>Restricción de contenido </strong>en el menú de navegación de la izquierda.</p>
+    <p>Para ver y editar el <strong>Restricción de contenido</strong> propiedades de un reproductor, abra el módulo reproductores, haga clic en el nombre de un reproductor y haga clic en <strong>Restricción de contenido </strong>en el menú de navegación de la izquierda.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="content restriction" src="/assets/images/players/node15616-content-restrictions.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Nota: Cualquier cambio realizado en un jugador puede tardar hasta 5 minutos en aparecer en los reproductores publicados.</aside>
+    <aside class="bcls-aside bcls-aside--information">Nota: Cualquier cambio realizado en un reproductor puede tardar hasta 5 minutos en aparecer en los reproductores publicados.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="domains">Configurar restricciones de dominio</h2>
-    <p>Se pueden establecer restricciones de dominio en los jugadores para limitar los dominios donde se pueden usar los jugadores. Si el código de publicación del reproductor se copia y se usa en otro sitio, las restricciones de dominio evitarían que el reproductor cargue videos. Los editores deben utilizar el código de inserción en la página para que la reproducción funcione en los dominios que se han incluido en la lista blanca. Los editores no pueden utilizar el código de inserción de iframe en un dominio incluido en la lista blanca (o cualquier otro dominio) y esperan que la reproducción funcione correctamente.</p>
+    <p>Se pueden establecer restricciones de dominio en los reproductores para limitar los dominios donde se pueden usar los reproductores. Si el código de publicación del reproductor se copia y se usa en otro sitio, las restricciones de dominio evitarían que el reproductor cargue videos. Los editores deben utilizar el código de inserción en la página para que la reproducción funcione en los dominios que se han incluido en la lista blanca. Los editores no pueden utilizar el código de inserción de iframe en un dominio incluido en la lista blanca (o cualquier otro dominio) y esperan que la reproducción funcione correctamente.</p>
     <aside class="bcls-aside bcls-aside--information">
       <h4>Notas:</h4>
       <ul>
@@ -32,11 +33,11 @@ parent: Managing Players
         <li>Para los espectadores que usan Internet Explorer, la función de restricción de dominio requiere la versión 10 o más reciente. Los espectadores que utilicen Internet Explorer &lt;10 no obtendrán ninguna reproducción.</li>
         <li>Se admiten restricciones de dominio cuando se utiliza una experiencia en la página de la galería y el código de inserción recomendado (JavaScript).</li>
         <li>Los reproductores con dominio restringido no son compatibles con las integraciones de AMP. Esto se debe a que la integración de AMP crea un iframe que, a su vez, no es compatible con los reproductores de dominio restringido.</li>
-        <li>Al usar la función de restricción de dominio, las restricciones de dominio deben configurarse para todos los jugadores en su cuenta. Si todos los reproductores no están configurados con restricciones de dominio, alguien podría tomar la clave de política de un reproductor desprotegido y usarla para reproducir cualquier video.</li>
+        <li>Al usar la función de restricción de dominio, las restricciones de dominio deben configurarse para todos los reproductores en su cuenta. Si todos los reproductores no están configurados con restricciones de dominio, alguien podría tomar la clave de política de un reproductor desprotegido y usarla para reproducir cualquier video.</li>
         <li>Si bien no hay límite en la cantidad de dominios que se pueden agregar en Studio, existe un límite en la longitud de la URL para la solicitud de API; incluida en esa URL estará la lista de dominios delimitada por comas. Por lo tanto, existe un límite en la cantidad de dominios que se pueden especificar, pero la cantidad dependerá de la extensión de los nombres de dominio. </li>
       </ul>
     </aside>
-    <p>Para configurar una restricción de dominio para un jugador, siga estos pasos:</p>
+    <p>Para configurar una restricción de dominio para un reproductor, siga estos pasos:</p>
     <ol class="bcls-tasklist-restart">
       <li>Ingrese una o más URL de dominio completas (como http://www.brightcove.com o https://www.brightcove.com) para restringir la disponibilidad de su reproductor a estos dominios en particular. Asegúrese de incluir http: // o https: //. Hacer clic <strong>+</strong>.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node15616-domains.png" /></figure>

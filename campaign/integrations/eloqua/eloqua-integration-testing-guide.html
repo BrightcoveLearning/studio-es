@@ -1,5 +1,6 @@
 ---
-title: Descripción de la Guía de pruebas de integración de Eloqua: En este tema, aprenderá a verificar una integración entre Video Cloud y Eloqua.
+title: Guía de pruebas de integración de Eloqua
+description: 'En este tema, aprenderá a verificar una integración entre Video Cloud y Eloqua.'
 parent: Eloqua 
 grandparent: Integrations
 ---
@@ -40,7 +41,7 @@ grandparent: Integrations
     <p>Para generar un enlace de vista previa al video, siga estos pasos.</p>
     <ol class="bcls-tasklist-restart">
       <li>Abra el módulo de medios.</li>
-      <li>Seleccione un video y publíquelo en un reproductor web. Asegúrese de seleccionar el jugador habilitado para campaña con el formulario de cliente potencial.</li>
+      <li>Seleccione un video y publíquelo en un reproductor web. Asegúrese de seleccionar el reproductor habilitado para campaña con el formulario de cliente potencial.</li>
       <li>Haga clic en el enlace de vista previa para abrir el video en una nueva ventana del navegador. Probar de esta manera elimina cualquier variable potencial que pudieran introducir los reproductores incrustados en una página HTML.</li>
       <li>Confirme que el video se reproduce y que el formulario principal se muestra en la marca de 5 segundos.</li>
       <li>Complete el formulario de cliente potencial con información de contacto y dirección de correo electrónico únicas (es decir, el nombre de una celebridad o un nombre que contenga las palabras “bctest”) para que pueda encontrarlo fácilmente más adelante en Eloqua. Esto elimina cualquier variable de nivel de navegador, reproductor o base de datos. Al completar el formulario como nuevo usuario, podemos estar seguros de que ahora es un usuario conocido en Eloqua.</li>
@@ -81,7 +82,7 @@ grandparent: Integrations
       <li>Localizar el <strong>BrightcoveVideoView</strong> objeto personalizado.</li>
       <li>Haga clic en la flecha desplegable junto a él y luego haga clic en <strong>Registros de objetos personalizados asignados al desglose de contactos</strong>. Se mostrará una lista de contactos que tienen datos de visualización de videos en este objeto personalizado.</li>
       <li>Busque el nombre único o la dirección de correo electrónico que utilizó al completar el formulario de cliente potencial.</li>
-      <li>Haga clic en el contacto para abrir la página de detalles. Se mostrará una lista de todos los registros de visualización de video del contacto. Estos son los datos de visualización de video entregados desde Campaign a Eloqua. Se incluyen campos como el nombre del video, la identificación del video, la identificación del jugador, el tiempo de visualización, el porcentaje de visualización y más.
+      <li>Haga clic en el contacto para abrir la página de detalles. Se mostrará una lista de todos los registros de visualización de video del contacto. Estos son los datos de visualización de video entregados desde Campaign a Eloqua. Se incluyen campos como el nombre del video, la identificación del video, la identificación del reproductor, el tiempo de visualización, el porcentaje de visualización y más.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node18742-eloqua-info.png" /></figure>
       </li>
     </ol>

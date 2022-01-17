@@ -1,5 +1,6 @@
 ---
-title: 'Paso a paso: Uso del módulo Players para crear y publicar una' descripción del reproductor: El propósito de este tema es mostrarle cómo puede crear y publicar un reproductor usando el módulo de Jugadores.
+title: 'Paso a paso: Uso del módulo Players para crear y publicar un reproductor'
+description: 'El propósito de este tema es mostrarle cómo puede crear y publicar un reproductor usando el módulo de reproductores.'
 
 parent: 'Publishing Videos &amp; Players'
 ---
@@ -12,9 +13,9 @@ parent: 'Publishing Videos &amp; Players'
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
     <p>Después de seguir los pasos de este tema, debería poder:</p>
     <ul>
-      <li>Navega dentro del módulo de Jugadores</li>
-      <li>Crea un jugador</li>
-      <li>Establecer las propiedades del jugador</li>
+      <li>Navega dentro del módulo de reproductores</li>
+      <li>Crea un reproductor</li>
+      <li>Establecer las propiedades del reproductor</li>
       <li>Pasar una identificación de video de Video Cloud para que se muestre en el reproductor</li>
       <li>Obtener una vista previa y publicar un reproductor</li>
     </ul>
@@ -36,60 +37,60 @@ parent: 'Publishing Videos &amp; Players'
     <h2 id="instructions">Instrucciones</h2>
     <p>Para crear y publicar un reproductor Brightcove con Video Cloud Studio, completará las siguientes tareas:</p>
     <ul>
-      <li><a href="#create">Crea un jugador</a></li>
+      <li><a href="#create">Crea un reproductor</a></li>
       <li><a href="#size">Configurar las dimensiones del reproductor</a></li>
       <li><a href="#publish">Publicar y obtener una vista previa del reproductor</a></li>
       <li><a href="#assign">Asignar dinámicamente contenido de video al reproductor</a></li>
       <li><a href="#style">Configurar propiedades de estilo</a></li>
       <li><a href="#social">Configurar propiedades para compartir en redes sociales</a></li>
       <li><a href="#preview">Vista previa del reproductor</a></li>
-      <li><a href="#final">Publica el jugador final</a></li>
+      <li><a href="#final">Publica el reproductor final</a></li>
     </ul>
     <div class="BCL-taskSubsection" id="create">
-      <h3>Crea un jugador</h3>
-      <p>Para crear un nuevo jugador, siga estos pasos.</p>
+      <h3>Crea un reproductor</h3>
+      <p>Para crear un nuevo reproductor, siga estos pasos.</p>
       <ol class="bcls-tasklist">
         <li>Inicie sesión en Video Cloud Studio.</li>
-        <li>El nombre de la cuenta de Video Cloud actual aparecerá en la esquina superior derecha de la página. Si tiene varias cuentas, haga clic en el <strong>usuario actual - cuenta corriente</strong> enlace y seleccione la cuenta en la que le gustaría crear el jugador.
+        <li>El nombre de la cuenta de Video Cloud actual aparecerá en la esquina superior derecha de la página. Si tiene varias cuentas, haga clic en el <strong>usuario actual - cuenta corriente</strong> enlace y seleccione la cuenta en la que le gustaría crear el reproductor.
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node14057-current-account.png" /></figure>
         </li>
-        <li>Haga clic en el <strong>Jugadores</strong> enlace en el encabezado de navegación.</li>
-        <li>Haga clic en el <strong>Nuevo jugador</strong> botón.</li>
-        <li>Entrar a <strong> Nombre </strong>y <strong>Breve descripción</strong> para el jugador. Para este inicio rápido, el nombre del jugador será <strong>Reproductor de muestra</strong>.
+        <li>Haga clic en el <strong>reproductores</strong> enlace en el encabezado de navegación.</li>
+        <li>Haga clic en el <strong>Nuevo reproductor</strong> botón.</li>
+        <li>Entrar a <strong> Nombre </strong>y <strong>Breve descripción</strong> para el reproductor. Para este inicio rápido, el nombre del reproductor será <strong>Reproductor de muestra</strong>.
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node14057-new-player-dialog.png" /></figure>
         </li>
-        <li>Confirma que el jugador aparece en la lista de jugadores.
+        <li>Confirma que el reproductor aparece en la lista de reproductores.
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node14057-list-of-players.png" /></figure>
         </li>
       </ol>
-      <p>Cuando se crea un nuevo reproductor usando el módulo de Jugadores, el reproductor se construye usando la última versión publicada por Brightcove. Para ver la versión del reproductor, abra el módulo de Jugadores y haga clic en el reproductor que desea verificar. Las propiedades de Información del jugador mostrarán el <strong>Versión de reproductor publicada</strong>.</p>
+      <p>Cuando se crea un nuevo reproductor usando el módulo de reproductores, el reproductor se construye usando la última versión publicada por Brightcove. Para ver la versión del reproductor, abra el módulo de reproductores y haga clic en el reproductor que desea verificar. Las propiedades de Información del reproductor mostrarán el <strong>Versión de reproductor publicada</strong>.</p>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node14057-player-version.png" /></figure>
-      <p>Tenga en cuenta que es posible que no todos los reproductores tengan la misma versión. A medida que Brightcove continúe desarrollando y mejorando el reproductor Brightcove, se lanzarán nuevas versiones del reproductor. De forma predeterminada, las actualizaciones se aplican a todos los jugadores automáticamente. Para evitar la actualización automática de un reproductor, debe configurar el <strong>Modo de actualizacion</strong> ajuste a <strong>Manual</strong> (también conocido como bloquear a un jugador). Para más información, ver <a href="/players/setting-player-update-mode-and-version.html">Configuración del modo y la versión de actualización del reproductor</a>.</p>
+      <p>Tenga en cuenta que es posible que no todos los reproductores tengan la misma versión. A medida que Brightcove continúe desarrollando y mejorando el reproductor Brightcove, se lanzarán nuevas versiones del reproductor. De forma predeterminada, las actualizaciones se aplican a todos los reproductores automáticamente. Para evitar la actualización automática de un reproductor, debe configurar el <strong>Modo de actualizacion</strong> ajuste a <strong>Manual</strong> (también conocido como bloquear a un reproductor). Para más información, ver <a href="/players/setting-player-update-mode-and-version.html">Configuración del modo y la versión de actualización del reproductor</a>.</p>
     </div>
     <div class="BCL-taskSubsection" id="size">
       <h3>Configurar las dimensiones del reproductor</h3>
       <p>Al agregar las dimensiones del reproductor, los parámetros de ancho y alto se agregarán al código de inserción del iframe. Si deja las dimensiones en blanco, el reproductor se puede poner en un <code translate="No">&lt;div&gt;</code> de cualquier tamaño en una página y se expandirá para llenar el espacio. Para configurar las dimensiones del reproductor, siga estos pasos.</p>
       <ol class="bcls-tasklist">
         <li>Haga clic en el enlace para <strong>Reproductor de muestra</strong> para abrir la página de propiedades del reproductor.</li>
-        <li>Hacer clic <strong>Información del jugador</strong> en el menú de navegación de la izquierda.</li>
+        <li>Hacer clic <strong>Información del reproductor</strong> en el menú de navegación de la izquierda.</li>
         <li>Selecciona el <strong>Relación de aspecto</strong> a <strong>16: 9</strong>.</li>
-        <li>Selecciona el <strong>Ancho del jugador</strong> a <strong>640</strong>.
+        <li>Selecciona el <strong>Ancho del reproductor</strong> a <strong>640</strong>.
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node14057-settings-props.png" /></figure>
         </li>
         <li>Hacer clic <strong>Ahorrar</strong>.</li>
       </ol>
-      <p>Para obtener más información sobre las propiedades de Información del jugador, consulte <a href="/players/setting-player-information-properties.html">Configuración de las propiedades de información del jugador</a>.</p>
+      <p>Para obtener más información sobre las propiedades de Información del reproductor, consulte <a href="/players/setting-player-information-properties.html">Configuración de las propiedades de información del reproductor</a>.</p>
     </div>
     <div class="BCL-taskSubsection" id="publish">
       <h3>Publicar y obtener una vista previa del reproductor</h3>
-      <p>La publicación del reproductor enviará los cambios al reproductor publicado. Para obtener más información sobre reproductores de vista previa, reproductores publicados y código de publicación de reproductores, consulte <a href="/players/generating-player-embed-code.html">Generación de inserción de jugador&nbsp;Código</a>.</p>
+      <p>La publicación del reproductor enviará los cambios al reproductor publicado. Para obtener más información sobre reproductores de vista previa, reproductores publicados y código de publicación de reproductores, consulte <a href="/players/generating-player-embed-code.html">Generación de inserción de reproductor&nbsp;Código</a>.</p>
       <p>Para publicar el reproductor, siga estos pasos.</p>
       <ol class="bcls-tasklist">
         <li>Hacer clic <strong>Publicar e insertar</strong> y entonces <strong>Publicar cambios</strong> para publicar el reproductor.</li>
         <li>Confirme que la publicación se haya realizado correctamente.
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node14057-publish-ok.png" /></figure>
         </li>
-        <li>Haga clic en el <strong>URL del jugador</strong> para abrir el reproductor de vista previa en una nueva pestaña del navegador. El reproductor estará vacío ya que no se ha asignado ningún video al reproductor.
+        <li>Haga clic en el <strong>URL del reproductor</strong> para abrir el reproductor de vista previa en una nueva pestaña del navegador. El reproductor estará vacío ya que no se ha asignado ningún video al reproductor.
 <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node14057-published-player-code.png" /></figure>
         </li>
       </ol>
@@ -111,7 +112,7 @@ parent: 'Publishing Videos &amp; Players'
     </div>
     <div class="BCL-taskSubsection" id="style">
       <h3>Configurar propiedades de estilo</h3>
-      <p>Las propiedades de estilo se utilizan para personalizar la apariencia del reproductor. Para obtener más información sobre cómo diseñar reproductores, consulte <a href="/players/styling-players.html">Jugadores de estilo</a>.</p>
+      <p>Las propiedades de estilo se utilizan para personalizar la apariencia del reproductor. Para obtener más información sobre cómo diseñar reproductores, consulte <a href="/players/styling-players.html">reproductores de estilo</a>.</p>
       <p>Para configurar los ajustes de estilo, regrese al módulo Reproductores y siga estos pasos.</p>
       <ol class="bcls-tasklist">
         <li>Haga clic en el enlace para <strong>Reproductor de muestra</strong> para abrir la página de propiedades del reproductor.</li>
@@ -129,7 +130,7 @@ parent: 'Publishing Videos &amp; Players'
     </div>
     <div class="BCL-taskSubsection" id="social">
       <h3>Configurar propiedades para compartir en redes sociales</h3>
-      <p>Cuando el uso compartido en redes sociales está habilitado, aparecerá un icono de compartir en la parte inferior del reproductor junto al cabezal de reproducción. Esto permitirá a los espectadores compartir su contenido en sitios populares de redes sociales. Para obtener más información sobre cómo configurar las propiedades sociales de un jugador, consulte <a href="/players/configuring-social-properties-player.html">Configuración de las propiedades sociales de un jugador</a>.</p>
+      <p>Cuando el uso compartido en redes sociales está habilitado, aparecerá un icono de compartir en la parte inferior del reproductor junto al cabezal de reproducción. Esto permitirá a los espectadores compartir su contenido en sitios populares de redes sociales. Para obtener más información sobre cómo configurar las propiedades sociales de un reproductor, consulte <a href="/players/configuring-social-properties-player.html">Configuración de las propiedades sociales de un reproductor</a>.</p>
       <p>Para configurar la configuración social, siga estos pasos.</p>
       <ol class="bcls-tasklist">
         <li>Hacer clic <strong>Social</strong> en el menú de navegación de la izquierda.</li>
@@ -146,17 +147,17 @@ parent: 'Publishing Videos &amp; Players'
       <aside class="bcls-aside bcls-aside--information">Nota: Si regresa al reproductor publicado que abrimos anteriormente y actualiza la página, notará que estos cambios no están activos en el reproductor publicado. Los cambios de color y redes sociales no se enviarán al reproductor publicado hasta que los cambios se hayan publicado dentro del módulo Players.</aside>
       <p>También es posible generar el código de publicación para el reproductor de vista previa. Por ejemplo, tal vez el departamento de marketing necesite aprobar todos los cambios realizados en el reproductor. Puede enviarles una URL al reproductor de vista previa para que puedan aprobar los cambios. Para generar el código de publicación para el reproductor de vista previa, siga estos pasos.</p>
       <ol class="bcls-tasklist">
-        <li>En la página de inicio del módulo de Jugadores, haga clic en <strong>Insertar código y URL</strong> y haga clic en <strong>Reproductor de vista previa</strong>. Aparecerá el cuadro de diálogo Código de inserción del reproductor de vista previa.</li>
-        <li>Haga clic en el <strong>URL del jugador</strong> para abrir el reproductor de vista previa en una nueva pestaña del navegador.</li>
+        <li>En la página de inicio del módulo de reproductores, haga clic en <strong>Insertar código y URL</strong> y haga clic en <strong>Reproductor de vista previa</strong>. Aparecerá el cuadro de diálogo Código de inserción del reproductor de vista previa.</li>
+        <li>Haga clic en el <strong>URL del reproductor</strong> para abrir el reproductor de vista previa en una nueva pestaña del navegador.</li>
         <li>El reproductor de vista previa debe ocupar todo el ancho de la página del navegador y tener un logotipo de Brightcove superpuesto que indica que es el reproductor de vista previa. Confirme que los cambios de color y los cambios de promoción viral sean visibles.</li>
-        <li>Deje abierto el reproductor de vista previa y regrese al módulo de Jugadores.</li>
+        <li>Deje abierto el reproductor de vista previa y regrese al módulo de reproductores.</li>
       </ol>
     </div>
     <div class="BCL-taskSubsection" id="final">
-      <h3>Publica el jugador final</h3>
+      <h3>Publica el reproductor final</h3>
       <p>Los cambios en el reproductor de vista previa no serán visibles en el reproductor publicado hasta que se publiquen los cambios. Para publicar los cambios, siga estos pasos.</p>
       <ol class="bcls-tasklist">
-        <li>En el módulo de Jugadores, haga clic en <strong>Publicar e insertar</strong> y entonces <strong>Publicar cambios</strong> para publicar el reproductor.</li>
+        <li>En el módulo de reproductores, haga clic en <strong>Publicar e insertar</strong> y entonces <strong>Publicar cambios</strong> para publicar el reproductor.</li>
         <li>Confirme que la publicación se haya realizado correctamente.
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node14057-publish-ok.png" /></figure>
         </li>

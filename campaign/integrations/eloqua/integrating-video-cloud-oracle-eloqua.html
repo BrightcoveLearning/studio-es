@@ -1,5 +1,6 @@
 ---
-title: Integración de Video Cloud con Oracle Eloqua descripción: Este tema explica cómo configurar el módulo Campaign para su uso con Oracle Eloqua.
+title: Integración de Video Cloud con Oracle Eloqua 
+description: 'Este tema explica cómo configurar el módulo Campaign para su uso con Oracle Eloqua.'
 parent: Eloqua 
 grandparent: Integrations
 ---
@@ -44,7 +45,7 @@ grandparent: Integrations
           <li>ID de video</li>
           <li>ID de cuenta (Video Cloud)</li>
           <li>URL de la página (URL de la página de referencia)</li>
-          <li>ID de jugador (reproductor de Video Cloud)</li>
+          <li>ID de reproductor (reproductor de Video Cloud)</li>
           <li>% Watched</li>
         </ul>
       </li>
@@ -110,7 +111,7 @@ grandparent: Integrations
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="data retention options" src="/assets/images/campaign/integrations/eloqua/node15635-data-retention-options.png" /></figure>
       </li>
     </ol>
-    <p>Para eliminar la integración con Oracle Eloqua, haga clic en <strong>Desconectar</strong>. La parte inferior de la página enumerará todos los jugadores habilitados para la campaña y los formularios de clientes potenciales asociados.</p>
+    <p>Para eliminar la integración con Oracle Eloqua, haga clic en <strong>Desconectar</strong>. La parte inferior de la página enumerará todos los reproductores habilitados para la campaña y los formularios de clientes potenciales asociados.</p>
     <p>El módulo Campaña admite múltiples conexiones a plataformas de marketing. Hacer clic <strong>Agregar nueva conexión</strong> para configurar integraciones adicionales.</p>
   </section>
   <section class="bcls-section">
@@ -119,7 +120,7 @@ grandparent: Integrations
   </section>
   <section class="bcls-section">
     <h2 id="player">Creación de un reproductor habilitado para campaña</h2>
-    <p>Los datos de participación de video solo se enviarán a Eloqua cuando esté utilizando un reproductor de video habilitado para Campaña. Para obtener información sobre cómo crear un Brightcove Player habilitado para la campaña, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un jugador habilitado para campaña</a>.</p>
+    <p>Los datos de participación de video solo se enviarán a Eloqua cuando esté utilizando un reproductor de video habilitado para Campaña. Para obtener información sobre cómo crear un Brightcove Player habilitado para la campaña, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un reproductor habilitado para campaña</a>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="trackingid">Pasando una identificación de seguimiento</h2>
@@ -130,7 +131,7 @@ grandparent: Integrations
     <pre>
   http://www.myurl.com/video.html?<strong>bctrackingid = 12345</strong></pre>
     <ul>
-      <li>Ejemplo: Agregado al código de inserción del jugador</li>
+      <li>Ejemplo: Agregado al código de inserción del reproductor</li>
     </ul>
     <pre>
   &lt;video data-video-id = "6033402539001" data-account = "1486906377" data-player = "default" data-embed = "default" data-application-id class = "video-js" <strong>data-bc-trackingid = "12345"</strong> control S&gt;&lt; /video&gt;&lt; script src = "// players.brightcove.net/1486906377/default_default/index.min.js"&gt;&lt; /texto&gt;</pre>
@@ -138,7 +139,7 @@ grandparent: Integrations
   </section>
   <section class="bcls-section">
     <h2 id="identify">Identificación de espectadores</h2>
-    <p>Los jugadores habilitados para la campaña con una integración de Eloqua invocarán las API de Eloqua para obtener la identificación del visitante, frecuentemente conocida como la GUID de Eloqua. Esta ID se captura en los datos de visualización del módulo Campaign y se utiliza para sincronizar los datos de visualización con Eloqua.</p>
+    <p>Los reproductores habilitados para la campaña con una integración de Eloqua invocarán las API de Eloqua para obtener la identificación del visitante, frecuentemente conocida como la GUID de Eloqua. Esta ID se captura en los datos de visualización del módulo Campaign y se utiliza para sincronizar los datos de visualización con Eloqua.</p>
     <p>Eloqua utiliza su propio conjunto de cookies y cuando se configura un Brightcove Player con una integración de Eloqua, Campaign captura el GUID en la cookie de Eloqua y se comunica con Eloqua en el servidor para intentar averiguar quién es el usuario.</p>
     <p>La dirección de correo electrónico del usuario también se puede pasar y utilizar para identificar al espectador. Para obtener más información y un ejemplo, consulte <a href="/campaign/general/how-campaign-module-identifies-viewers.html#email">Cómo el módulo de campaña identifica a los espectadores</a>.</p>
   </section>

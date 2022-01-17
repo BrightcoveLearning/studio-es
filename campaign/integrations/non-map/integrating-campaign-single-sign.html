@@ -1,5 +1,6 @@
 ---
-title: Descripción de la campaña de integración con inicio de sesión único: Este tema explica cómo configurar el módulo Campaign para su uso con el inicio de sesión único.
+title: Campaña de integración con inicio de sesión único
+description: 'Este tema explica cómo configurar el módulo Campaign para su uso con el inicio de sesión único.'
 parent: Non-MAP 
 grandparent: Integrations
 ---
@@ -67,7 +68,7 @@ grandparent: Integrations
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="data retention options" src="/assets/images/campaign/general/node18363-data-retention-options.png" /></figure>
       </li>
     </ol>
-    <p>Para eliminar la integración, haga clic en <strong>Desconectar</strong>. La parte inferior de la página enumerará todos los jugadores habilitados para la campaña, las conexiones con las que están asociados y los formularios de clientes potenciales asociados.</p>
+    <p>Para eliminar la integración, haga clic en <strong>Desconectar</strong>. La parte inferior de la página enumerará todos los reproductores habilitados para la campaña, las conexiones con las que están asociados y los formularios de clientes potenciales asociados.</p>
     <p>El módulo Campaña admite múltiples conexiones a plataformas de marketing. Hacer clic <strong>Agregar nueva conexión</strong> para configurar integraciones adicionales.</p>
   </section>
   <section class="bcls-section">
@@ -95,17 +96,17 @@ grandparent: Integrations
     <aside class="bcls-aside bcls-aside--information">Nota: Para que el reproductor / complemento lea el parámetro de URL, se debe usar el código de inserción Avanzado (en la página). El código de incrustación estándar (iframe) no funcionará ya que el complemento se ejecutará dentro de un iframe y, por lo tanto, no puede acceder a la URL de la página principal que tiene el parámetro.</aside>
     <p>También es posible pasar el GUID al reproductor Campaign utilizando un valor de JavaScript que está disponible en la página. Usando la configuración del reproductor, es posible decirle a Campaign cuál es el nombre de la variable JavaScript y Campaign luego intentará leer esa variable usándola como el GUID personalizado. Para hacer esto, edite el reproductor Campaign y configure las opciones del complemento para el complemento Campaign.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="plugin params" src="/assets/images/campaign/general/node18363-plugin-params.png" /></figure>
-    <p>En el ejemplo anterior, la configuración del jugador le dice a Campaign que hay un objeto JavaScript en la página llamado <code translate="No">samlAttributes</code> y tiene una propiedad llamada <code translate="No">nameID</code>. Campaign intentará leer eso y usará su valor para el GUID personalizado.</p>
+    <p>En el ejemplo anterior, la configuración del reproductor le dice a Campaign que hay un objeto JavaScript en la página llamado <code translate="No">samlAttributes</code> y tiene una propiedad llamada <code translate="No">nameID</code>. Campaign intentará leer eso y usará su valor para el GUID personalizado.</p>
   </section>
   <section class="bcls-section">
     <h2 id="player">Creación de un reproductor habilitado para campaña</h2>
-    <p>Los datos de participación en el video solo se rastrearán cuando esté utilizando un reproductor de video habilitado para Campaña. Para obtener información sobre cómo crear un Brightcove Player habilitado para la campaña, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un jugador habilitado para campaña</a>.</p>
+    <p>Los datos de participación en el video solo se rastrearán cuando esté utilizando un reproductor de video habilitado para Campaña. Para obtener información sobre cómo crear un Brightcove Player habilitado para la campaña, consulte <a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un reproductor habilitado para campaña</a>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="viewdata">Ver datos de video</h2>
     <p>Hay varias opciones disponibles para ver datos de video cuando se usa una integración SSO:</p>
     <ul>
-      <li><strong>Actividades del espectador (eventos)</strong> - Proporcionada como parte del módulo Campaña, esta opción se puede utilizar para ver datos de video dentro del módulo Campaña. Para obtener información, consulte <a href="/campaign/general/viewing-player-events-campaign-module.html">Visualización de eventos de jugadores en el módulo de campaña</a>.</li>
+      <li><strong>Actividades del espectador (eventos)</strong> - Proporcionada como parte del módulo Campaña, esta opción se puede utilizar para ver datos de video dentro del módulo Campaña. Para obtener información, consulte <a href="/campaign/general/viewing-player-events-campaign-module.html">Visualización de eventos de reproductores en el módulo de campaña</a>.</li>
       <li><strong>Perfiles de espectadores</strong> - Proporcionada como parte del módulo Campaña, esta opción se puede usar para ver datos de video basados en un valor de perfil de usuario dentro del módulo Campaña. Para obtener información, consulte <a href="/campaign/general/viewing-viewer-profile-information.html">Visualización de la información del perfil del espectador</a>.</li>
       <li><strong>Exportar datos</strong> - Proporcionada como parte del módulo Campaña, esta opción se puede utilizar para exportar la vista de video y los datos de clientes potenciales. Para obtener información, consulte <a href="/campaign/admin/exporting-campaign-data-campaign-module.html">Exportación de datos de campaña desde el módulo de campaña</a>.</li>
       <li><strong>API de audiencia</strong> - La API Audience se puede utilizar para recuperar de manera programática la vista de video y los datos de clientes potenciales. Para obtener información, consulte <a href="/campaign/develop/overview-audience-api.html">Descripción general: API de audiencia</a>.</li>

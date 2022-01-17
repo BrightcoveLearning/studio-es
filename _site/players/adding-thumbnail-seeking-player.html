@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item">Gestionar jugadores<a href="/players/"></a></li>
+      <li class="breadcrumb-item">Gestionar reproductores<a href="/players/"></a></li>
       
       <li class="breadcrumb-item active" aria-current="page">Adición de la búsqueda de miniaturas a un reproductor Brightcove</li>
     </ol>
@@ -113,7 +113,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <option value="https://player.support.brightcove.com">Desarrollo de jugadores de Brightcove</option>
+              <option value="https://player.support.brightcove.com">Desarrollo de reproductores de Brightcove</option>
             
           
             
@@ -252,7 +252,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/basics/video-cloud-basics-styling-player.html">Estilo de un jugador</a></li>
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">Estilo de un reproductor</a></li>
                   
                 
                   
@@ -520,7 +520,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <h5 class="submenu-header"><a href="/players/index.html"><strong>+</strong> &nbsp;Gestión de Jugadores</a></h5>
+              <h5 class="submenu-header"><a href="/players/index.html"><strong>+</strong> &nbsp;Gestión de reproductores</a></h5>
               <ul class="sidenav-submenu" style="display:none;">
                 
                   
@@ -540,7 +540,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuración de la publicidad del jugador</a></li>
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuración de la publicidad del reproductor</a></li>
                   
                 
                   
@@ -572,7 +572,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/generating-player-embed-code.html">Generación de código de inserción del jugador</a></li>
+                    <li><a href="/players/generating-player-embed-code.html">Generación de código de inserción del reproductor</a></li>
                   
                 
                   
@@ -592,7 +592,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/styling-players.html">Jugadores de estilo</a></li>
+                    <li><a href="/players/styling-players.html">reproductores de estilo</a></li>
                   
                 
               </ul>
@@ -651,7 +651,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar Jugadores en Joomla</a></li>
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar reproductores en Joomla</a></li>
                   
                 
                   
@@ -671,7 +671,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios jugadores en una página</a></li>
+                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios reproductores en una página</a></li>
                   
                 
                   
@@ -730,7 +730,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de jugador en Google Analytics</a></li>
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de reproductor en Google Analytics</a></li>
                   
                 
                   
@@ -925,7 +925,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h3>¿Cuándo se generan las imágenes en miniatura?</h3>
     <p>Brightcove genera las imágenes dinámicamente a pedido. Cualquier video ingerido con Dynamic Delivery tendrá imágenes generadas en la primera solicitud. Esto asegura que no se creen imágenes para videos no utilizados. Una vez generadas, las imágenes se almacenan en caché localmente y en la CDN para su visualización repetida, como cualquier otra imagen.</p>
     <h3>¿Con qué frecuencia se generan imágenes?</h3>
-    <p>La lista de miniaturas se filtra en función del ancho de píxel del reproductor en la inicialización. Esta lista varía significativamente según el estilo del jugador, el tamaño de la ventana, la plataforma / dispositivo, etc. El complemento de miniaturas tiene como objetivo mostrar una nueva miniatura aproximadamente cada 30 píxeles cuando el usuario se desplaza sobre la barra de progreso. Por ejemplo, si el reproductor tiene 1.500 píxeles de ancho, el reproductor intentará filtrar la lista hasta 50 miniaturas. Los intervalos de tiempo restantes para las señales de WebVTT se ajustan de acuerdo con la duración del contenido.</p>
+    <p>La lista de miniaturas se filtra en función del ancho de píxel del reproductor en la inicialización. Esta lista varía significativamente según el estilo del reproductor, el tamaño de la ventana, la plataforma / dispositivo, etc. El complemento de miniaturas tiene como objetivo mostrar una nueva miniatura aproximadamente cada 30 píxeles cuando el usuario se desplaza sobre la barra de progreso. Por ejemplo, si el reproductor tiene 1.500 píxeles de ancho, el reproductor intentará filtrar la lista hasta 50 miniaturas. Los intervalos de tiempo restantes para las señales de WebVTT se ajustan de acuerdo con la duración del contenido.</p>
     <!-- <p>Images are generated every 5 seconds for videos < 1 hour and every 10 seconds for videos > 1 hour.</p> --> 
   </section>
   <section class="bcls-section">
@@ -939,7 +939,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="Implementing_thumbnails_using_Studio">Configurar la búsqueda de miniaturas</h2>
-    <p>Tenga en cuenta que, de forma predeterminada, la búsqueda de miniaturas está habilitada para cualquier reproductor recién creado. Para configurar la búsqueda de miniaturas para un jugador, siga estos pasos:</p>
+    <p>Tenga en cuenta que, de forma predeterminada, la búsqueda de miniaturas está habilitada para cualquier reproductor recién creado. Para configurar la búsqueda de miniaturas para un reproductor, siga estos pasos:</p>
     <ol class="bcls-tasklist-restart">
       <li>En el encabezado de navegación, haga clic en <strong>Reproductores</strong> para abrir el módulo Players.</li>
       <li>Haga clic en el enlace del reproductor que desee configurar.</li>

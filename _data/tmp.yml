@@ -22,7 +22,7 @@
       url: /general/publishing-video-email-using-audience-module.html
     - name: Uso de eventos y métricas personalizadas
       url: /general/using-custom-metrics-and-events.html
-    - name: Visualización de eventos del jugador
+    - name: Visualización de eventos del reproductor
       url: /general/viewing-player-events-audience-module.html
     - name: Visualización de la actividad de video
       url: /general/viewing-video-activity.html

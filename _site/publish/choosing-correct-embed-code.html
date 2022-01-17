@@ -113,7 +113,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <option value="https://player.support.brightcove.com">Desarrollo de jugadores de Brightcove</option>
+              <option value="https://player.support.brightcove.com">Desarrollo de reproductores de Brightcove</option>
             
           
             
@@ -252,7 +252,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/basics/video-cloud-basics-styling-player.html">Estilo de un jugador</a></li>
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">Estilo de un reproductor</a></li>
                   
                 
                   
@@ -520,7 +520,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <h5 class="submenu-header"><a href="/players/index.html"><strong>+</strong> &nbsp;Gestión de Jugadores</a></h5>
+              <h5 class="submenu-header"><a href="/players/index.html"><strong>+</strong> &nbsp;Gestión de reproductores</a></h5>
               <ul class="sidenav-submenu" style="display:none;">
                 
                   
@@ -540,7 +540,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuración de la publicidad del jugador</a></li>
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuración de la publicidad del reproductor</a></li>
                   
                 
                   
@@ -572,7 +572,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/generating-player-embed-code.html">Generación de código de inserción del jugador</a></li>
+                    <li><a href="/players/generating-player-embed-code.html">Generación de código de inserción del reproductor</a></li>
                   
                 
                   
@@ -592,7 +592,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/styling-players.html">Jugadores de estilo</a></li>
+                    <li><a href="/players/styling-players.html">reproductores de estilo</a></li>
                   
                 
               </ul>
@@ -651,7 +651,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar Jugadores en Joomla</a></li>
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar reproductores en Joomla</a></li>
                   
                 
                   
@@ -671,7 +671,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios jugadores en una página</a></li>
+                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios reproductores en una página</a></li>
                   
                 
                   
@@ -730,7 +730,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de jugador en Google Analytics</a></li>
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de reproductor en Google Analytics</a></li>
                   
                 
                   
@@ -923,7 +923,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <p>Al publicar vídeos mediante el módulo Media, puede utilizar la URL del reproductor para obtener una vista previa del vídeo o copiar el iframe o el código de inserción en página para pegarlo en la página web o aplicación.</p>
     <aside class="bcls-aside bcls-aside--information">Nota: Haga clic en el botón <strong>Acortar</strong> situado junto a la URL de vista previa para generar&nbsp;una URL de vista previa acortada.</aside>
-    <p >El vínculo Estándar muestra el código de inserción iframe y el enlace Avanzado muestra el código incrustado en página.<strong></strong><strong></strong> Desde la perspectiva de la API de administración de jugadores, también verá el código <strong>avanzado</strong> del reproductor denominado implementación <strong>embed_in_page</strong> .</p>
+    <p >El vínculo Estándar muestra el código de inserción iframe y el enlace Avanzado muestra el código incrustado en página.<strong></strong><strong></strong> Desde la perspectiva de la API de administración de reproductores, también verá el código <strong>avanzado</strong> del reproductor denominado implementación <strong>embed_in_page</strong> .</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node15622-pub-code-options.png"/></figure>
     <aside class="bcls-aside bcls-aside--information">Nota: Para obtener información sobre cómo trabajar con reproductores <a href="https://player.support.brightcove.com/styling/responsive-sizing-brightcove-player.html">adaptables, consulte el documento para desarrolladores de Brightcove Player</a> .</aside>
   </section>
@@ -959,11 +959,11 @@ controls&gt;&lt;/video&gt;
 </code></pre>
     <p>Aunque la integración del código de publicación en página puede ser más compleja, utilizar el código en página es mejor cuando la página que contiene el reproductor necesita comunicarse con el reproductor. Algunos ejemplos de cuándo usar el código incrustado en página incluyen:</p>
     <ul>
-      <li>El código de la página que contiene necesita escuchar y actuar sobre los eventos del jugador</li>
+      <li>El código de la página que contiene necesita escuchar y actuar sobre los eventos del reproductor</li>
       <li>El reproductor utiliza estilos de la página principal</li>
       <li>El código iframe hará que la lógica de la aplicación falle, como una redirección desde la página principal</li>
     </ul>
-    <p>Incluso si su implementación final no usa el&nbsp;código de inserción iframe, aún puede usar el código In-Page con un complemento para su JavaScript y un archivo separado para su CSS. Esto encapsula tu lógica para que puedas usarla fácilmente en varios jugadores.</p>
+    <p>Incluso si su implementación final no usa el&nbsp;código de inserción iframe, aún puede usar el código In-Page con un complemento para su JavaScript y un archivo separado para su CSS. Esto encapsula tu lógica para que puedas usarla fácilmente en varios reproductores.</p>
     <aside class="bcls-aside bcls-aside--information language-editable">Nota: Si seleccionó la implementación del iframe al publicar desde Studio, verá las opciones agregadas en el iframe.<code translate="No">allowfullscreen webkitallowfullscreen mozallowfullscreen </code> Si alguna vez está colocando manualmente un reproductor de Brightcove, ya sea la implementación incrustada en página o iframe, en un iframe también debe incluir esas opciones para una funcionalidad de pantalla completa adecuada. Si por alguna razón anidas un reproductor en varios iframes, todos los iframes deben tener las opciones añadidas.</aside>
     <div class="bcls-subsection language-editable">
       <h3>Chrome y el icono de vídeo HTML «roto»</h3>

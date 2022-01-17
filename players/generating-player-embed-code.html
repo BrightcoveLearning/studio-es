@@ -1,27 +1,27 @@
 ---
-title: Generación de la descripción del código de inserción del reproductor: Este tema trata sobre cómo generar código de inserción para reproductores publicados y de vista previa.
+title: Generación del código de inserción del reproductor
+description: 'Este tema trata sobre cómo generar código de inserción para reproductores publicados y de vista previa.'
 parent: Managing Players
----
 
 <article class="bcls-article">
   <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <p>El módulo de jugadores ofrece la posibilidad de generar el código de inserción del jugador y la URL del jugador para la vista previa y los reproductores publicados. Por lo general, generaría el código de inserción para un reproductor utilizando el módulo Reproductores cuando desee asignar dinámicamente un video al reproductor en tiempo de ejecución. Para obtener información sobre cómo asignar videos a un reproductor de forma dinámica, consulte <a href="/publish/dynamically-assigning-videos-player.html">Asignar videos dinámicamente a un reproductor</a>.</p>
+    <p>El módulo de reproductores ofrece la posibilidad de generar el código de inserción del reproductor y la URL del reproductor para la vista previa y los reproductores publicados. Por lo general, generaría el código de inserción para un reproductor utilizando el módulo Reproductores cuando desee asignar dinámicamente un video al reproductor en tiempo de ejecución. Para obtener información sobre cómo asignar videos a un reproductor de forma dinámica, consulte <a href="/publish/dynamically-assigning-videos-player.html">Asignar videos dinámicamente a un reproductor</a>.</p>
     <p>Si es un cliente de Video Cloud que busca publicar una lista de reproducción o un solo video en un reproductor, use la función de publicación dentro del módulo de Medios. Para más información, ver <a href="/publish/publishing-videos-and-playlists-media-module.html">Publicar videos y listas de reproducción con el módulo de medios</a>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="diff">Reproductor de vista previa vs.</h2>
     <p>El reproductor de vista previa se utiliza para que pueda obtener una vista previa de los cambios antes de que se publiquen. Una vez que los cambios son aceptables, se puede publicar el reproductor y los cambios se reflejarán en cualquier reproductor publicado. El reproductor de vista previa mostrará una superposición del logotipo de Brightcove que indica que no debe usarse en producción.</p>
     <p>El reproductor publicado se ha optimizado y es el reproductor que aparecerá en sus páginas web. Este reproductor contiene todos los cambios que se han realizado en la configuración del reproductor y luego se publicaron haciendo clic en el <strong>Publicar</strong> botón.</p>
-    <p>Abra el módulo de Jugadores y seleccione un jugador. Hacer clic <strong>Insertar código y URL</strong> y haga clic en <strong>Reproductor de vista previa</strong> o <strong>Reproductor publicado</strong>.</p>
+    <p>Abra el módulo de reproductores y seleccione un reproductor. Hacer clic <strong>Insertar código y URL</strong> y haga clic en <strong>Reproductor de vista previa</strong> o <strong>Reproductor publicado</strong>.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node14063-menu-options.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="types">Tipos de código de inserción</h2>
     <p>Hay dos tipos de código de inserción que se pueden generar:</p>
     <ul>
-      <li><strong>Estándar (iframe)</strong> - Recomendado para la mayoría de los casos. Coloca al jugador dentro de un <code translate="No">&lt;iframe&gt;</code> etiqueta. Si se especifican las dimensiones del reproductor, el iframe se ajustará a las dimensiones del reproductor. Si no se especifican las dimensiones del reproductor, el iframe se puede colocar dentro de un <code translate="No">&lt;div&gt;</code> etiqueta y la naturaleza receptiva del jugador cambiará el tamaño del jugador para ocupar todo el espacio de la <code translate="No">&lt;div&gt;</code>.</li>
+      <li><strong>Estándar (iframe)</strong> - Recomendado para la mayoría de los casos. Coloca al reproductor dentro de un <code translate="No">&lt;iframe&gt;</code> etiqueta. Si se especifican las dimensiones del reproductor, el iframe se ajustará a las dimensiones del reproductor. Si no se especifican las dimensiones del reproductor, el iframe se puede colocar dentro de un <code translate="No">&lt;div&gt;</code> etiqueta y la naturaleza receptiva del reproductor cambiará el tamaño del reproductor para ocupar todo el espacio de la <code translate="No">&lt;div&gt;</code>.</li>
       <li><strong>Avanzado (I<strong>n-Page</strong>)</strong> - Permite que el reproductor exista en la página HTML directamente, no en un iframe. Esto ofrece a los desarrolladores los beneficios de acceder fácilmente al reproductor y a las propiedades y eventos asociados. Al usar el código de inserción avanzado, pierde la facilidad de uso del reproductor como una unidad única contenida en las aplicaciones de redes sociales y para compartir. <strong>Esta opción está disponible solo para el reproductor publicado.</strong></li>
     </ul>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node14063-pub-code.png" /></figure>
@@ -30,8 +30,8 @@ parent: Managing Players
     <h2 id="previewcode">Generando código de inserción para un reproductor de vista previa</h2>
     <p>Para generar el código de inserción para un reproductor de vista previa:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Abre el Jugadores módulo.</li>
-      <li>Haga clic en la fila del jugador para el que desea generar el código. No haga clic en el nombre del jugador y abra la página de propiedades.</li>
+      <li>Abre el reproductores módulo.</li>
+      <li>Haga clic en la fila del reproductor para el que desea generar el código. No haga clic en el nombre del reproductor y abra la página de propiedades.</li>
       <li>Hacer clic <strong>Insertar código y URL</strong> y haga clic en <strong>Reproductor de vista previa</strong>.</li>
       <li>Seleccione el código de inserción apropiado.</li>
     </ol>
@@ -40,15 +40,15 @@ parent: Managing Players
     <h2 id="publish">Generando código de inserción para un reproductor publicado</h2>
     <p>Para generar el código de inserción para un reproductor publicado:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Abre el Jugadores módulo.</li>
-      <li>Haga clic en la fila del jugador para el que desea generar el código.</li>
+      <li>Abre el reproductores módulo.</li>
+      <li>Haga clic en la fila del reproductor para el que desea generar el código.</li>
       <li>Hacer clic <strong>Insertar código y URL</strong> y haga clic en <strong>Reproductor publicado</strong>.</li>
       <li>Seleccione el código de inserción apropiado.</li>
     </ol>
-    <p>El código de inserción del reproductor publicado también se puede copiar haciendo clic en el nombre de un jugador y luego haciendo clic en <strong>Publicar e insertar</strong>.</p>
+    <p>El código de inserción del reproductor publicado también se puede copiar haciendo clic en el nombre de un reproductor y luego haciendo clic en <strong>Publicar e insertar</strong>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="appid">Agregar una ID de aplicación al código de inserción</h2>
-    <p>En el pasado, los editores solían crear nuevos reproductores con diferentes nombres para usar en diferentes partes de un sitio o para usar en diferentes sitios. Al revisar los análisis de jugadores, tener diferentes nombres de jugadores facilitó determinar qué jugadores obtenían la mayor cantidad de vistas. Al agregar un parámetro de ID de aplicación al código de inserción, se puede usar el mismo reproductor en un sitio o sitios, y el ID de aplicación se puede usar para identificar dónde se publicó el reproductor. El uso de una ID de aplicación de jugador puede ayudar a reducir la cantidad de jugadores que deben crearse y mantenerse. Para obtener información sobre cómo agregar un ID de aplicación al código de inserción, consulte <a href="/publish/adding-application-id-player-embed-code.html">Agregar una ID de aplicación al código de inserción del reproductor</a>.</p>
+    <p>En el pasado, los editores solían crear nuevos reproductores con diferentes nombres para usar en diferentes partes de un sitio o para usar en diferentes sitios. Al revisar los análisis de reproductores, tener diferentes nombres de reproductores facilitó determinar qué reproductores obtenían la mayor cantidad de vistas. Al agregar un parámetro de ID de aplicación al código de inserción, se puede usar el mismo reproductor en un sitio o sitios, y el ID de aplicación se puede usar para identificar dónde se publicó el reproductor. El uso de una ID de aplicación de reproductor puede ayudar a reducir la cantidad de reproductores que deben crearse y mantenerse. Para obtener información sobre cómo agregar un ID de aplicación al código de inserción, consulte <a href="/publish/adding-application-id-player-embed-code.html">Agregar una ID de aplicación al código de inserción del reproductor</a>.</p>
   </section>
 </article>

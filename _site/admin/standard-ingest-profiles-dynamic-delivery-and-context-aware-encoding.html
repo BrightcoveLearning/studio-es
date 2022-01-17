@@ -113,7 +113,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <option value="https://player.support.brightcove.com">Desarrollo de jugadores de Brightcove</option>
+              <option value="https://player.support.brightcove.com">Desarrollo de reproductores de Brightcove</option>
             
           
             
@@ -252,7 +252,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/basics/video-cloud-basics-styling-player.html">Estilo de un jugador</a></li>
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">Estilo de un reproductor</a></li>
                   
                 
                   
@@ -520,7 +520,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <h5 class="submenu-header"><a href="/players/index.html"><strong>+</strong> &nbsp;Gestión de Jugadores</a></h5>
+              <h5 class="submenu-header"><a href="/players/index.html"><strong>+</strong> &nbsp;Gestión de reproductores</a></h5>
               <ul class="sidenav-submenu" style="display:none;">
                 
                   
@@ -540,7 +540,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuración de la publicidad del jugador</a></li>
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuración de la publicidad del reproductor</a></li>
                   
                 
                   
@@ -572,7 +572,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/generating-player-embed-code.html">Generación de código de inserción del jugador</a></li>
+                    <li><a href="/players/generating-player-embed-code.html">Generación de código de inserción del reproductor</a></li>
                   
                 
                   
@@ -592,7 +592,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/players/styling-players.html">Jugadores de estilo</a></li>
+                    <li><a href="/players/styling-players.html">reproductores de estilo</a></li>
                   
                 
               </ul>
@@ -651,7 +651,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar Jugadores en Joomla</a></li>
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar reproductores en Joomla</a></li>
                   
                 
                   
@@ -671,7 +671,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios jugadores en una página</a></li>
+                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios reproductores en una página</a></li>
                   
                 
                   
@@ -730,7 +730,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de jugador en Google Analytics</a></li>
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de reproductor en Google Analytics</a></li>
                   
                 
                   
@@ -985,7 +985,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <ul style="list-style-type:none">
         <li id="note1-1"><sup><strong>[ 1-1]</strong></sup> Cuando haga referencia a una copia en un perfil de <strong>ingesta, asegúrese de anteponer el nombre con <code translate="No">default/</code></strong>, por ejemplo: <code translate="No">default/audio128</code></li>
         <li id="note1-2"><sup><strong>[ 1-2]</strong></sup> Un segmento se correlaciona con un archivo descargable. Por ejemplo, con HLS puede segmentar el archivo cada 6 segundos. Cada segmento contiene suficiente información para permitir que se decodifice y reproduzca independientemente de otros segmentos. Un manifiesto HLS mostrará una lista de cada ruta de segmento y su duración.
-          <p>Un fragmento hace referencia a fragmentos de un archivo MP4. Un MP4 no fragmentado contiene metadatos al inicio o al final del archivo y requiere que los datos (<code translate="No">FTYP</code>, <code translate="No">MOOV</code> átomos) se decodificen antes del medio (<code translate="No">MDAT</code> átomo). Para facilitar el streaming, un archivo MP4 se puede fragmentar de modo que los metadatos y necesarios para la reproducción, así como los medios, se fragmenten en fragmentos dentro del archivo. Esto permite a los jugadores buscar fragmentos específicos de contenido multimedia fácilmente, así como permitir transiciones fluidas entre diferentes representaciones. El fragmento se creó inicialmente para DASH, pero ahora también es compatible con HLS.</p>
+          <p>Un fragmento hace referencia a fragmentos de un archivo MP4. Un MP4 no fragmentado contiene metadatos al inicio o al final del archivo y requiere que los datos (<code translate="No">FTYP</code>, <code translate="No">MOOV</code> átomos) se decodificen antes del medio (<code translate="No">MDAT</code> átomo). Para facilitar el streaming, un archivo MP4 se puede fragmentar de modo que los metadatos y necesarios para la reproducción, así como los medios, se fragmenten en fragmentos dentro del archivo. Esto permite a los reproductores buscar fragmentos específicos de contenido multimedia fácilmente, así como permitir transiciones fluidas entre diferentes representaciones. El fragmento se creó inicialmente para DASH, pero ahora también es compatible con HLS.</p>
           <p>También puede fragmentar y guiones de medios de forma que un segmento (archivo) pueda contener varios fragmentos. Es común hacer que el segmento y la duración del fragmento sean iguales. Tenga en cuenta que y refiérase a lo mismo cuando discuta fragmentos y segmentos.<code translate="No">duration</code><code translate="No">length</code></p>
         </li>
       </ul>
