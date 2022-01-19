@@ -1,12 +1,12 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en-us">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="En este tema, aprenderá a compartir videos con otras cuentas.">
   
-  <title>Uso compartido de medios mediante el módulo multimedia</title>
+  <title>Uso compartido de medios mediante módulo de medios</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -18,878 +18,678 @@
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
   <link rel="stylesheet" href="/assets/css/local.css">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-2728311-17');
+  window.dataLayer = window.dataLayer || []; función gtag (){dataLayer.push(arguments);} gtag ('js', nueva fecha ()); gtag ('configuración', 'UA-2728311-17');
 </script>
   <script src="/assets/js/sajari-head.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body class="body">
 
 <header>
   <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Video_Cloud_Logo.svg" alt="logotipo del producto" style="max-height: 100px;max-width: 232px;"/></a>
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/SVG/COVE004_Brightcove_Video_Cloud_Logo_RGB_K.svg" alt="Brightcove"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">Seleccionar idioma</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+<select onchange="doGTranslate(this);"><option value="">Seleccione el idioma</option><option value="en|en" translate="No">Inglés</option><option value="en|zh-TW" translate="No">繁體 中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
 
 <script>
-/* <![CDATA[ */
-function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-/* ]]> */
+/ *<![CDATA[ * / función doGTranslate (lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;} / *]]> * /
 </script>
 
-    
-
-
-    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="soporte"/> Contactar con Soporte</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">Estado<img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="estado del sistema"/> del sistema</a></span> <br/>
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><i data-feather="help-circle"></i> Contacta con el soporte</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><i data-feather="cloud"></i> Estado del sistema</a></span>
+    <br>
     
   </div>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       
-      <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+      <li class="breadcrumb-item first-item"><a href="/">Casa</a></li>
+        
+      <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
       
-      
-      
-      <li class="breadcrumb-item">Gestión de Vídeos<a href="/media/"></a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">Uso compartido de medios mediante el módulo multimedia</li>
+      <li class="breadcrumb-item active" aria-current="page">Uso compartido de medios mediante módulo de medios</li>
     </ol>
   </nav>
 </header>
 <div class="container">
     <div class="row">
-            <div class="col-sm-3 left-side-bar">
-        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
-          <option value="">Otros documentos de Brightcove</option>
-          
-            
-              <option value="https://support.brightcove.com">Documentación Inicio</option>
-            
-          
-            
-              <option value="https://audience.support.brightcove.com">Audiencia de Brightcove</option>
-            
-          
-            
-              <option value="https://beacon.support.brightcove.com">Baliza Brightcove</option>
-            
-          
-            
-              <option value="https://campaign.support.brightcove.com">Campaña de Brightcove</option>
-            
-          
-            
-              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
-            
-          
-            
-              <option value="https://live.support.brightcove.com">Brightcove Live</option>
-            
-          
-            
-              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
-            
-          
-            
-              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
-            
-          
-            
-              <option value="https://social.support.brightcove.com">Brightcove Social</option>
-            
-          
-            
-              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
-            
-          
-            
-              <option value="https://player.support.brightcove.com">Desarrollo de reproductores de Brightcove</option>
-            
-          
-            
-              <option value="https://apis.support.brightcove.com">API para la plataforma de Video Cloud</option>
-            
-          
-            
-              <option value="https://sdks.support.brightcove.com">SDK de dispositivos de Video Cloud</option>
-            
-          
-            
-              <option value="https://integrations.support.brightcove.com">Integraciones y conectores CMS</option>
-            
-          
-            
-              <option value="https://general.support.brightcove.com">Información general de Video Cloud</option>
-            
-          
-            
-              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
-            
-          
-        </select>
-
+      <div class="col-sm-3 left-side-bar">
+				<select id="site_select" class="bcls-select" style="margin-left: 1rem;">
+					<option value="">Otros documentos de Brightcove</option>
+					 
+							<option value="https://support.brightcove.com">Inicio de documentación</option>
+						  
+							<option value="">- NUBE DE VIDEO -</option>
+						  
+							<option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Estudio de Video Cloud</option>
+						  
+							<option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Desarrollo de Brightcove Player</option>
+						  
+							<option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;API de Video Cloud Platform</option>
+						  
+							<option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;SDK de dispositivos de Video Cloud</option>
+						  
+							<option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integraciones y conectores CMS</option>
+						  
+							<option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Información general de Video Cloud</option>
+						  
+							<option value="">- VIDEO ESENCIALES -</option>
+						  
+							<option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Baliza Brightcove</option>
+						  
+							<option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove en Directo</option>
+						  
+							<option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+						  
+							<option value="">- COMPLEMENTOS DE VIDEO NUBE -</option>
+						  
+							<option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Campaña Brightcove</option>
+						  
+							<option value="https://engage.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
+						  
+							<option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Galería Brightcove</option>
+						  
+							<option value="https://studio.support.brightcove.com/social/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+						  
+							<option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+						 
+				</select>
         <nav class="sidenav" id="side_nav">
-          
-            
-            <h5><a href="/index.html">Inicio</a></h5>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/get-started/index.html"> <strong>+</strong> &nbsp;Empezar</a></h5>
+           
+            <h5><a href="/index.html">Casa</a></h5>
+              
+              <h5 class="submenu-header"><a href="/get-started/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Empezando</a></h5>
               <ul class="sidenav-submenu" style="display:none;">
-                
-                  
+                 
                     <li><a href="/get-started/getting-started-video-cloud-studio.html">Introducción a Video Cloud Studio</a></li>
-                  
-                
-                  
-                    <li><a href="/get-started/getting-started-your-video-cloud-trial.html">Introducción a la versión de prueba de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/get-started/navigating-brightcove-support-site.html">Navegación por el sitio de soporte de Brightcove</a></li>
-                  
-                
-                  
-                    <li><a href="/get-started/quick-start-video-cloud.html">Inicio rápido de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">Paso a paso: Flujo de trabajo de publicación de Video</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">Capacitación: Introducción a la analítica de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-introduction-video-cloud.html">Capacitación: Introducción a Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-video-cloud-basics.html">Capacitación: Conceptos básicos de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/get-started/video-cloud-glossary.html">Glosario de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/training/video-cloud-studio-training-videos.html">Vídeos de formación de Video Cloud Studio</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/basics/index.html"><strong>+</strong> &nbsp;Aprender los conceptos básicos</a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-activating-and-deactivating-video.html">Activación y desactivación de un vídeo</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-adding-user-video-cloud-account.html">Agregar un usuario a una cuenta de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html">Captura de póster de vídeo y imágenes en miniatura</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-creating-manual-playlist.html">Creación de una lista de reproducción manual</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-creating-player.html">Creación de un reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-creating-playlist-player.html">Creación de un reproductor de lista de reproducción</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-creating-smart-playlist.html">Creación de una lista de reproducción inteligente</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-determining-how-much-video-being-watched.html">Determinación de la cantidad de vídeo que se ve</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-determining-which-videos-have-most-views.html">Determinar qué vídeos tienen más vistas</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-editing-basic-video-properties.html">Edición de propiedades básicas de vídeo</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-editing-video-properties-multiple-videos.html">Edición de propiedades de vídeo para varios vídeos</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-organizing-videos-using-folders.html">Organización de vídeos mediante carpetas</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-publishing-playlist-web.html">Publicación de una lista de reproducción en el Web</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-publishing-single-video-web.html">Publicación de un único vídeo en la Web</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-styling-player.html">Estilo de un reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html">Cargar póster de vídeo y imágenes en miniatura</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-uploading-videos.html">Subir vídeos</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/video-cloud-basics-viewing-brightcove-system-status-page.html">Visualización de la página Estado del Sistema de Brightcove</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/general/index.html"><strong>+ &nbsp;</strong>Información general</h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/general/adding-facebook-button-brightcove-player.html">Agregar un botón Me gusta de Facebook a un reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/general/best-practices-video-creating-transcoding-and-uploading-workflow.html">Prácticas recomendadas: Transcodificación y carga</a></li>
-                  
-                
-                  
-                    <li><a href="/general/content-delivery-options.html">Opciones de entrega de contenido</a></li>
-                  
-                
-                  
-                    <li><a href="/general/creating-audio-only-renditions-low-bandwidth-delivery.html">Creación de copias de sólo audio</a></li>
-                  
-                
-                  
-                    <li><a href="/general/domains-and-ports-must-be-accessible-video-cloud.html">Dominios y puertos que deben ser accesibles</a></li>
-                  
-                
-                  
-                    <li><a href="/general/drm-output-protection-settings.html">Configuración de protección de salida DRM</a></li>
-                  
-                
-                  
-                    <li><a href="/general/enabling-longer-videos-youtube.html">Habilitar vídeos más largos en YouTube</a></li>
-                  
-                
-                  
-                    <li><a href="/general/making-your-video-content-indexable.html">Hacer que su contenido de vídeo sea indexable</a></li>
-                  
-                
-                  
-                    <li><a href="/general/optimal-video-dimensions.html">Dimensiones óptimas de vídeo</a></li>
-                  
-                
-                  
-                    <li><a href="/general/overview-context-aware-encoding.html">Descripción general de la codificación consciente del contexto</a></li>
-                  
-                
-                  
-                    <li><a href="/general/overview-digital-rights-management-drm-video-cloud.html">Visión general: Gestión de derechos digitales (DRM)</a></li>
-                  
-                
-                  
-                    <li><a href="/general/overview-dynamic-delivery.html">Descripción general de la entrega dinámica</a></li>
-                  
-                
-                  
-                    <li><a href="/general/protecting-videos-hls-encryption.html">Protección de vídeos con cifrado HLS</a></li>
-                  
-                
-                  
-                    <li><a href="/general/resetting-your-studio-password.html">Restablecer la contraseña de Studio</a></li>
-                  
-                
-                  
-                    <li><a href="/general/sharing-videos-twitter-player-cards.html">Compartir vídeos con tarjetas de Twitter Player</a></li>
-                  
-                
-                  
-                    <li><a href="/general/studio-system-requirements.html">Requisitos del sistema Studio</a></li>
-                  
-                
-                  
-                    <li><a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">Formatos de vídeo y audio compatibles</a></li>
-                  
-                
-                  
-                    <li><a href="/general/tls-media-player-and-api-urls.html">TLS para URL multimedia, reproductor y API</a></li>
-                  
-                
-                  
-                    <li><a href="/general/video-cloud-architecture-overview.html">Descripción general de la arquitectura de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/general/video-cloud-studio-cookies.html">Cookies de Video Cloud Studio</a></li>
-                  
-                
-                  
-                    <li><a href="/general/video-source-file-specifications-and-recommendations.html">Especificaciones y recomendaciones del archivo de origen de vídeo</a></li>
-                  
-                
-                  
-                    <li><a href="/general/working-360deg-videos.html">Trabajar con vídeos de 360°</a></li>
-                  
-                
-                  
-                    <li><a href="/general/working-audio-content.html">Trabajar con contenido de solo audio</a></li>
-                  
-                
-                  
-                    <li><a href="/general/working-multiple-video-cloud-accounts.html">Trabajar con varias cuentas</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/media/index.html"><strong>+</strong> &nbsp;Gestión de Vídeos</a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/media/adding-audio-tracks-videos-using-media-module.html">Adición de pistas de audio a vídeos</a></li>
-                  
-                
-                  
-                    <li><a href="/media/adding-captions-videos-using-media-module.html">Adición de subtítulos a vídeos</a></li>
-                  
-                
-                  
-                    <li><a href="/media/adding-chapters-video.html">Adición de capítulos a un vídeo</a></li>
-                  
-                
-                  
-                    <li><a href="/media/capturing-poster-and-thumbnail-images.html">Captura de póster y imágenes en miniatura</a></li>
-                  
-                
-                  
-                    <li><a href="/media/configuring-video-availability.html">Configuración de la disponibilidad de vídeo</a></li>
-                  
-                
-                  
-                    <li><a href="/media/creating-and-managing-playlists.html">Creación y administración de listas de reproducción</a></li>
-                  
-                
-                  
-                    <li><a href="/media/downloading-videos-video-cloud.html">Descarga de vídeos de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/media/editing-video-properties-using-media-module.html">Edición de propiedades de vídeo</a></li>
-                  
-                
-                  
-                    <li><a href="/media/editing-video-properties-using-quick-edit.html">Edición de propiedades mediante Edición rápida</a></li>
-                  
-                
-                  
-                    <li>Exportar datos de vídeo<a href="/media/exporting-video-data.html"></a></li>
-                  
-                
-                  
-                    <li><a href="/media/getting-started-media-module.html">Introducción al Módulo de Medios</a></li>
-                  
-                
-                  
-                    <li><a href="/media/how-search-videos-and-playlists-media-module.html">Cómo buscar vídeos y listas de reproducción</a></li>
-                  
-                
-                  
-                    <li><a href="/media/increasing-quality-poster-and-thumbnail-images.html">Aumento de la calidad de las imágenes de póster</a></li>
-                  
-                
-                  
-                    <li><a href="/media/introduction-playlists.html">Introducción a las listas de reproducción</a></li>
-                  
-                
-                  
-                    <li><a href="/media/media-sharing-using-media-module.html">Uso compartido de medios</a></li>
-                  
-                
-                  
-                    <li><a href="/media/organizing-videos-using-folders.html">Organización de vídeos mediante carpetas</a></li>
-                  
-                
-                  
-                    <li><a href="/media/overview-adding-captions-video.html">Visión general: Adición de subtítulos a un vídeo</a></li>
-                  
-                
-                  
-                    <li><a href="/media/replacing-video-source-file.html">Reemplazar un archivo de origen de vídeo</a></li>
-                  
-                
-                  
-                    <li><a href="/media/retranscoding-videos-using-media-module.html">Vídeos de retranscodificación</a></li>
-                  
-                
-                  
-                    <li><a href="/media/setting-required-fields-videos.html">Establecimiento de campos obligatorios</a></li>
-                  
-                
-                  
-                    <li><a href="/media/styling-captions.html">Estilo de subtítulos</a></li>
-                  
-                
-                  
-                    <li><a href="/media/uploading-poster-and-thumbnail-images.html">Cargar imágenes de póster y miniatura</a></li>
-                  
-                
-                  
-                    <li><a href="/media/uploading-videos-using-upload-module.html">Subir vídeos</a></li>
-                  
-                
-                  
-                    <li><a href="/media/uploading-videos-remote-urls.html">Cargar vídeos URL remotas</a></li>
-                  
-                
-                  
-                    <li><a href="/media/working-cue-points-media-module.html">Trabajar con puntos de referencia</a></li>
-                  
-                
-                  
-                    <li><a href="/media/working-multi-lingual-metadata.html">Trabajar con metadatos multilingües</a></li>
-                  
-                
-                  
-                    <li><a href="/media/working-remote-asset-videos.html">Trabajar con vídeos de activos remotos</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/cloud-playout/index.html"><strong>+</strong> &nbsp;Administrar canales de reproducción en la nube</a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/cloud-playout/cloud-playout-overview.html">Visión general: Playout en la nube</a></li>
-                  
-                
-                  
-                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Creación de un canal de reproducción en la nube</a></li>
-                  
-                
-                  
-                    <li><a href="/cloud-playout/using-channel-actions.html">Usar acciones de canal</a></li>
-                  
-                
-                  
-                    <li><a href="/cloud-playout/enabling-server-side-ads.html">Monetización de Cloud Playout</a></li>
-                  
-                
-                  
-                    <li><a href="/cloud-playout/generating-channel-embed-code.html">Generación del código de inserción del canal</a></li>
-                  
-                
-                  
-                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">Visualización de resultados y análisis del canal</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/players/index.html"><strong>+</strong> &nbsp;Gestión de reproductores</a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/players/adding-thumbnail-seeking-player.html">Adición de búsqueda de miniaturas</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">Configuración de una superposición de reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-adobe-analytics-event-tracking.html">Configuración del seguimiento de eventos de Adobe Analytics</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-google-analytics-event-tracking.html">Configuración del seguimiento de eventos de Google Analytics</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuración de la publicidad del reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-player-content-restrictions.html">Configuración de Restricciones de Contenido del Reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-player-controls.html">Configuración de Controles del Reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-player-endscreen.html">Configuración de la pantalla final del reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-player-localization.html">Configuración de la localización del reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-player-playback-properties.html">Configuración de las propiedades de reproducción del reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-player-plugins.html">Configuración de Plugins del Reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/configuring-social-properties-player.html">Configuración de las propiedades sociales</a></li>
-                  
-                
-                  
-                    <li><a href="/players/generating-player-embed-code.html">Generación de código de inserción del reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/getting-started-players-module.html">Introducción al módulo de reproductores</a></li>
-                  
-                
-                  
-                    <li><a href="/players/setting-player-information-properties.html">Configuración de las propiedades de información del reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/setting-player-properties.html">Configuración de las propiedades del reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/setting-player-update-mode-and-version.html">Configuración del modo de actualización del reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/players/styling-players.html">reproductores de estilo</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/publish/index.html"><strong>+</strong> &nbsp;Publicar vídeos y reproductores</a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/publish/adding-3play-media-interactive-transcript-video.html">Agregar una transcripción interactiva de 3Play Media</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/adding-application-id-player-embed-code.html">Adición de un ID de aplicación al código de incrustación</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/adding-brightcove-player-facebook-fan-page.html">Agregar un reproductor a una página de fans de Facebook</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/changing-video-player-without-changing-embed-code.html">Cambio de un vídeo en un reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/choosing-correct-embed-code.html">Elegir el código de incrustación correcto</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/creating-and-publishing-high-quality-screencasts.html">Creación y publicación de pantallas de alta calidad</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/deep-linking.html">Vinculación profunda</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/driving-video-views-through-email.html">Cómo conducir las vistas de vídeo por correo electrónico</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/dynamically-assigning-videos-player.html">Asignación dinámica de vídeos a un reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/embedding-brightcove-player-google-sites-page.html">Incrustar un reproductor en una página de Google Sites</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/publishing-brightcove-player-wordpress-page.html">Publicación de un reproductor en una página de Wordpress</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/publishing-brightcove-players-facebook-instant-articles.html">Publicar reproductores en artículos instantáneos de Facebook</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar reproductores en Joomla</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/publishing-video-email.html">Publicación de un vídeo en correo electrónico</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/publishing-videos-and-playlists-media-module.html">Publicación de vídeos y listas de reproducción</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/publishing-videos-page-experience.html">Publicación de vídeos en una experiencia en página</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/step-step-using-players-module-create-and-publish-player.html">Paso a paso: Creación y publicación de un reproductor</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios reproductores en una página</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/using-reference-ids.html">Uso de Id de referencia</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/analytics/index.html"><strong>+</strong> &nbsp;Revisión de Analytics</a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/analytics/analytics-module-ui-glossary.html">Glosario de interfaz de usuario del módulo de análisis</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/analytics-report-reference.html">Referencia del informe de análisis</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/calculating-video-engagement-score.html">Cálculo del puntaje de participación</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/creating-custom-analytics-reports.html">Creación de informes personalizados de Analytics</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/engagement-report-reference.html">Referencia del informe de compromiso</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/exporting-data-analytics-module.html">Exportar datos</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/faq-analytics-module.html">PREGUNTAS FRECUENTES: Módulo Análisis</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/getting-started-analytics-module.html">Introducción al módulo Analytics</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/how-search-videos-analytics-module.html">Cómo buscar vídeos</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/managing-scheduled-reports.html">Gestión de informes programados</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/performance-report-reference.html">Referencia del informe de rendimiento</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de reproductor en Google Analytics</a></li>
-                  
-                
-                  
-                    <li><a href="/analytics/trending-now-report-reference.html">Referencia del informe Tendencias ahora</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/admin/index.html"><strong>+</strong> &nbsp;Administrar cuentas</a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/admin/authenticating-studio-users-using-single-sign.html">Autenticar usuarios de Studio mediante SSO</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/configuring-language-settings.html">Configuración de los ajustes de idioma</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/configuring-server-side-ad-settings.html">Configuración de la configuración de anuncios del lado del servidor</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/creating-custom-metadata-fields.html">Creación de campos de metadatos personalizados</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/creating-ingest-profiles-context-aware-encoding.html">Creación de perfiles de ingesta para codificación consciente de contexto</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/creating-ingest-profiles-dynamic-delivery.html">Creación de perfiles de ingesta para entrega dinámica</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/ingest-profiles-best-practices.html">Prácticas recomendadas de perfiles de ingesta</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/managing-account-information.html">Gestión de la información de cuenta</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/managing-account-settings.html">Administrar la configuración de cuenta</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/managing-api-authentication-credentials.html"></a>Administración de credenciales de autenticación de API</li>
-                  
-                
-                  
-                    <li><a href="/admin/managing-ingest-profiles.html">Administración de perfiles de ingesta</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/managing-media-sharing-settings.html">Administrar la configuración de uso compartido de</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/managing-profile-information.html">Gestión de la información de perfil</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Perfiles de ingesta estándar (DD y CAE)</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/managing-users.html">Administrar usuarios</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/using-directed-migration-tool-migrate-brightcove-smart-players.html">Uso de la herramienta Migración Dirigida</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/viewing-billing-information.html">Consulta de Información de Facturación</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><strong>+</strong> &nbsp;Entrenamiento<a href="/training/index.html"></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/training/online-training-courses.html">Todos los cursos de formación en línea</a></li>
-                  
-                
-                  
-                    <li><a href="/training/register-training.html">Regístrese para la formación impartida por instructor</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-introduction-video-cloud.html">Capacitación: Introducción a Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">Capacitación: Introducción a la analítica de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-video-cloud-basics.html">Capacitación: Conceptos básicos de Video Cloud</a></li>
-                  
-                
-                  
-                    <li><a href="/training/video-cloud-studio-training-videos.html">Vídeos de formación de Video Cloud Studio</a></li>
-                  
-                
-                  
-                    <li><a href="/training/brightcove-university.html">Cursos de formación de la Universidad de Brightcove</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header">Notas de la versión +<a href="/release-notes/index.html"><strong></strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li>Notas de la versión de Video Cloud Studio<a href="/release-notes/video-cloud-studio-release-notes.html"></a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header">Soporte +<a href="/support/index.html"><strong></strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
                     
-                  
-                
-                  
-                    <li>Visualización de la página Estado del Sistema de Brightcove<a href="/support/viewing-brightcove-system-status-page.html"></a></li>
-                  
-                
-                  
-                    <li><a href="/support/contact-sales.html">Contacto con Ventas</a></li>
-                  
-                
-                  
-                    <li>Apertura de un caso de soporte<a href="/support/opening-case-with-brightcove-support.html"></a></li>
-                  
-                
+                    <li><a href="/get-started/getting-started-your-video-cloud-trial.html">Introducción a la prueba de Video Cloud</a></li>
+                    
+                    <li><a href="/get-started/navigating-brightcove-support-site.html">Navegación por el sitio de soporte de Brightcove</a></li>
+                    
+                    <li><a href="/get-started/quick-start-video-cloud.html">Inicio rápido a Video Cloud</a></li>
+                    
+                    <li><a href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">Paso a paso: Flujo de trabajo de publicación de</a></li>
+                    
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">Capacitación: Introducción a Video Cloud Analytics</a></li>
+                    
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">Capacitación: Introducción a Video Cloud</a></li>
+                    
+                    <li><a href="/training/training-demand-video-cloud-basics.html">Capacitación: Conceptos básicos de Video Cloud</a></li>
+                    
+                    <li><a href="/get-started/video-cloud-glossary.html">Glosario de Video Cloud</a></li>
+                    
+                    <li><a href="/training/video-cloud-studio-training-videos.html">Vídeos de formación de Video Cloud Studio</a></li>
+                   
               </ul>
-            
-          
+              
+              <h5 class="submenu-header"><a href="/basics/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Aprende lo básico</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/basics/video-cloud-basics-activating-and-deactivating-video.html">Activar y desactivar un video</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-adding-user-video-cloud-account.html">Agregar un usuario a una cuenta de Video Cloud</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html">Captura de pósteres de video e imágenes en miniatura</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-creating-manual-playlist.html">Creación de una lista de reproducción manual</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-creating-player.html">Crear un reproductor</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-creating-playlist-player.html">Creación de un reproductor de listas de reproducción</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-creating-smart-playlist.html">Crear una lista de reproducción inteligente</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-determining-how-much-video-being-watched.html">Determinar la cantidad de video que se ve</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-determining-which-videos-have-most-views.html">Determinar qué videos tienen más reproducciones</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-editing-basic-video-properties.html">Editar propiedades de video básicas</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-editing-video-properties-multiple-videos.html">Edición de propiedades de video para varios videos</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-organizing-videos-using-folders.html">Organizar videos usando carpetas</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-publishing-playlist-web.html">Publicar una lista de reproducción en la Web</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-publishing-single-video-web.html">Publicar un solo video en la web</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">Diseñar un reproductor</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html">Carga de póster de video e imágenes en miniatura</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-uploading-videos.html">Carga de videos</a></li>
+                    
+                    <li><a href="/basics/video-cloud-basics-viewing-brightcove-system-status-page.html">Visualización de la página de estado del sistema Brightcove</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/general/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Información general</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/general/adding-facebook-button-brightcove-player.html">Agregar un botón Me gusta de Facebook a un reproductor</a></li>
+                    
+                    <li><a href="/general/best-practices-video-creating-transcoding-and-uploading-workflow.html">Mejores prácticas: Trancodificación y carga</a></li>
+                    
+                    <li><a href="/general/china-delivery-overview.html">Descripción general de la entrega en China</a></li>
+                    
+                    <li><a href="/general/content-delivery-options.html">Opciones de entrega de contenido</a></li>
+                    
+                    <li><a href="/general/creating-audio-only-renditions-low-bandwidth-delivery.html">Creación de copias de solo audio</a></li>
+                    
+                    <li><a href="/general/domains-and-ports-must-be-accessible-video-cloud.html">Dominios y puertos que deben ser accesibles</a></li>
+                    
+                    <li><a href="/general/drm-output-protection-settings.html">Configuración de protección de salida DRM</a></li>
+                    
+                    <li><a href="/general/enabling-longer-videos-youtube.html">Habilitación de videos más largos en YouTube</a></li>
+                    
+                    <li><a href="/general/making-your-video-content-indexable.html">Hacer que su contenido de video sea indexable</a></li>
+                    
+                    <li><a href="/general/optimal-video-dimensions.html">Dimensiones óptimas de video</a></li>
+                    
+                    <li><a href="/general/overview-context-aware-encoding.html">Descripción general de la codificación sensible al contexto</a></li>
+                    
+                    <li><a href="/general/overview-digital-rights-management-drm-video-cloud.html">Descripción general: Gestión de derechos digitales (DRM)</a></li>
+                    
+                    <li><a href="/general/overview-dynamic-delivery.html">Descripción general de la entrega dinámica</a></li>
+                    
+                    <li><a href="/general/protecting-videos-hls-encryption.html">Protección de videos con cifrado HLS</a></li>
+                    
+                    <li><a href="/general/resetting-your-studio-password.html">Restablecimiento de su contraseña de Studio</a></li>
+                    
+                    <li><a href="/general/sharing-videos-twitter-player-cards.html">Compartir videos en tarjetas de reproductor de Twitter</a></li>
+                    
+                    <li><a href="/general/studio-system-requirements.html">Requisitos del sistema de estudio</a></li>
+                    
+                    <li><a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">Formatos de audio y video compatibles</a></li>
+                    
+                    <li><a href="/general/tls-media-player-and-api-urls.html">TLS para URL de medios, reproductores y API</a></li>
+                    
+                    <li><a href="/general/video-cloud-architecture-overview.html">Descripción general de la arquitectura de Video Cloud</a></li>
+                    
+                    <li><a href="/general/video-cloud-studio-cookies.html">Cookies de Video Cloud Studio</a></li>
+                    
+                    <li><a href="/general/video-source-file-specifications-and-recommendations.html">Recomendaciones y especificaciones del archivo de origen de video</a></li>
+                    
+                    <li><a href="/general/working-360deg-videos.html">Trabajar con videos de 360 °</a></li>
+                    
+                    <li><a href="/general/working-audio-content.html">Trabajar con contenido de solo audio</a></li>
+                    
+                    <li><a href="/general/working-multiple-video-cloud-accounts.html">Trabajar con varias cuentas</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/media/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Gerente Videos</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/media/adding-audio-tracks-videos-using-media-module.html">Agregar pistas de audio a videos</a></li>
+                    
+                    <li><a href="/media/adding-captions-videos-using-media-module.html">Agregar subtítulos a videos</a></li>
+                    
+                    <li><a href="/media/adding-chapters-video.html">Agregar capítulos a un video</a></li>
+                    
+                    <li><a href="/media/capturing-poster-and-thumbnail-images.html">Captura de imágenes en miniatura y póster</a></li>
+                    
+                    <li><a href="/media/configuring-video-availability.html">Configuración de la disponibilidad de video</a></li>
+                    
+                    <li><a href="/media/creating-and-managing-playlists.html">Creación y gestión de listas de reproducción</a></li>
+                    
+                    <li><a href="/media/downloading-videos-video-cloud.html">Descarga de videos de Video Cloud</a></li>
+                    
+                    <li><a href="/media/editing-video-properties-using-media-module.html">Editar propiedades de video</a></li>
+                    
+                    <li><a href="/media/editing-video-properties-using-quick-edit.html">Editar propiedades usando Edición rápida</a></li>
+                    
+                    <li><a href="/media/exporting-video-data.html">Exportación de datos de video</a></li>
+                    
+                    <li><a href="/media/getting-started-media-module.html">Introducción al módulo multimedia</a></li>
+                    
+                    <li><a href="/media/how-search-videos-and-playlists-media-module.html">Cómo buscar videos y listas de reproducción</a></li>
+                    
+                    <li><a href="/media/increasing-quality-poster-and-thumbnail-images.html">Aumento de la calidad de las imágenes de los carteles</a></li>
+                    
+                    <li><a href="/media/introduction-playlists.html">Introducción a las listas de reproducción</a></li>
+                    
+                    <li><a href="/media/media-sharing-using-media-module.html">Uso compartido de medios</a></li>
+                    
+                    <li><a href="/media/organizing-videos-using-folders.html">Organizar videos usando carpetas</a></li>
+                    
+                    <li><a href="/media/overview-adding-captions-video.html">Descripción general: Agregar subtítulos a un video</a></li>
+                    
+                    <li><a href="/media/replacing-video-source-file.html">Reemplazo de un archivo de origen de video</a></li>
+                    
+                    <li><a href="/media/retranscoding-videos-using-media-module.html">Retranscodificación de vídeos</a></li>
+                    
+                    <li><a href="/media/setting-required-fields-videos.html">Configuración de campos obligatorios</a></li>
+                    
+                    <li><a href="/media/styling-captions.html">Estilo de subtítulos</a></li>
+                    
+                    <li><a href="/media/uploading-poster-and-thumbnail-images.html">Carga de imágenes en miniatura y póster</a></li>
+                    
+                    <li><a href="/media/uploading-videos-using-upload-module.html">Carga de videos</a></li>
+                    
+                    <li><a href="/media/uploading-videos-remote-urls.html">Subir videos URL remotas</a></li>
+                    
+                    <li><a href="/media/working-cue-points-media-module.html">Trabajar con puntos de referencia</a></li>
+                    
+                    <li><a href="/media/working-multi-lingual-metadata.html">Trabajar con metadatos multilingües</a></li>
+                    
+                    <li><a href="/media/working-remote-asset-videos.html">Trabajar con videos de activos remotos</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Administrar canales de reproducción en la nube</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">Descripción general: Playout en la nube</a></li>
+                    
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Creación de un canal de reproducción en la nube</a></li>
+                    
+                    <li><a href="/cloud-playout/cloud-playout-add-content.html">Agregar contenido a un canal de reproducción en la nube</a></li>
+                    
+                    <li><a href="/cloud-playout/static-image-overlays.html">Superposiciones de imágenes estáticas</a></li>
+                    
+                    <li><a href="/cloud-playout/using-channel-actions.html">Usar acciones de canal</a></li>
+                    
+                    <li><a href="/cloud-playout/adding-bumpers-to-vod.html">Agregar parachoques a la reproducción en la nube</a></li>
+                    
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">Monetización de Cloud Playout</a></li>
+                    
+                    <li><a href="/cloud-playout/mid-roll-ad-insertion.html">Agregar anuncios mid-roll a un canal</a></li>
+                    
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">Generación del código de inserción del canal</a></li>
+                    
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">Visualización de resultados y análisis del canal</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/players/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Gerente reproductores</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">Adición de búsqueda de miniaturas</a></li>
+                    
+                    <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">Configurar una superposición de reproductor</a></li>
+                    
+                    <li><a href="/players/configuring-playlist-endscreen-using-plugin.html">Configuración de una pantalla final de lista de reproducción</a></li>
+                    
+                    <li><a href="/players/configuring-adobe-analytics-event-tracking.html">Configuración del seguimiento de eventos de Adobe Analytics</a></li>
+                    
+                    <li><a href="/players/configuring-google-analytics-event-tracking.html">Configuración del seguimiento de eventos de Google Analytics</a></li>
+                    
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configurar la publicidad del reproductor</a></li>
+                    
+                    <li><a href="/players/configuring-player-content-restrictions.html">Configuración de restricciones de contenido del reproductor</a></li>
+                    
+                    <li><a href="/players/configuring-player-controls.html">Configurar los controles del reproductor</a></li>
+                    
+                    <li><a href="/players/configuring-player-endscreen.html">Configuración de la pantalla final del reproductor</a></li>
+                    
+                    <li><a href="/players/configuring-player-localization.html">Configurar la localización del reproductor</a></li>
+                    
+                    <li><a href="/players/configuring-player-playback-properties.html">Configuración de las propiedades de reproducción del reproductor</a></li>
+                    
+                    <li><a href="/players/configuring-player-plugins.html">Configuración de complementos del reproductor</a></li>
+                    
+                    <li><a href="/players/configuring-social-properties-player.html">Configuración de las propiedades sociales</a></li>
+                    
+                    <li><a href="/players/generating-player-embed-code.html">Generando código de inserción del reproductor</a></li>
+                    
+                    <li><a href="/players/getting-started-players-module.html">Introducción al módulo de reproductores</a></li>
+                    
+                    <li><a href="/players/setting-player-information-properties.html">Configuración de las propiedades de información del reproductor</a></li>
+                    
+                    <li><a href="/players/setting-player-properties.html">Configuración de las propiedades del reproductor</a></li>
+                    
+                    <li><a href="/players/setting-player-update-mode-and-version.html">Configuración del modo de actualización del reproductor</a></li>
+                    
+                    <li><a href="/players/styling-players.html">reproductores de estilo</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/publish/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Publicación de videos y reproductores</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/publish/adding-3play-media-interactive-transcript-video.html">Agregar una transcripción interactiva de 3Play Media</a></li>
+                    
+                    <li><a href="/publish/adding-application-id-player-embed-code.html">Agregar una ID de aplicación al código de inserción</a></li>
+                    
+                    <li><a href="/publish/adding-brightcove-player-facebook-fan-page.html">Agregar un reproductor a una página de fans de Facebook</a></li>
+                    
+                    <li><a href="/publish/changing-video-player-without-changing-embed-code.html">Cambiar un video en un reproductor</a></li>
+                    
+                    <li><a href="/publish/choosing-correct-embed-code.html">Elegir el código de inserción correcto</a></li>
+                    
+                    <li><a href="/publish/creating-and-publishing-high-quality-screencasts.html">Creación y publicación de screencasts de alta calidad</a></li>
+                    
+                    <li><a href="/publish/deep-linking.html">Vinculación profunda</a></li>
+                    
+                    <li><a href="/publish/driving-video-views-through-email.html">Generar reproducciones de videos a través del correo electrónico</a></li>
+                    
+                    <li><a href="/publish/dynamically-assigning-videos-player.html">Asignar videos dinámicamente a un reproductor</a></li>
+                    
+                    <li><a href="/publish/embedding-brightcove-player-google-sites-page.html">Insertar un reproductor en una página de sitios de Google</a></li>
+                    
+                    <li><a href="/publish/publishing-brightcove-player-wordpress-page.html">Publicar un reproductor en una página de Wordpress</a></li>
+                    
+                    <li><a href="/publish/publishing-brightcove-players-facebook-instant-articles.html">Publicar reproductores en artículos instantáneos de Facebook</a></li>
+                    
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Publicar reproductores en Joomla</a></li>
+                    
+                    <li><a href="/publish/publishing-video-email.html">Publicar un video en un correo electrónico</a></li>
+                    
+                    <li><a href="/publish/publishing-videos-and-playlists-media-module.html">Publicar videos y listas de reproducción</a></li>
+                    
+                    <li><a href="/publish/publishing-videos-page-experience.html">Publicar videos en una experiencia en la página</a></li>
+                    
+                    <li><a href="/publish/step-step-using-players-module-create-and-publish-player.html">Paso a paso: Creación y publicación de un reproductor</a></li>
+                    
+                    <li><a href="/publish/using-multiple-players-one-page.html">Uso de varios reproductores en una página</a></li>
+                    
+                    <li><a href="/publish/using-reference-ids.html">Usar ID de referencia</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/social/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Compartiendo socialmente</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/social/creating-social-media-publishing-destinations.html">Creación de destinos de publicación</a></li>
+                    
+                    <li><a href="/social/creating-video-clip-using-brightcove-social.html">Crear un videoclip</a></li>
+                    
+                    <li><a href="/social/getting-started-brightcove-social.html">Introducción a las redes sociales</a></li>
+                    
+                    <li><a href="/social/publishing-videos-social-media-platforms.html">Publicar videos en las redes sociales</a></li>
+                    
+                    <li><a href="/social/reviewing-social-analytics.html">Revisión de análisis social</a></li>
+                    
+                    <li><a href="/social/reviewing-social-engagement-analytics.html">Revisión de análisis de participación social</a></li>
+                    
+                    <li><a href="/social/reviewing-social-views-analytics.html">Revisión de análisis de vistas sociales</a></li>
+                    
+                    <li><a href="/social/setting-privacy-status-video.html">Configuración del estado de privacidad de un video</a></li>
+                    
+                    <li><a href="/social/using-auto-sync-synchronize-videos-social-media-accounts.html">Uso de la sincronización automática</a></li>
+                    
+                    <li><a href="/social/viewing-videos-published-social-media.html">Visualización de videos publicados</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/campaign/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Automatización de marketing</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li class="submenu-header">
+                      <a href="/campaign/get-started/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Empezando</a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                         
+                            <li><a href="/campaign/get-started/getting-started-campaign-module.html">Introducción a la campaña</a></li>
+                            
+                            <li><a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un reproductor habilitado para campaña</a></li>
+                            
+                            <li><a href="/campaign/get-started/overview-video-content-types.html">Descripción general de los tipos de contenido de video</a></li>
+                            
+                            <li><a href="/campaign/get-started/using-hud.html">Usando la extensión de Chrome</a></li>
+                           
+                      </ul>
+                    </li>
+                    
+                    <li class="submenu-header">
+                      <a href="/campaign/general/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Información general</a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                         
+                            <li><a href="/campaign/general/campaign-fields-and-data-definitions.html">Campos de campaña y definiciones de datos</a></li>
+                            
+                            <li><a href="/campaign/general/configuring-campaign-settings.html">Configurar la configuración de la campaña</a></li>
+                            
+                            <li><a href="/campaign/general/creating-campaign-enabled-player.html">Creación de un reproductor habilitado para campaña</a></li>
+                            
+                            <li><a href="/campaign/general/creating-campaign-lead-form.html">Creación de un formulario de cliente potencial de campaña</a></li>
+                            
+                            <li><a href="/campaign/general/how-campaign-module-identifies-viewers.html">Cómo identifica la campaña a los espectadores</a></li>
+                            
+                            <li><a href="/campaign/general/how-vbs-calculated.html">Cómo se calcula la puntuación de referencia de video</a></li>
+                            
+                            <li><a href="/campaign/general/overview-video-content-types.html">Descripción general de los tipos de contenido de video</a></li>
+                            
+                            <li><a href="/campaign/general/publishing-video-email-using-campaign-module.html">Publicar un video en un correo electrónico</a></li>
+                            
+                            <li><a href="/campaign/general/using-custom-metrics-and-events.html">Uso de eventos y métricas personalizadas</a></li>
+                            
+                            <li><a href="/campaign/general/viewing-player-events-campaign-module.html">Visualización de eventos del reproductor</a></li>
+                            
+                            <li><a href="/campaign/general/viewing-video-activity.html">Visualización de la actividad de video</a></li>
+                            
+                            <li><a href="/campaign/general/viewing-viewer-profile-information.html">Visualización de la información del perfil del espectador</a></li>
+                            
+                            <li><a href="/campaign/general/working-utm-fields-campaign-module.html">Trabajar con campos UTM</a></li>
+                           
+                      </ul>
+                    </li>
+                    
+                    <li class="submenu-header">
+                      <a href="/campaign/integrations/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Integraciones</a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                         
+                          <li>
+                            <a href="/campaign/integrations/eloqua/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Eloqua</a>
+                            <ul class="sidenav-subsubmenu" style="display:none;">
+                              
+                              <li><a href="/campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html">Creación de formularios de clientes potenciales personalizados</a></li>
+                              
+                              <li><a href="/campaign/integrations/eloqua/eloqua-integration-testing-guide.html">Guía de pruebas de integración de Eloqua</a></li>
+                              
+                              <li><a href="/campaign/integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html">Insertar un video en una página de destino</a></li>
+                              
+                              <li><a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">Integración con Oracle Eloqua</a></li>
+                              
+                            </ul>
+                          </li>
+                            
+                          <li>
+                            <a href="/campaign/integrations/hubspot/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;HubSpot</a>
+                            <ul class="sidenav-subsubmenu" style="display:none;">
+                              
+                              <li><a href="/campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html">Creación de formularios de clientes potenciales personalizados</a></li>
+                              
+                              <li><a href="/campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html">Guía de prueba de API REST de HubSpot</a></li>
+                              
+                              <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">Integración con HubSpot (API del lado del cliente)</a></li>
+                              
+                              <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">Integración con HubSpot (API REST)</a></li>
+                              
+                            </ul>
+                          </li>
+                            
+                          <li>
+                            <a href="/campaign/integrations/marketo/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Marketo</a>
+                            <ul class="sidenav-subsubmenu" style="display:none;">
+                              
+                              <li><a href="/campaign/integrations/marketo/creating-custom-lead-forms-marketo.html">Creación de formularios de clientes potenciales personalizados</a></li>
+                              
+                              <li><a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">Integración con Marketo (Munchkin)</a></li>
+                              
+                              <li><a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">Integración con Marketo (API REST)</a></li>
+                              
+                              <li><a href="/campaign/integrations/marketo/marketo-rest-integration-testing-guide.html">Guía de pruebas de integración de Marketo REST</a></li>
+                              
+                            </ul>
+                          </li>
+                            
+                          <li>
+                            <a href="/campaign/integrations/non-map/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;No MAP</a>
+                            <ul class="sidenav-subsubmenu" style="display:none;">
+                              
+                              <li><a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">Crear integraciones personalizadas</a></li>
+                              
+                              <li><a href="/campaign/integrations/non-map/integrating-campaign-single-sign.html">Integración con inicio de sesión único</a></li>
+                              
+                              <li><a href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html">Uso de Campaign para rastrear espectadores</a></li>
+                              
+                            </ul>
+                          </li>
+                            
+                          <li>
+                            <a href="/campaign/integrations/salesforce/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Fuerza de ventas</a>
+                            <ul class="sidenav-subsubmenu" style="display:none;">
+                              
+                              <li><a href="/campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html">Creación de formularios de clientes potenciales personalizados</a></li>
+                              
+                              <li><a href="/campaign/integrations/salesforce/creating-salesforce-object-pardot.html">Creación de un objeto de Salesforce para Pardot</a></li>
+                              
+                              <li><a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html">Integrarse con Salesforce</a></li>
+                              
+                            </ul>
+                          </li>
+                           
+                      </ul>
+                    </li>
+                    
+                    <li class="submenu-header">
+                      <a href="/campaign/admin/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Administración de campaña</a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                         
+                            <li><a href="/campaign/admin/exporting-campaign-data-campaign-module.html">Exportación de datos de la campaña</a></li>
+                            
+                            <li><a href="/campaign/admin/exporting-gallery-lead-data.html">Exportación de datos de clientes potenciales de la galería</a></li>
+                            
+                            <li><a href="/campaign/admin/managing-viewer-data.html">Administrar los datos del espectador</a></li>
+                            
+                            <li><a href="/campaign/admin/troubleshooting-campaign-issues.html">Solución de problemas de campañas</a></li>
+                           
+                      </ul>
+                    </li>
+                    
+                    <li class="submenu-header">
+                      <a href="/campaign/develop/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Desarrolladores</a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                         
+                            <li><a href="/campaign/develop/overview-audience-api.html">Descripción general: API de audiencia</a></li>
+                            
+                            <li><a href="/campaign/develop/reference.html">Referencia de la API de audiencia</a></li>
+                           
+                      </ul>
+                    </li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/analytics/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Revisión de análisis</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/analytics/analytics-module-ui-glossary.html">Glosario de la interfaz de usuario del módulo de análisis</a></li>
+                    
+                    <li><a href="/analytics/analytics-report-reference.html">Referencia de informes de análisis</a></li>
+                    
+                    <li><a href="/analytics/calculating-video-engagement-score.html">Cálculo de la puntuación de interacción con el vídeo</a></li>
+                    
+                    <li><a href="/analytics/creating-custom-analytics-reports.html">Creación de informes analíticos personalizados</a></li>
+                    
+                    <li><a href="/analytics/engagement-report-reference.html">Referencia del informe de participación</a></li>
+                    
+                    <li><a href="/analytics/exporting-data-analytics-module.html">Exportación de datos</a></li>
+                    
+                    <li><a href="/analytics/faq-analytics-module.html">PREGUNTAS MÁS FRECUENTES: Módulo Analytics</a></li>
+                    
+                    <li><a href="/analytics/getting-started-analytics-module.html">Introducción al módulo de análisis</a></li>
+                    
+                    <li><a href="/analytics/how-search-videos-analytics-module.html">Cómo buscar videos</a></li>
+                    
+                    <li><a href="/analytics/managing-scheduled-reports.html">Gestión de informes programados</a></li>
+                    
+                    <li><a href="/analytics/performance-report-reference.html">Referencia del informe de rendimiento</a></li>
+                    
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Revisión de eventos de reproductores en Google Analytics</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/admin/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Administrar cuentas</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/admin/authenticating-studio-users-using-single-sign.html">Autenticar usuarios de Studio mediante SSO</a></li>
+                    
+                    <li><a href="/admin/configuring-language-settings.html">Configurar los ajustes de idioma</a></li>
+                    
+                    <li><a href="/admin/configuring-server-side-ad-settings.html">Configuración de la configuración de anuncios del lado del servidor</a></li>
+                    
+                    <li><a href="/admin/creating-custom-metadata-fields.html">Creación de campos de metadatos personalizados</a></li>
+                    
+                    <li><a href="/admin/creating-ingest-profiles-context-aware-encoding.html">Creación de perfiles de ingesta para codificación sensible al contexto</a></li>
+                    
+                    <li><a href="/admin/creating-ingest-profiles-dynamic-delivery.html">Creación de perfiles de ingesta para una entrega dinámica</a></li>
+                    
+                    <li><a href="/admin/ingest-profiles-best-practices.html">Mejores prácticas de perfiles de ingesta</a></li>
+                    
+                    <li><a href="/admin/managing-account-information.html">Administrar la información de la cuenta</a></li>
+                    
+                    <li><a href="/admin/managing-account-settings.html">Administrar la configuración de la cuenta</a></li>
+                    
+                    <li><a href="/admin/managing-api-authentication-credentials.html">Administrar las credenciales de autenticación de API</a></li>
+                    
+                    <li><a href="/admin/managing-ingest-profiles.html">Gestión de perfiles de ingesta</a></li>
+                    
+                    <li><a href="/admin/managing-media-sharing-settings.html">Administrar la configuración de uso compartido de medios</a></li>
+                    
+                    <li><a href="/admin/managing-profile-information.html">Gestión de la información del perfil</a></li>
+                    
+                    <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Perfiles de ingesta estándar (DD y CAE)</a></li>
+                    
+                    <li><a href="/admin/managing-users.html">Administrar usuarios</a></li>
+                    
+                    <li><a href="/admin/using-directed-migration-tool-migrate-brightcove-smart-players.html">Uso de la herramienta de migración dirigida</a></li>
+                    
+                    <li><a href="/admin/viewing-billing-information.html">Ver información de facturación</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/training/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Capacitación</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/training/online-training-courses.html">Todos los cursos de formación online</a></li>
+                    
+                    <li><a href="/training/register-training.html">Regístrese para la capacitación dirigida por un instructor</a></li>
+                    
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">Capacitación: Introducción a Video Cloud</a></li>
+                    
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">Capacitación: Introducción a Video Cloud Analytics</a></li>
+                    
+                    <li><a href="/training/training-demand-video-cloud-basics.html">Capacitación: Conceptos básicos de Video Cloud</a></li>
+                    
+                    <li><a href="/training/video-cloud-studio-training-videos.html">Vídeos de formación de Video Cloud Studio</a></li>
+                    
+                    <li><a href="/training/brightcove-university.html">Cursos de formación de la Universidad de Brightcove</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/release-notes/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Notas de lanzamiento</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/release-notes/video-cloud-studio-release-notes.html">Notas de la versión de Video Cloud Studio</a></li>
+                   
+              </ul>
+              
+              <h5 class="submenu-header"><a href="/support/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Apoyo</a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                 
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Visualización de la página de estado del sistema Brightcove</a></li>
+                    
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Abrir un caso de asistencia</a></li>
+                    
+                    <li><a href="/support/reset-support-portal-password.html">Restablecer la contraseña del portal de soporte</a></li>
+                    
+                    <li><a href="/support/contact-sales.html">Comuníquese con Ventas</a></li>
+                   
+              </ul>
+             
       </nav>
     </div>
     <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
   <!-- bootstrap layout -->
 
-<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Menú de navegación"/></p>
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Navigation Menu"></p>
 
 <!-- search bar -->
 <div id="nav-search-box" style="margin-top: 1rem;"></div>
@@ -900,149 +700,141 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <ul id="centered_in_page_toc" class="list-none"></ul>
 </details>
 <!-- open in new tab/window -->
-<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="abrir en una nueva pestaña" style="margin-top:4em;width: 1.5em;"/></a>
-
-
-
-  
-    
-
-
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>Uso compartido de medios mediante el módulo multimedia</h1>
-  <summary>En este tema aprenderás a compartir vídeos con otras cuentas.</summary>
+  <h1>Uso compartido de medios mediante módulo de medios</h1>
+  <summary>En este tema, aprenderá a compartir videos con otras cuentas.</summary>
   <section class="bcls-section">
     <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4703864538001">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>Gracias a las funciones de compartición de medios, los editores solo necesitan subir cada vídeo una única vez para compartirlo con otras cuentas. Dichas cuentas pueden ser propias, corporativas o incluso de otros editores. Estos vídeos compartidos pueden utilizarse independientemente en las otras cuentas de Video Cloud. La compartición de medios se suele emplear cuando los editores desean mantener una cuenta principal de contenido de vídeo y compartir vídeos con otras divisiones y subsidiarias de la organización.</p>
-    <aside class="bcls-aside bcls-aside--information">
-      Nota: 
+    <p>El uso compartido de medios permite a los editores cargar videos una vez y luego compartirlos con otras cuentas. Las cuentas pueden ser propias, cuentas corporativas o cuentas de otros editores. Los videos compartidos se pueden usar de forma independiente en las otras cuentas de Video Cloud. El uso compartido de medios se usa normalmente cuando los editores desean mantener una cuenta maestra del contenido de video y luego compartir videos con otras divisiones o subsidiarias de la organización.</p>
+    <aside class="bcls-aside bcls-aside--information"> Nota: 
       <ul>
-        <li>El uso compartido de medios solo está disponible para los clientes de Video Cloud Enterprise. Si está interesado en obtener una versión superior de su cuenta de Video Cloud, póngase en contacto con Brightcove para obtener más información.</li>
+        <li>El uso compartido de medios solo está disponible para los clientes de Video Cloud Enterprise. Si está interesado en actualizar su cuenta de Video Cloud, comuníquese con Brightcove para obtener más información.</li>
         <li>El intercambio de medios puede ser bidireccional: cada cuenta puede ser maestra y afiliada de la otra.</li>
       </ul>
     </aside>
-    <p>El uso compartido de medios también se puede implementar mediante programación mediante la API de CMS. Para obtener más información, consulte <a href="https://apis.support.brightcove.com/cms/managing-videos/media-sharing-cms-api.html">Uso compartido de medios con la API de CMS</a>.</p>
+    <p>El uso compartido de medios también se puede implementar mediante programación utilizando la API de CMS. Para más información, ver <a href="https://apis.support.brightcove.com/cms/managing-videos/media-sharing-cms-api.html">Uso compartido de medios con la API de CMS</a>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="terminology">Terminología para compartir medios</h2>
-    <p>En este artículo se emplea la siguiente terminología:</p>
+    <h2 id="terminology">Terminología de uso compartido de medios</h2>
+    <p>Este tema utilizará la siguiente terminología:</p>
     <ul>
-      <li>Maestro - La cuenta que creó el video original.<strong></strong> El Master es el propietario del contenido y es responsable de configurar, administrar y proporcionar contenido a los afiliados.</li>
-      <li><strong>Afiliado</strong> - La cuenta que está recibiendo el video. El afiliado puede aceptar contenido compartido a él de un maestro.</li>
+      <li><strong>Maestría</strong> - La cuenta que creó el video original. El Máster es propietario del contenido y es responsable de configurar, administrar y proporcionar contenido a los afiliados.</li>
+      <li><strong>Afiliado</strong> - La cuenta que está recibiendo el video. El afiliado puede aceptar contenido compartido de un maestro.</li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="limitations">Limitaciones para compartir medios</h2>
+    <h2 id="limitations">Limitaciones de uso compartido de medios</h2>
     <ul>
       <li>
-        <p> <strong>No</strong> se admite el uso compartido de vídeos protegidos mediante DRM. Se admite el uso compartido de vídeos desde una cuenta que no está habilitada para DRM con una cuenta habilitada para DRM, pero los vídeos compartidos no se empaquetarán para DRM.<strong></strong></p>
+        <p>Compartir videos que se han protegido mediante DRM es <strong>no</strong> soportado. Se admite compartir videos de una cuenta que no está habilitada para DRM a una cuenta que sí está habilitada para DRM, pero los videos compartidos <strong>no</strong> ser empaquetado para DRM.</p>
       </li>
       <li>
-        <p>El uso compartido fallará para los vídeos creados con la opción «Convertir transmisión en vivo a VOD». Funcionará para videos realizados recortando transmisiones en vivo.</p>
+        <p>No se podrán compartir los videos creados con la opción "Convertir transmisión en vivo a VOD". Funcionará para videos hechos mediante el recorte de transmisiones en vivo.</p>
       </li>
       <li>
-        <p>Los vídeos compartidos solo se pueden descargar para su visualización sin conexión si el vídeo original puede serlo. La propiedad se hereda del vídeo original y no se puede cambiar sólo para el vídeo compartido.</p>
+        <p>Los videos compartidos se pueden descargar para verlos sin conexión solo si el video original puede ser. La propiedad se hereda del video original y no se puede cambiar solo para videos compartidos.</p>
       </li>
       <li>
-        Al reproducir un vídeo compartido con SSAI, el reemplazo de macros SSAI utilizará los metadatos del vídeo principal en lugar del vídeo secundario. SSAI también omitirá la búsqueda de anuncios si el vídeo principal está marcado como, incluso si el vídeo secundario está etiquetado como.<code translate="No">Advertising='Free'</code><code translate="No">Ad Supported</code>
+        Al reproducir un video compartido con SSAI, el reemplazo de macro SSAI usará los metadatos del video principal en lugar del video secundario. SSAI también omitirá la búsqueda de anuncios si el vídeo principal está marcado como <code translate="No">Advertising='Free'</code>, incluso si el vídeo secundario está etiquetado como <code translate="No">Ad Supported</code>.
       </li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="manage">Administración de relaciones de uso compartido de medios</h2>
-    <p>Antes de que los vídeos se puedan compartir entre cuentas, la configuración de uso compartido de medios debe configurarse como parte de la configuración de <strong>Administrador Uso compartido de &gt; medios</strong> . Tenga en cuenta que sólo los administradores de cuentas tienen acceso al menú Administrador. Si desea compartir vídeos con otras cuentas, se deben agregar afiliados y las cuentas de afiliados deben aceptar la relación. Las cuentas principales y afiliadas pueden terminar la relación en cualquier momento. Al finalizar una relación de uso compartido de medios no se eliminan los vídeos compartidos de las cuentas de afiliados.<strong></strong> Si desea eliminar vídeos compartidos de la cuenta de un afiliado, debe eliminarlos de su propia cuenta (maestra) o abrir las propiedades del vídeo, ir a la sección Compartir multimedia y hacer clic en el icono Quitar vídeo de la cuenta de afiliado.<strong></strong><strong></strong></p>
-    <figure><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18465-remove-video.png"/></figure>
-    <p>Para obtener información sobre cómo configurar los ajustes de Uso compartido de medios, consulte <a href="/admin/managing-media-sharing-settings.html">Administrar la configuración de uso compartido de medios</a>.</p>
+    <h2 id="manage">Gestionar las relaciones de intercambio de medios</h2>
+    <p>Antes de que los videos se puedan compartir entre cuentas, los ajustes de uso compartido de medios deben configurarse como parte del <strong>ADMIN&gt; Uso compartido de medios</strong> ajustes. Tenga en cuenta que solo los administradores de cuentas tienen acceso al menú Admin. Si desea compartir videos con otras cuentas, se deben agregar afiliados y las cuentas de afiliados deben aceptar la relación. Las cuentas maestras y afiliadas pueden terminar la relación en cualquier momento. Terminar una relación de intercambio de medios <strong>no es</strong> eliminar los videos compartidos de las cuentas de afiliados. Si desea eliminar videos compartidos de la cuenta de un afiliado, debe eliminarlos de su propia cuenta (maestra) o abrir las propiedades del video, vaya a la <strong>Uso compartido de medios</strong> sección y haga clic en el <strong>Quitar video</strong> icono de la cuenta de afiliado.</p>
+    <figure><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18465-remove-video.png" /></figure>
+    <p>Para obtener información sobre cómo configurar los ajustes de uso compartido de medios, consulte <a href="/admin/managing-media-sharing-settings.html">Administrar la configuración de uso compartido de medios</a>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="sharing">Compartir vídeos</h2>
-    <p>De forma predeterminada, la función de compartir vídeos está disponible para todos los usuarios de su cuenta que tengan acceso al módulo Media. Para compartir vídeos, siga estos pasos:</p>
+    <h2 id="sharing">Compartir videos</h2>
+    <p>De forma predeterminada, la capacidad de compartir videos está disponible para todos los usuarios de su cuenta con acceso al módulo de Medios. Para compartir videos, siga estos pasos:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Abra el módulo multimedia, seleccione uno o más vídeos y, a continuación, haga clic en <strong>Más &gt; Compartir</strong>.
-        <aside class="bcls-aside bcls-aside--information">Nota: Al compartir un gran número de vídeos, Brightcove recomienda compartir como máximo 50 vídeos a la vez. Compartir un gran número de vídeos a la vez puede causar un error de tiempo de espera en Studio. Si necesita compartir una gran cantidad de videos, se <span translate="No">CMS API</span> debe usar el.</aside>
+      <li>Abra el módulo de Medios, seleccione uno o más videos y luego haga clic en <strong>Más&gt; Compartir</strong>. <aside class="bcls-aside bcls-aside--information">Nota: Al compartir una gran cantidad de videos, Brightcove recomienda compartir como máximo 50 videos a la vez. Compartir una gran cantidad de videos a la vez puede causar un error de tiempo de espera en Studio. Si necesita compartir una gran cantidad de videos, el <span translate="No">API de CMS</span> debería ser usado.</aside>
       </li>
-      <li>Seleccione las cuentas de afiliado a las que compartir los vídeos y, a continuación, haga clic en Compartir.<strong></strong> El campo de búsqueda se puede utilizar para buscar un ID de cuenta. El campo de búsqueda admite búsquedas difusas, por lo que al introducir parte de un ID se devolverán coincidencias.
-        <figure><img alt="" src="/assets/images/media/node18465-select-accounts.png"/></figure>
+      <li>Seleccione las cuentas de afiliados para compartir los videos y luego haga clic en <strong>Cuota</strong>. El campo de búsqueda se puede utilizar para buscar un ID de cuenta. El campo de búsqueda admite búsquedas difusas, por lo que ingresar parte de una identificación arrojará coincidencias.
+        <figure><img alt="" src="/assets/images/media/node18465-select-accounts.png" /></figure>
       </li>
     </ol>
-    <p>Es posible volver a compartir vídeos (compartir vídeos previamente compartidos en la misma cuenta). Al hacerlo, se reemplazarán los cambios de metadatos de vídeo realizados por la cuenta de afiliado con los valores de la cuenta maestra (compartir). Tenga cuidado al volver a compartir vídeos.</p>
+    <p>Es posible volver a compartir videos (compartir videos previamente compartidos en la misma cuenta). Al hacerlo, se reemplazarán los cambios en los metadatos de video realizados por la cuenta del afiliado con los valores de la cuenta maestra (para compartir). Tenga cuidado al compartir videos.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="review">Revisión de vídeos compartidos</h2>
-    <p>Las cuentas de afiliados tienen la capacidad de configurar un <strong>modo de aceptación</strong> para cada cuenta maestra. Cuando el <strong>modo de aceptación</strong> es <strong>Automático</strong> , los vídeos compartidos aparecerán en la lista de vídeos de la cuenta de afiliados en el módulo multimedia. Cuando el <strong>modo de aceptación</strong> es <strong>Manual</strong> , aparecerá un enlace <strong>Recursos pendientes</strong> que muestra el número de vídeos compartidos en el módulo multimedia.</p>
-    <aside class="bcls-aside bcls-aside--information">Nota: Para obtener información sobre cómo configurar el modo de aceptación, consulte <a href="/admin/managing-media-sharing-settings.html">Administrar la configuración de uso compartido de medios</a>.</aside>
-    <figure><img alt="" src="/assets/images/media/node18465-shares-pending.png"/></figure>
-    <p>Cuando se hace clic en el botón <strong>Comparticiones pendientes</strong> se muestra una lista de los vídeos compartidos.</p>
-    <figure><img alt="" src="/assets/images/media/node18465-shares-pending-list.png"/></figure>
-    <p>Desde la lista de comparticiones pendientes es posible:</p>
+    <h2 id="review">Revisar videos compartidos</h2>
+    <p>Las cuentas de afiliados tienen la capacidad de configurar un <strong>Modo de aceptación</strong> para cada cuenta maestra. Cuando el modo de <strong>aceptación</strong> es <strong>automático</strong>, los vídeos compartidos aparecerán en la lista de vídeos de la cuenta de afiliado en el módulo multimedia. Cuando el <strong>Modo de aceptación</strong> es <strong>Manual</strong> , a <strong>Acciones pendientes</strong> El enlace que muestra la cantidad de videos compartidos aparecerá en el módulo de Medios.</p>
+    <aside class="bcls-aside bcls-aside--information">Nota: Para obtener información sobre cómo configurar el modo de aceptación, consulte <a href="/admin/managing-media-sharing-settings.html">Administración de la configuración de uso compartido de medios</a>.</aside>
+    <figure><img alt="" src="/assets/images/media/node18465-shares-pending.png" /></figure>
+    <p>Haciendo clic en el <strong>Acciones pendientes</strong> enlace mostrará la lista de videos compartidos.</p>
+    <figure><img alt="" src="/assets/images/media/node18465-shares-pending-list.png" /></figure>
+    <p>Desde la lista de acciones pendientes, puede:</p>
     <ul>
-      <li>Rechazar: rechazar el vídeo compartido y no incluirlo en su cuenta.<strong></strong> Rechazar un vídeo compartido no impide que el maestro lo vuelva a compartir en tu cuenta en el futuro.</li>
-      <li><strong>Aceptar</strong> - Para aceptar el vídeo compartido en su cuenta.</li>
+      <li><strong>Rechazar</strong> - Rechazar el video compartido y no incluirlo en su cuenta. Rechazar un video compartido no impide que el maestro vuelva a compartirlo con su cuenta en el futuro.</li>
+      <li><strong>Aceptar</strong> - Aceptar el video compartido en su cuenta.</li>
     </ul>
-    <p>La vista rápida se puede utilizar para abrir un panel para ver las propiedades de vídeo.<strong></strong> Cuando haya aceptado un vídeo compartido dejará de aparecer en la vista Comparticones pendientes del módulo Media y se mostrará en la vista Todos los vídeos.</p>
+    <p><strong>Vista rápida</strong> se puede utilizar para abrir un panel para ver las propiedades del video. Una vez que acepta un video compartido, ya no aparece en la lista de recursos compartidos pendientes en el módulo de Medios y aparece en la vista Todos los videos.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="view">Vídeos compartidos en el módulo Media</h2>
-    <p>Los vídeos compartidos mostrarán un icono para compartir en la esquina superior de la miniatura del vídeo para indicar que el vídeo se ha compartido dentro o fuera de una cuenta.</p>
+    <h2 id="view">Vídeos compartidos en el módulo de medios</h2>
+    <p>Los videos compartidos mostrarán un icono para compartir en la esquina superior de la miniatura del video para indicar que el video se ha compartido dentro o fuera de una cuenta.</p>
     <div class="BCL-subsection">
-      <h3>Vídeo compartido desde otra cuenta</h3>
-      <p>Mantenga el cursor sobre el icono de compartición (<img alt="" src="/assets/images/media/node15924-shared-in-icon.png"/>) para que se muestren los detallles.</p>
-      <figure><img alt="" src="/assets/images/media/node18465-shared-in.png"/></figure>
+      <h3>Video compartido en una cuenta</h3>
+      <p>Colocando el cursor sobre el ícono de compartir (<img alt="" src="/assets/images/media/node15924-shared-in-icon.png" />) mostrará los detalles para compartir.</p>
+      <figure><img alt="" src="/assets/images/media/node18465-shared-in.png" /></figure>
     </div>
     <section class="bcls-subsection">
-      <h3>Vídeo compartido con otra cuenta</h3>
-      <p>Mantenga el cursor sobre el icono de compartición (<img alt="" src="/assets/images/media/node15924-shared-out-icon.png"/>) para que se muestren los detallles.</p>
-      <figure><img alt="" src="/assets/images/media/node18465-shared-out.png"/></figure>
+      <h3>Video compartido con otra cuenta</h3>
+      <p>Colocando el cursor sobre el ícono de compartir (<img alt="" src="/assets/images/media/node15924-shared-out-icon.png" />) mostrará los detalles para compartir.</p>
+      <figure><img alt="" src="/assets/images/media/node18465-shared-out.png" /></figure>
     </section>
-    <p>Las cuentas maestras pueden ver el estado de los vídeos compartidos con cuentas de afiliados mediante la sección <strong>Compartir multimedia</strong> de la página de propiedades del vídeo.</p>
-    <figure><img alt="" src="/assets/images/media/node18465-media-sharing-status.png"/></figure>
-    <p>Los errores también pueden aparecer aquí. Por ejemplo, si está marcada <strong>Forzar coincidencia de campos personalizados</strong> , la cuenta de afiliado debe tener los mismos campos personalizados que la cuenta maestra o cualquier acción compartida fallará.</p>
-    <figure><img alt="" src="/assets/images/media/node18465-media-sharing-error.png"/></figure>
+    <p>Las cuentas maestras pueden ver el estado de los videos compartidos con las cuentas de afiliados usando el <strong>Uso compartido de medios</strong> sección de la página de propiedades del video.</p>
+    <figure><img alt="" src="/assets/images/media/node18465-media-sharing-status.png" /></figure>
+    <p>También pueden aparecer errores aquí. Por ejemplo, si <strong>Hacer cumplir la coincidencia de campos personalizados</strong> está marcada, la cuenta de afiliado debe tener los mismos campos personalizados que la cuenta maestra o cualquier recurso compartido fallará.</p>
+    <figure><img alt="" src="/assets/images/media/node18465-media-sharing-error.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="delete">Eliminación de vídeos compartidos</h2>
-    <p>Cuando se elimina un vídeo compartido de una cuenta maestra, se muestra un mensaje recordándole que al eliminar el vídeo compartido se eliminará de todas las cuentas de afiliados con las que lo haya compartido.</p>
-    <figure><img alt="" src="/assets/images/media/node18465-delete-shared-video.png"/></figure>
+    <h2 id="delete">Eliminar videos compartidos</h2>
+    <p>Cuando se elimina un video compartido de una cuenta maestra, se muestra un mensaje que le recuerda que eliminar el video compartido lo eliminará de todas las cuentas de afiliados con las que lo ha compartido.</p>
+    <figure><img alt="" src="/assets/images/media/node18465-delete-shared-video.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="properties">Propiedades de vídeo compartidas</h2>
-    <p>Cuando un vídeo se comparte con una cuenta de afiliado, se copian las siguientes propiedades de vídeo con el vídeo compartido:</p>
+    <h2 id="properties">Propiedades de video compartidas</h2>
+    <p>Cuando se comparte un video con una cuenta de afiliado, las siguientes propiedades del video se copian con el video compartido:</p>
     <ul>
       <li>Nombre</li>
       <li>Descripción corta y larga</li>
-      <li>Id. de referencia (si alguna de las cuentas de los afiliados con los que comparte cuentan con un vídeo que tenga el mismo Id. de referencia, la operación de compartición no se realiza y se genera un mensaje de error. Puede evitarlo configurando las reglas para asignar nombre de Id. de referencia que impiden que los afiliados utilicen los mismos Id. de referencia).</li>
+      <li>ID de referencia (si alguna de las cuentas de afiliados con las que está compartiendo ya tiene un video con el mismo ID de referencia, la operación de uso compartido falla con un mensaje de error. Puede evitar esto configurando convenciones de nomenclatura de ID de referencia que impidan que los afiliados utilicen los mismos ID de referencia).</li>
       <li>Enlace relacionado (texto del enlace y URL del enlace)</li>
       <li>Etiquetas</li>
-      <li>Proyección de vídeo</li>
-      <li>Imágenes en miniatura y póster - De forma predeterminada, las imágenes de póster y miniatura de los vídeos maestros se utilizarán en las cuentas de afiliados. Si se realizan cambios en el póster y/o miniatura de la cuenta maestra, dichos cambios se reflejarán en las cuentas de afiliados <strong>a menos que</strong> la cuenta de afiliado haya generado previamente nuevas imágenes de póster o miniatura. Una vez que la cuenta de afiliado realice un cambio en el póster o en las imágenes en miniatura, los cambios realizados en el póster o miniatura realizados en la cuenta principal no se propagarán a la cuenta de afiliado.<strong></strong></li>
-      <li>Pistas de texto: los afiliados no tienen la capacidad de eliminar o editar las propiedades de las pistas de texto de los vídeos compartidos.</li>
-      <li>Publicidad (Gratuita/AdWords Adported</li>
-      <li>Teclas de anuncio</li>
-      <li>Programación de la fecha de inicio y de fin</li>
-      <li>Restricción geográfica: los editores deben asegurarse de que las cuentas principales y de afiliados estén configuradas de la misma manera con respecto a las restricciones geográficas.</li>
+      <li>Proyección de video</li>
+      <li>Imágenes en miniatura y póster: de forma predeterminada, las imágenes de póster y miniatura de los videos maestros se utilizarán en las cuentas de afiliados. Si se realizan cambios en el póster y / o la miniatura en la cuenta principal, esos cambios se reflejarán en las cuentas de afiliados. <strong>a no ser que</strong> la cuenta de afiliado ha generado previamente un nuevo póster o imágenes en miniatura. Una vez que la cuenta de afiliado realiza un cambio en el póster o las imágenes en miniatura, cualquier cambio en el póster / miniatura realizado en la cuenta maestra <strong>no </strong>propagar a la cuenta de afiliado.</li>
+      <li>Pistas de texto: los afiliados no tienen la capacidad de eliminar o editar las propiedades de la pista de texto para videos compartidos.</li>
+      <li>Pistas de audio: los afiliados no tienen la capacidad de eliminar o editar las propiedades de la pista de audio para videos compartidos.</li>
+      <li>Publicidad (gratis / compatible con anuncios)</li>
+      <li>Claves de anuncios</li>
+      <li>Programación de la fecha de inicio y la fecha de finalización</li>
+      <li>Restricción geográfica: los editores deben asegurarse de que las cuentas maestras y afiliadas estén configuradas de la misma manera con respecto a las restricciones geográficas.</li>
       <li>Puntos de referencia con sus metadatos asociados</li>
-      <li>Campos personalizados: si la cuenta maestra está configurada para <strong>exigir coincidencias de campos personalizados</strong>, las cuentas de afiliados deben tener los mismos campos personalizados que la cuenta maestra o cualquier acción compartida fallará.</li>
+      <li>Campos personalizados: si la cuenta maestra está configurada para <strong>hacer cumplir la coincidencia de campos personalizados</strong>, las cuentas de afiliado deben tener los mismos campos personalizados que la cuenta principal o cualquier acción fallará.</li>
     </ul>
     <aside class="bcls-aside bcls-aside--information">Nota: Si el campo personalizado es un tipo de lista, el campo personalizado debe tener las mismas opciones en ambas cuentas.</aside>
-    <p>El vídeo compartido tiene todos los valores de estos campos de metadatos de vídeo que tenía el vídeo maestro en el momento en que se compartió. Sin embargo, a partir de ese momento, la copia maestra y la copia afiliada se convierten en entidades independientes:</p>
+    <p>El video compartido tiene todos los valores para estos campos de metadatos de video que tenía el video maestro en el momento en que se compartió. Sin embargo, a partir de ese momento, la copia maestra y la copia afiliada se convierten en entidades independientes:</p>
     <ul>
-      <li>Los archivos de vídeo no se copian cuando utiliza la opción de compartir medios; únicamente se copian los metadatos del vídeo. El vídeo compartido enlaza a los archivos del vídeo original de su cuenta.</li>
-      <li>Si el vídeo se elimina de la cuenta maestra, el vídeo se elimina de todas las cuentas de afiliados.</li>
-      <li>Cualquier cambio que un afiliado realice en un vídeo no afectará al original ni a ninguna otra copia compartida. Si un afiliado elimina un vídeo compartido, se elimina de la cuenta del afiliado, pero permanece en la cuenta principal y en todas las demás cuentas de afiliados.</li>
-      <li>Los afiliados no pueden eliminar o actualizar pistas de texto utilizando el Módulo multimedia.</li>
-      <li>Cuando los afiliados reciben un video compartiendo, se encuentra en el estado activo. Esto es cierto incluso si el video no estaba activo en la cuenta maestra.</li>
-      <li>Si un afiliado acepta un vídeo y faltan campos obligatorios, el vídeo estará inactivo.</li>
-      <li>Una cuenta de afiliado que recibe un vídeo compartido no puede compartirlo con otra cuenta. Solo la cuenta maestra puede compartir el vídeo.</li>
-      <li>Cada cuenta factura de forma independiente las reproducciones (reproducciones del vídeo y utilización del ancho de banda) de un vídeo compartido desde esa cuenta.</li>
-      <li>Los informes sobre un vídeo compartido son específicos de cada cuenta y no añaden información de cada copia del vídeo de cada cuenta.</li>
+      <li>Los archivos de video no se copian cuando usa Media Sharing, solo se copian los metadatos del video. El video compartido apunta a los archivos de video originales en su cuenta.</li>
+      <li>Si el video se elimina de la cuenta maestra, el video se elimina de todas las cuentas de afiliados.</li>
+      <li>Cualquier cambio que realice un afiliado a un video no afectará el original ni ninguna otra copia compartida. Si un afiliado elimina un video compartido, se elimina de la cuenta del afiliado, pero permanece en la cuenta maestra y en todas las demás cuentas de afiliados.</li>
+      <li>Los afiliados no pueden eliminar ni actualizar pistas de texto mediante el Módulo de medios.</li>
+      <li>Cuando los afiliados reciben un video al compartirlo, está en estado activo. Esto es cierto incluso si el video no estaba activo en la cuenta maestra.</li>
+      <li>Si un afiliado acepta un video y faltan los campos obligatorios, el video estará inactivo.</li>
+      <li>Una cuenta de afiliado que recibe un video compartido no puede compartir ese video con otra cuenta. Solo la cuenta maestra puede compartir el video.</li>
+      <li>Cada cuenta se factura por separado por la reproducción (reproducción de video y uso de ancho de banda) de un video compartido desde esa cuenta.</li>
+      <li>Informar sobre un video compartido es específico para cada cuenta y no agrega información sobre cada copia del video en cada cuenta.</li>
     </ul>
-    <p>Es posible volver a compartir vídeos (compartir vídeos previamente compartidos en la misma cuenta). Al hacerlo, se reemplazarán los cambios de metadatos de vídeo realizados por la cuenta de afiliado con los valores de la cuenta maestra (compartir). Tenga cuidado al volver a compartir vídeos.</p>
+    <p>Es posible volver a compartir videos (compartir videos previamente compartidos en la misma cuenta). Al hacerlo, se reemplazarán los cambios en los metadatos de video realizados por la cuenta del afiliado con los valores de la cuenta maestra (para compartir). Tenga cuidado al compartir videos.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="renditions">Rendiciones de vídeo compartidas</h2>
-    <p>Los vídeos se pueden compartir con las cuentas de afiliados <strong>antes de que</strong> se complete la transcodificación. Las cuentas de afiliados que reciban el vídeo compartido tendrán acceso a las representaciones creadas en la cuenta maestra. Si el vídeo de la cuenta de origen está retranscodificado, o si el archivo de origen ha cambiado, estos cambios se efectuarán en las cuentas afiliadas que reciban el vídeo compartido.</p>
-    <p>Las cuentas de afiliados no pueden retranscodificar o reemplazar el archivo fuente de un vídeo compartido.</p>
+    <h2 id="renditions">Representaciones de video compartidas</h2>
+    <p>Los videos se pueden compartir con cuentas de afiliados <strong>antes de</strong> se ha completado la transcodificación. Las cuentas de afiliados que reciban el video compartido tendrán acceso a las representaciones que se crearon en la cuenta maestra. Si el video en la cuenta de origen se retranscodifica, o si se cambia el archivo de origen, esos cambios ocurrirán en las cuentas de afiliados que reciben el video compartido.</p>
+    <p>Las cuentas de afiliados no pueden volver a codificar o reemplazar el archivo de origen de un video compartido.</p>
   </section>
   <!--<div class="bcls-section">
   <h2 id="drm">Media sharing & DRM</h2>
@@ -1050,35 +842,34 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>-->
   
   <section class="bcls-section">
-    <h2 id="billing">Medios compartidos y facturación</h2>
-    <p>A menudo tenemos preguntas sobre cómo los medios compartidos entre cuentas afectan a la facturación. A continuación presentamos algunos supuestos para explicar los criterios aplicables a la hora de facturar contenidos compartidos entre editores.</p>
-    <h3>Supuesto 1</h3>
+    <h2 id="billing">Facturación y medios compartidos</h2>
+    <p>A menudo recibimos preguntas sobre cómo los medios que se comparten entre cuentas afectan la facturación. A continuación, se muestran algunos escenarios que explican cómo se gestiona la facturación del contenido que se comparte entre editores.</p>
+    <h3>Escenario 1</h3>
     <ul>
-      <li>Editor A y Editor B con contenidos en la CDN de Brightcove</li>
-      <li>Editor A comparte con Editor B</li>
-      <li>Editor B paga a Brightcove por secuencias y ancho de banda</li>
+      <li>Pub A y Pub B con contenido en Brightcove CDN</li>
+      <li>Pub A comparte con Pub B</li>
+      <li>Pub B paga a Brightcove por las transmisiones y el ancho de banda</li>
     </ul>
-    <h3>Supuesto 2</h3>
+    <h3>Escenario 2</h3>
     <ul>
-      <li>Editor A aporta su propia CDN BYO</li>
-      <li>Editor B en la CDN de Brightcove o que aporta su propia CDN BYO (da igual)</li>
-      <li>Editor A comparte con Editor B</li>
-      <li>Editor B paga a Brightcove la transmisión; Editor A paga el ancho de banda a su propia CDN</li>
+      <li>Pub A con BYO CDN</li>
+      <li>Pub B en Brightcove CDN O BYO CDN (no importa)</li>
+      <li>Pub A comparte con Pub B</li>
+      <li>Pub B paga a Brightcove por las transmisiones; Pub A paga su propio CDN por el ancho de banda</li>
     </ul>
-    <h3>Supuesto 3</h3>
+    <h3>Escenario 3</h3>
     <ul>
-      <li>Editor A con contenidos en la CDN de Brightcove</li>
-      <li>Editor B aporta su propia CDN BYO</li>
-      <li>Editor A comparte con Editor B</li>
-      <li>Editor B paga a Brightcove las transmisiones y el ancho de banda (se entiende que se entregan los parámetros de facturación). Hemos detectado casos extremos en los que los reproductores de vídeo personalizados no entregan correctamente los parámetros de facturación.</li>
+      <li>Pub A con contenido en Brightcove CDN</li>
+      <li>Pub B con BYO CDN</li>
+      <li>Pub A comparte con Pub B</li>
+      <li>Pub B paga a Brightcove por las transmisiones y el ancho de banda asumiendo que se están pasando los parámetros de facturación. Hemos visto casos extremos en los que los parámetros de facturación no se pasan debido a la creación de reproductores de video personalizados que no pasan correctamente los parámetros de facturación.</li>
     </ul>
-    <h3>Escenario 4: el contenido debe recuperarse de Origin</h3>
-    <p>Pasamos el ID de cuenta&nbsp;en cada solicitud para&nbsp;que cada cuenta sea facturada por su propio acceso de origen. Por lo tanto, si la cuenta de <strong>Sharer</strong> frecuentemente pierde su caché de CDN y tiene que volver al origen para el contenido, entonces se facturará al <strong>Compartente</strong> por eso. Si la cuenta de <strong>Sharee</strong> frecuentemente pierde su caché de CDN y tiene que volver al origen para obtener contenido, se facturará a la cuenta de <strong>Sharee</strong> . Los cargos por acceso a Origin permanecen separados independientemente del escenario de configuración de CDN.</p>
-    <h3>Scenario 5 - Imágenes</h3>
-    <p>De forma predeterminada, con Dynamic Delivery, la cuenta maestra (creador de las imágenes) se factura por todo el tráfico de imágenes asociado a un activo compartido. Si la cuenta de afiliado carga o captura nuevas imágenes para el contenido compartido, el tráfico de imágenes se asociará y se facturará a la cuenta del afiliado.</p>
+    <h3>Escenario 4: el contenido debe obtenerse de Origin</h3>
+    <p>Pasamos el ID de la cuenta&nbsp;en cada solicitud&nbsp;para que cada cuenta se facture por su propio acceso de origen. Entonces si el <strong>Partícipe</strong> cuenta con frecuencia pierde su caché CDN y tiene que volver al origen para el contenido, luego el <strong>Partícipe</strong> se facturará por eso. Si el <strong>Sharee</strong> cuenta con frecuencia pierde su caché CDN y tiene que volver al origen para el contenido, luego el <strong>Sharee</strong> la cuenta se factura por eso. Los cargos por el acceso a Origin permanecen separados independientemente del escenario de configuración de CDN.</p>
+    <h3>Escenario 5: imágenes</h3>
+    <p>De forma predeterminada, con Dynamic Delivery, la cuenta maestra (creador de las imágenes) se factura por todo el tráfico de imágenes asociado con un activo compartido. Si la cuenta de afiliado carga o captura nuevas imágenes para el contenido compartido, el tráfico de imágenes se asociará y facturará a la cuenta de afiliado.</p>
   </section>
 </article>
-
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -1094,7 +885,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Página actualizada por última vez el 11 de diciembre de 2020
+  Página actualizada por última vez el 19 Nov 2021
 </div>
 
 
@@ -1103,15 +894,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+        <img src="https://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_KO.svg" class="bc-footer-logo" alt="Brightcove">
 
-        <h2>Asistencia técnica de Brightcove</h2>
+        <h2>Soporte de Brightcove</h2>
 
         <ul class="menu">
           <li>
-            Estado del sistema<a href="https://status.brightcove.com"></a>
+            <a href="https://status.brightcove.com">Estado del sistema</a>
           </li>
           <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">Contactar soporte</a>
+            <a href="https://supportportal.brightcove.com/s/login/?">Soporte de contacto</a>
           </li>
           <li>
             <a href="https://support.brightcove.com/">Documentación</a>
@@ -1125,10 +917,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
         <ul class="menu">
           <li>
-            Cursos en línea<a href="https://studio.support.brightcove.com/training/online-training-courses.html"></a>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">Cursos online</a>
           </li>
           <li>
-            Inscríbete a un curso<a href="https://studio.support.brightcove.com/training/register-training.html"></a>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">Regístrese en un curso</a>
           </li>
           <li>
             <a href="https://university.brightcove.com/">Universidad de Brightcove</a>
@@ -1142,10 +934,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
         <ul class="menu">
           <li>
-            <a href="https://www.brightcove.com">BrightCove.com</a>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
           </li>
           <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">Contáctanos</a>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contáctenos</a>
           </li>
         </ul>
       </nav>
@@ -1157,12 +949,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <table>
           <tr>
             <td>
-              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. Todos los derechos reservados.</div>
             </td>
-            <td>Privacidad | Términos y Condiciones<a href="https://www.brightcove.com/en/legal/privacy"></a><a href="https://www.brightcove.com/en/terms-and-conditions"></a></td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Intimidad</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Términos y condiciones</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
                 </div>
               </div>
             </td>
@@ -1175,19 +967,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <script>
       
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documenation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
+  var searchBox = sajari.init ({ mode: "search-box", project: "1588255093746585379", // Set this to your project. collection: "brightcove-documenation", // Set this to your collection. instantPipeline: "autocomplete", // Pipeline used as you type inputPlaceholder: "Search", // Input element placeholder maxSuggestions: 5, // Maximum number of suggestions to show attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to }); searchBox ("sub", "pipeline.search-sent", función (_, consulta) { window.location = "/search.html?q=" + encodeURIComponent(query.q); });
   
 
 </script>
@@ -1200,6 +980,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
   
   <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script> -->
   <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
   <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
   <script src="/assets/js/sites_nav.js"></script>
@@ -1209,32 +990,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <script src="/assets/js/sajari-search-foot.js"></script>
   
+  <script>
+    feather.replace ()
+  </script>
   <!-- <script src="/assets/js/sajari-index.js"></script> -->
   <style>
-    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-      background-color: lightblue;
-    }
-    div.sj-tabs__tab {
-      margin-top: 3rem;
-      margin-left: .3rem;
-      border-top-left-radius: .4rem;
-      border-top-right-radius: .4rem;
-      background-color:#e8e8e8;
-    }
-
-    div.sj-tabs__tab.sj-tabs__tab--selected {
-      border-bottom-color: crimson;
-      background-color: #f8f8f8;
-    }
-
-    p.sj-results__result__description.css-p9jvyt {
-      font-size: 1rem;
-    }
-
-    .sj-result__text.css-31l7gp h3 {
-      color: navy;
-      font-size: 1.4rem;
-    }
+    a.sj-paginator__page-number.sj-paginator__page-number - current.css-so0ov7 { background-color: lightblue; } div.sj-tabs__tab { margin-top: 3rem; margin-left: .3rem; border-top-left-radius: .4rem; border-top-right-radius: .4rem; background-color:#e8e8e8; } div.sj-tabs__tab.sj-tabs__tab - seleccionado { border-bottom-color: crimson; background-color: #f8f8f8; } p.sj-results__result__description.css-p9jvyt { font-size: 1rem; } .sj-result__text.css-31l7gp h3 { color: navy; font-size: 1.4rem; }
     </style>
 
 </body>
