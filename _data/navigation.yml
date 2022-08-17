@@ -9,6 +9,45 @@
       url: /get-started/getting-started-video-cloud-studio.html
     - name: Introducción a la prueba de Video Cloud
       url: /get-started/getting-started-your-video-cloud-trial.html
+    - name: Aprende lo básico
+      url: /basics/index.html
+      docs:
+        - name: Activar y desactivar un video
+          url: /basics/video-cloud-basics-activating-and-deactivating-video.html
+        - name: Agregar un usuario a una cuenta de Video Cloud
+          url: /basics/video-cloud-basics-adding-user-video-cloud-account.html
+        - name: Captura de pósteres de video e imágenes en miniatura
+          url: /basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
+        - name: Creación de una lista de reproducción manual
+          url: /basics/video-cloud-basics-creating-manual-playlist.html
+        - name: Crear un reproductor
+          url: /basics/video-cloud-basics-creating-player.html
+        - name: Creación de un reproductor de listas de reproducción
+          url: /basics/video-cloud-basics-creating-playlist-player.html
+        - name: Crear una lista de reproducción inteligente
+          url: /basics/video-cloud-basics-creating-smart-playlist.html
+        - name: Determinar la cantidad de video que se ve
+          url: /basics/video-cloud-basics-determining-how-much-video-being-watched.html
+        - name: Determinar qué videos tienen más reproducciones
+          url: /basics/video-cloud-basics-determining-which-videos-have-most-views.html
+        - name: Editar propiedades de video básicas
+          url: /basics/video-cloud-basics-editing-basic-video-properties.html
+        - name: Edición de propiedades de video para varios videos
+          url: /basics/video-cloud-basics-editing-video-properties-multiple-videos.html
+        - name: Organizar videos usando carpetas
+          url: /basics/video-cloud-basics-organizing-videos-using-folders.html
+        - name: Publicar una lista de reproducción en la Web
+          url: /basics/video-cloud-basics-publishing-playlist-web.html
+        - name: Publicar un solo video en la web
+          url: /basics/video-cloud-basics-publishing-single-video-web.html
+        - name: Diseñar un reproductor
+          url: /basics/video-cloud-basics-styling-player.html
+        - name: Carga de póster de video e imágenes en miniatura
+          url: /basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
+        - name: Carga de videos
+          url: /basics/video-cloud-basics-uploading-videos.html
+        - name: Visualización de la página de estado del sistema Brightcove
+          url: /basics/video-cloud-basics-viewing-brightcove-system-status-page.html
     - name: Navegación por el sitio de soporte de Brightcove
       url: /get-started/navigating-brightcove-support-site.html
     - name: Inicio rápido a Video Cloud
@@ -25,46 +64,6 @@
       url: /get-started/video-cloud-glossary.html
     - name: Vídeos de formación de Video Cloud Studio
       url: /training/video-cloud-studio-training-videos.html
-- section:
-  name: Aprende lo básico
-  url: /basics/index.html
-  docs:
-    - name: Activar y desactivar un video
-      url: /basics/video-cloud-basics-activating-and-deactivating-video.html
-    - name: Agregar un usuario a una cuenta de Video Cloud
-      url: /basics/video-cloud-basics-adding-user-video-cloud-account.html
-    - name: Captura de pósteres de video e imágenes en miniatura
-      url: /basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
-    - name: Creación de una lista de reproducción manual
-      url: /basics/video-cloud-basics-creating-manual-playlist.html
-    - name: Crear un reproductor
-      url: /basics/video-cloud-basics-creating-player.html
-    - name: Creación de un reproductor de listas de reproducción
-      url: /basics/video-cloud-basics-creating-playlist-player.html
-    - name: Crear una lista de reproducción inteligente
-      url: /basics/video-cloud-basics-creating-smart-playlist.html
-    - name: Determinar la cantidad de video que se ve
-      url: /basics/video-cloud-basics-determining-how-much-video-being-watched.html
-    - name: Determinar qué videos tienen más reproducciones
-      url: /basics/video-cloud-basics-determining-which-videos-have-most-views.html
-    - name: Editar propiedades de video básicas
-      url: /basics/video-cloud-basics-editing-basic-video-properties.html
-    - name: Edición de propiedades de video para varios videos
-      url: /basics/video-cloud-basics-editing-video-properties-multiple-videos.html
-    - name: Organizar videos usando carpetas
-      url: /basics/video-cloud-basics-organizing-videos-using-folders.html
-    - name: Publicar una lista de reproducción en la Web
-      url: /basics/video-cloud-basics-publishing-playlist-web.html
-    - name: Publicar un solo video en la web
-      url: /basics/video-cloud-basics-publishing-single-video-web.html
-    - name: Diseñar un reproductor
-      url: /basics/video-cloud-basics-styling-player.html
-    - name: Carga de póster de video e imágenes en miniatura
-      url: /basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
-    - name: Carga de videos
-      url: /basics/video-cloud-basics-uploading-videos.html
-    - name: Visualización de la página de estado del sistema Brightcove
-      url: /basics/video-cloud-basics-viewing-brightcove-system-status-page.html
 - section:
   name: Información general
   url: /general/index.html
