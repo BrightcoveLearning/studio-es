@@ -1,0 +1,212 @@
+﻿<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>Sincronización automática</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">   -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+  <!-- <link rel="stylesheet" href="assets/css/site/styles.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="assets/css/site/tabs.css"> -->
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/help.css">
+  <!-- <link rel="stylesheet" href="/assets/css/details.css"> -->
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+    
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <!-- <script src="/assets/s-site-assets-scripts/sajari-head.js"></script> -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="body">
+
+<h1>Sincronización automática</h1>
+<article class="bcls-article">
+    <section class="bcls-section">
+        <p>Sincronice automáticamente los videos con los canales de las redes sociales en función de las etiquetas asociadas con un video.</p>
+        <p>Antes de poder publicar videos, debe crear destinos para sus cuentas sociales. En la barra de navegación izquierda, haga clic en <strong>Destinos</strong>.</p>
+        <aside class="bcls-aside bcls-aside--information">La publicación manual de videos es independiente de la sincronización automática. Si un video está etiquetado para publicarse con Auto Sync, lo hará incluso si ha publicado manualmente el video.</aside> 
+   
+        <details class="details-item">
+          <summary>Configurar sincronización automática</summary>
+          <section class="bcls-section">
+            <ol class="bcls-tasklist-restart">
+              <li>Hacer clic <span class="button-blue">Configurar sincronización automática</span>.</li>
+              <li>Entrar a <strong>Nombre</strong> para la sincronización.</li>
+              <li><strong>Seleccionar los videos a distribuir</strong>
+                <ul>
+                  <li><strong>Vídeos con todas estas etiquetas</strong> - Videos con TODAS de las etiquetas enumeradas deben estar sincronizadas</li>
+                  <li><strong>Vídeos con cualquiera de estas etiquetas</strong> - Videos con ALGUNA de las etiquetas enumeradas deben estar sincronizadas</li>
+                  <li><strong>Todos los videos de esta cuenta</strong> - Todos los videos de la cuenta deben estar sincronizados.</li>
+                </ul>
+              </li>
+              <li>A no ser que <strong>Todos los videos de esta cuenta</strong> fue seleccionado, ingrese una lista de etiquetas separadas por comas.</li>
+              <li><strong>Excluir videos que son</strong>
+                <ul>
+                  <li><strong>Inactivo</strong> - Los videos inactivos no se sincronizarán (predeterminado)</li>
+                  <li><strong>Horario restringido</strong> - Los videos programados no se sincronizarán</li>
+                  <li><strong>Restringido geográficamente</strong> - Los videos con restricciones geográficas no se sincronizarán</li>
+                </ul>
+              </li>
+              <li>Haz clic en <span class="button-blue">Siguiente</span>.</li>
+              <li>Elija un destino de publicación para sincronizar los videos.</li>
+              <li>Para crear nuevos destinos o editar los existentes, haga clic en <strong>Administrar destinos</strong>.</li>
+              <li>Haga clic en un destino para mostrar los valores predeterminados de destino.</li>
+              <li>Haz clic en <span class="button-blue">Siguiente</span>.</li>
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Definir reglas de YouTube</summary>
+          <section class="bcls-section">
+            <p>Se pueden definir reglas para manejar qué hacer cuando se elimina un video de Video Cloud, cuando cambian las etiquetas o cuando cambian los metadatos del video.</p>
+            <p>Las reglas se basan en la plataforma de redes sociales.</p>
+
+            <ol class="bcls-tasklist-restart">
+              <li>Seleccione lo que sucede cuando un video no se etiqueta o se elimina de Video Cloud.
+                <ul>
+                  <li><strong>Eliminar video distribuido en YouTube</strong> - El video se eliminará de YouTube.</li>
+                  <li><strong>Hacer video distribuido</strong> - Hacer el video de YouTube <strong>Privado</strong> o <strong>No incluido en listado</strong></li>
+                  <li><strong>Ninguna acción</strong> - No pasa nada con el video de YouTube</li>
+                </ul>
+              </li>
+              <li>Seleccione lo que sucede cuando se modifican los metadatos del video.
+                <ul>
+                  <li><strong>Actualizar metadatos de video en YouTube</strong> - Los cambios en los metadatos de video en Video Cloud se sincronizarán con YouTube</li>
+                  <li><strong>Ninguna acción</strong> - No se realiza ninguna acción</li>
+                </ul>
+              </li>
+              <li>Haz clic en <span class="button-blue">Siguiente</span>.</li>
+              <li>Confirme la configuración de Sincronización automática y haga clic en <span class="button-blue">Finalizar</span>.</li>
+              
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Definir reglas de Facebook</summary>
+          <section class="bcls-section">
+            <p>Se pueden definir reglas para manejar qué hacer cuando se elimina un video de Video Cloud, cuando cambian las etiquetas o cuando cambian los metadatos del video.</p>
+            <p>Las reglas se basan en la plataforma de redes sociales.</p>
+
+            <ol class="bcls-tasklist-restart">
+              <li>Seleccione lo que sucede cuando un video no se etiqueta o se elimina de Video Cloud.
+                <ul>
+                  <li><strong>Eliminar video distribuido en Facebook</strong> - El video se eliminará de Facebook.</li>
+                  <li><strong>Caducar el video distribuido en Facebook</strong> - El video caducará en Facebook</li>
+                  <li><strong>Ninguna acción</strong> - No pasa nada con el video de Facebook</li>
+                </ul>
+              </li>
+              <li>Seleccione lo que sucede cuando se modifican los metadatos del video.
+                <ul>
+                  <li><strong>Actualizar metadatos de video en Facebook</strong> - Los cambios en los metadatos de video en Video Cloud se sincronizarán con Facebook</li>
+                  <li><strong>Ninguna acción</strong> - No se realiza ninguna acción</li>
+                </ul>
+              </li>
+              <li>Haz clic en <span class="button-blue">Siguiente</span>.</li>
+              <li>Confirme la configuración de Sincronización automática y haga clic en <span class="button-blue">Finalizar</span>.</li>
+              
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Definir reglas de Twitter</summary>
+          <section class="bcls-section">
+            <p>Se pueden definir reglas para manejar qué hacer cuando se elimina un video de Video Cloud, cuando cambian las etiquetas o cuando cambian los metadatos del video.</p>
+            <p>Las reglas se basan en la plataforma de redes sociales.</p>
+
+            <ol class="bcls-tasklist-restart">
+              <li>Seleccione lo que sucede cuando un video no se etiqueta o se elimina de Video Cloud.
+                <ul>
+                  <li><strong>Eliminar video distribuido en Twitter</strong> - El video se eliminará de Twitter.</li>
+                  <li><strong>Ninguna acción</strong> - No pasa nada con el video de Twitter</li>
+                </ul>
+              </li>
+              <li>Haz clic en <span class="button-blue">Siguiente</span>.</li>
+              <li>Confirme la configuración de Sincronización automática y haga clic en <span class="button-blue">Finalizar</span>.</li>
+              
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Ver/editar trabajos de sincronización automática</summary>
+          <section class="bcls-section">
+            <p>Puede ver y editar los trabajos de sincronización automática que ha creado.</p>
+            <ul>
+              <li><strong>Sincronización automática de nombre e ID</strong> - Haga clic en un enlace en esta columna para abrir las propiedades de sincronización</li>
+              <li><strong>Etiquetas</strong> - Haga clic en un enlace en esta columna para abrir el módulo multimedia con una lista de videos que tiene la etiqueta</li>
+              <li><strong>Destino</strong> - Haga clic en un enlace en esta columna para ver los detalles del destino</li>
+              <li><strong>Borrar</strong> - Eliminar el trabajo de sincronización asociado</li>
+            </ul>
+
+            <p><strong>Sincronizar propiedades</strong></p>
+            <ul>
+              <li><strong>Estado</strong>
+                <ul>
+                  <li><strong>ACTIVO</strong> - Los videos se sincronizarán</li>
+                  <li><strong>En pausa</strong> - No se sincronizarán videos</li>
+                </ul>
+              </li>
+              <li><strong>Mostrar</strong> - Filtrar la lista de visualización</li>
+              <li><strong>Ajustes</strong> - Editar la configuración de sincronización; hacer clic <strong>Actualizar</strong> para guardar cambios</li>
+              <li><strong>Borrar</strong> - Eliminar el trabajo de sincronización</li> 
+            </ul>
+          </section>
+        </details>
+
+        
+  </section>
+  <section class="bcls-section">
+    <h3><a href="/social/general/using-auto-sync-synchronize-videos-social-media-accounts.html" target="_blank">Aprende más <i data-feather="external-link"></i></a></h3>
+  </section>
+</article>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitehttps-fix.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="/assets/s-site-assets-scripts/js/details.js"></script>
+  <!-- <script src="/assets/js/expand-dl.js"></script> -->
+
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetabs.js"></script> -->
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetoc.js"></script> -->
+  <!-- <script src="/assets/js/sites_nav.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitelocal-link-fix.js"></script> -->
+  <!-- <script src="/assets/js/feedback.js"></script> -->
+  <!-- <script src="/assets/js/local.js"></script> -->
+  <script translate="no">
+    feather.replace()
+  </script>
+</body>
+
+</html>

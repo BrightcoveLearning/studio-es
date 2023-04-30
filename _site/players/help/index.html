@@ -1,0 +1,178 @@
+﻿<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>Jugadores</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">   -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+  <!-- <link rel="stylesheet" href="assets/css/site/styles.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="assets/css/site/tabs.css"> -->
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/help.css">
+  <!-- <link rel="stylesheet" href="/assets/css/details.css"> -->
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+    
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <!-- <script src="/assets/s-site-assets-scripts/sajari-head.js"></script> -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="body">
+
+<h1>Jugadores</h1> 
+<article class="bcls-article">
+    <section class="bcls-section">
+        <p>El módulo Players le permite crear y administrar reproductores de video.</p>
+
+        <details class="details-item">
+          <summary>lista de jugadores</summary>
+          <section class="bcls-section">
+            <ul>
+              <li><strong>Nombre</strong> : haz clic en el enlace del nombre del jugador para editar los detalles del jugador. El ID del jugador aparece debajo del nombre del jugador.</li>
+              <li><strong>Actualizado</strong> : fecha y hora actualizadas más recientes</li>
+              <li><strong>Versión</strong> - Versión del reproductor</li>
+              <li><strong>Estado</strong> - Estado del jugador
+                <ul>
+                  <li><img alt="" src="/assets/images/players/node14049-cone-icon.png"/>- Indica que se han realizado cambios en el reproductor pero los cambios no se han publicado</li>
+                  <li><img alt="" src="/assets/images/players/node14049-check-icon.png"/>- Indica que el reproductor está activado y todos los cambios realizados en el reproductor se han publicado</li>
+                  <li><img alt="" src="/assets/images/players/node14049-red-circle-icon.png"/>- Indica que el reproductor está inactivo</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Resumen del jugador</summary>
+          <section class="bcls-section">
+            <ol class="bcls-tasklist-restart">
+              <li>Selecciona el nombre de un jugador para ver el resumen a la derecha de la lista de jugadores. La información incluye:
+                <ul>
+                  <li>Nombre del jugador: haz clic en el enlace del nombre del jugador para editar los detalles del jugador.</li>
+                  <li><strong>Creado</strong> - Fecha de creación del jugador</li>
+                  <li>Haga clic en <span class="button-blue">Vista previa del reproductor</span> para ver una vista previa de su reproductor en una ventana modal</li>
+                  <li>Haga clic en <span class="button-blue">Insertar código &amp; URL</span> para copiar el código de incrustación del <strong>reproductor de vista previa</strong> o del <strong>reproductor publicado</strong> para probar los cambios de su reproductor en su página HTML</li>
+                  <li><strong>ID del jugador</strong> : identificador único del jugador</li>
+                  <li><strong>Nombre</strong> - Nombre del jugador</li>
+                  <li><strong>Descripción</strong> - Breve descripción del jugador</li>
+                  <li><strong>Estado</strong> - Estado del jugador
+                    <ul>
+                      <li><span class="button-blue">Activo</span> : el reproductor está activo y listo para usar</li>
+                      <li><span class="button-red">Inactivo</span> : el reproductor está desactivado.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Estado publicado</strong> : estado publicado del jugador
+                    <ul>
+                      <li><strong>Publicado</strong> : el reproductor está publicado y no tiene cambios no publicados.</li>
+                      <li><strong>Tiene cambios no publicados</strong> : ha realizado cambios en el reproductor; los usuarios no los verán hasta que publique el reproductor</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ol>  
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Buscar jugadores</summary>
+          <section class="bcls-section">
+            <ol class="bcls-tasklist-restart">
+              <li>En <span class="button-gray"><i class="button-icon" data-feather="search"></i>Buscar jugadores</span> , comience a escribir para buscar jugadores en su cuenta. Se buscan los siguientes campos:
+                <ul>
+                  <li>Nombre del jugador</li>
+                  <li>ID de jugador</li>
+                  <li>Breve descripción</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Crear jugador</summary>
+          <section class="bcls-section">
+            <ol class="bcls-tasklist-restart">
+              <li>Haz clic en <span class="button-blue">+ Agregar jugador</span> .</li>
+              <li>Introduzca el <strong>nombre</strong> de su reproductor.</li>
+              <li>Introduzca una <strong>breve descripción</strong> para su reproductor.</li>
+              <li>Haz clic en <span class="button-blue">Guardar</span>.</li> 
+            </ol>
+            <aside class="bcls-aside bcls-aside--information">Cuando crea un nuevo reproductor, se crea con la última versión del reproductor publicada por Brightcove.</aside>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Jugador duplicado</summary>
+          <section class="bcls-section">
+            <ol class="bcls-tasklist-restart">
+              <li>Seleccione el jugador que desea duplicar.</li>
+              <li>Hacer clic <span class="button-blue">Duplicar</span>.</li>
+              <li>Ingrese el <strong>nombre</strong> y <strong>la descripción breve</strong> del nuevo jugador.</li>
+              <li>Haz clic en <span class="button-blue">Guardar</span>.</li> 
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Eliminar jugador</summary>
+          <section class="bcls-section">
+            <ol class="bcls-tasklist-restart">
+              <li>Seleccione el jugador o los jugadores que desea eliminar.</li>
+              <li>Hacer clic <img class="ui-image" alt="Eliminar icono" src="/assets/images/admin/help/delete-icon-red.png"/>.</li>
+              <li>En el cuadro de diálogo <strong>Eliminar jugadores</strong> , confirme haciendo clic en <span class="button-red-text">Eliminar</span> .</li> 
+            </ol>
+          </section> 
+        </details> 
+  </section>
+  <section class="bcls-section">
+    <h4><i data-feather="chevrons-right"></i><a href="/players/module/getting-started-players-module.html" target="_blank">Aprende más <i data-feather="external-link"></i></a></h4>
+  </section>
+</article>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitehttps-fix.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="/assets/s-site-assets-scripts/js/details.js"></script>
+  <!-- <script src="/assets/js/expand-dl.js"></script> -->
+
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetabs.js"></script> -->
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetoc.js"></script> -->
+  <!-- <script src="/assets/js/sites_nav.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitelocal-link-fix.js"></script> -->
+  <!-- <script src="/assets/js/feedback.js"></script> -->
+  <!-- <script src="/assets/js/local.js"></script> -->
+  <script translate="no">
+    feather.replace()
+  </script>
+</body>
+
+</html>

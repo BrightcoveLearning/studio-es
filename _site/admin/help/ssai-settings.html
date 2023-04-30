@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>Configuración de anuncios del lado del servidor</title>
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">   -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+  <!-- <link rel="stylesheet" href="assets/css/site/styles.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="assets/css/site/tabs.css"> -->
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/help.css">
+  <!-- <link rel="stylesheet" href="/assets/css/details.css"> -->
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+    
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <!-- <script src="/assets/s-site-assets-scripts/sajari-head.js"></script> -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="body">
+
+<h1>Configuración de anuncios del lado del servidor</h1>
+<article class="bcls-article">
+    <section class="bcls-section">
+        <p>La inserción de anuncios del lado del servidor (SSAI) de Brightcove incorpora anuncios en su flujo de video para brindar una experiencia de visualización similar a la de la televisión sin almacenamiento en búfer de anuncios.</p>
+
+        <details class="details-item">
+          <summary>Comportamiento</summary>
+          <section class="bcls-section">
+            <ul>
+              <li><strong>Eliminar</strong> : seleccione una o más configuraciones de anuncios y haga clic en <span class="button-red-text">Eliminar</span> para eliminarlas de su cuenta.</li>
+              <li><strong>Duplicar</strong> : seleccione una configuración de anuncios y haga clic en <span class="button-blue">Duplicar</span> para crear una copia de la configuración de anuncios; puede cancelar, o editar y guardar la nueva configuración</li>
+            </ul>
+          </section>
+        </details>
+        
+        <details class="details-item">
+          <summary>Ver configuraciones de anuncios</summary>
+          <section class="bcls-section">
+            <ul>
+              <li><strong>Nombre</strong> : el nombre de la configuración de anuncios; haga clic en el enlace del nombre para ver los detalles de la configuración del anuncio</li>
+              <li><strong>Tipo</strong> : ya sea <strong>VOD</strong> o <strong>en vivo</strong></li>
+              <li><strong>Respuesta del servidor de anuncios</strong> : el formato de respuesta de su servidor de anuncios</li>
+              <li><strong>Creado</strong> : la fecha de creación de la configuración del anuncio.</li>
+            </ul>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Crear configuración de anuncios</summary>
+          <section class="bcls-section">
+            <ol class="bcls-tasklist">
+              <li>Haga clic en <span class="button-blue">Crear configuración de anuncios.<i class="button-icon" data-feather="chevron-down"></i></span> para expandir el menú desplegable.</li>
+              <li>Elige uno:
+                <ul>
+                  <li><strong>VOD</strong> - Vídeo a la carta</li>
+                  <li><strong>En vivo</strong> - Transmisión en vivo</li>
+                </ul>
+              </li>
+              <li><strong>Nombre</strong> : el nombre de la configuración del anuncio.</li>
+              <li><strong>Respuesta del servidor de anuncios</strong> : el formato de respuesta de su servidor de anuncios
+              <ul>
+                <li><strong><a href="https://www.google.com/ads/publisher/#?modal_active=none" target="_blank">Reglas publicitarias de DFP <i data-feather="external-link"></i></a></strong> - Formato propietario para DFP/Google for Publishers</li>
+                <li><strong><a href="https://www.iab.com/guidelines/vmap/" target="_blank">VMAP de DFP <i data-feather="external-link"></i></a></strong> - Lista de reproducción de múltiples anuncios de video</li>
+                <li><strong><a href="https://www.freewheel.com/" target="_blank">XML inteligente <i data-feather="external-link"></i></a></strong> - Formato propietario para FreeWheel</li>
+                <li><strong><a href="https://www.iab.com/guidelines/vast/" target="_blank">VAST 3.0 <i data-feather="external-link"></i></a></strong> - Plantilla de publicación de anuncios de video digital</li>
+              </ul>
+              </li>
+              <li><strong>Etiqueta publicitaria</strong> : la URL del servidor para su etiqueta publicitaria.</li>
+              <li><strong>Deshabilitar balizas del lado del servidor</strong> : estas balizas emiten eventos desde el servidor para medir las impresiones de anuncios e informar errores de anuncios; si está deshabilitado, los eventos no se activarán desde el servidor, pero se incluirán en la respuesta del anuncio</li>
+              <li>Haz clic en <span class="button-blue">Guardar</span>.</li>
+            </ol>
+          </section>
+        </details>
+
+        <details class="details-item">
+          <summary>Editar configuración de anuncios</summary>
+          <section class="bcls-section">
+            <ol class="bcls-tasklist-restart">
+              <li>Haga clic en el vínculo del nombre de la configuración del anuncio.</li>
+              <li>Edite los valores de configuración del anuncio.</li>
+              <li>Haz clic en <span class="button-blue">Guardar</span>.</li>
+            </ol>
+          </section>
+        </details>
+      
+  </section>
+    <section class="bcls-section">
+       <h3><a href="/admin/general/configuring-server-side-ad-settings.html" target="_blank">Aprende más <i data-feather="external-link"></i></a></h3>
+    </section>
+</article>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitehttps-fix.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="/assets/s-site-assets-scripts/js/details.js"></script>
+  <!-- <script src="/assets/js/expand-dl.js"></script> -->
+
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetabs.js"></script> -->
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitetoc.js"></script> -->
+  <!-- <script src="/assets/js/sites_nav.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <!-- <script src="https://support.brightcove.com/site-assets/js/sitelocal-link-fix.js"></script> -->
+  <!-- <script src="/assets/js/feedback.js"></script> -->
+  <!-- <script src="/assets/js/local.js"></script> -->
+  <script translate="no">
+    feather.replace()
+  </script>
+</body>
+
+</html>
